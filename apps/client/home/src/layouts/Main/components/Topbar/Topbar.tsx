@@ -268,7 +268,7 @@ const Topbar = ({
       <div className={classes.flexGrow} />
       <Hidden smDown>
         <List disablePadding className={classes.navigationContainer}>
-          {[landings, supportedPages, account].map((page, i) => (
+          {[landings].map((page, i) => (
             <div key={page.id}>
               <ListItem
                 aria-describedby={page.id}
@@ -322,13 +322,13 @@ const Topbar = ({
               onClick={() => themeToggler()}
             />
           </ListItem>
-          <ListItem
+          {/* <ListItem
             className={clsx(classes.listItem, 'menu-item--no-dropdown')}
           >
             <Button variant="outlined" component="a" href="/documentation">
               Microlab
             </Button>
-          </ListItem>
+          </ListItem> */}
           <ListItem
             className={clsx(classes.listItem, 'menu-item--no-dropdown')}
           >

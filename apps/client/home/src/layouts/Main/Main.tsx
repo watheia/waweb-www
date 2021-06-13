@@ -30,7 +30,7 @@ const Main = ({ children, themeToggler, themeMode }: Props): JSX.Element => {
       id: 'demo-pages',
       children: {
         services: {
-          groupTitle: 'Examples',
+          groupTitle: 'Domains',
           pages: [
             {
               title: 'Coworking',

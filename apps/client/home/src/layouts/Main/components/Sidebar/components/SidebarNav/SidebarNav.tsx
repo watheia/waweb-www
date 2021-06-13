@@ -184,7 +184,7 @@ const SidebarNav = ({
           Account
         </Typography>
         <AccountPages />
-      </ListItem> */}
+      </ListItem> 
       <ListItem className={classes.listItem}>
         <Button
           variant="outlined"
@@ -194,7 +194,7 @@ const SidebarNav = ({
         >
           Microlab
         </Button>
-      </ListItem>
+      </ListItem>*/}
       <ListItem className={classes.listItem}>
         <Button
           variant="contained"
