@@ -1,5 +1,5 @@
 ---
-stackbit_url_path: /home/
+stackbit_url_path: /
 title: Home
 template: advanced
 seo:

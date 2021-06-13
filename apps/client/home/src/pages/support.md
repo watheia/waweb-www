@@ -1,10 +1,10 @@
 ---
-stackbit_url_path: /home/features/
-title: Features
+stackbit_url_path: /support
+title: Get Support
 template: advanced
 seo:
   type: stackbit_page_meta
-  description: Watheia Labs Capabilities
+  description: This is the contact page
   extra:
     - relativeUrl: false
       type: stackbit_page_meta_extra
@@ -15,46 +15,34 @@ seo:
       type: stackbit_page_meta_extra
       name: 'og:title'
       keyName: property
-      value: Features
+      value: Contact
     - relativeUrl: false
       type: stackbit_page_meta_extra
       name: 'og:description'
       keyName: property
-      value: This is the features page
-    - relativeUrl: true
-      type: stackbit_page_meta_extra
-      name: 'og:image'
-      keyName: property
-      value: images/5.png
+      value: This is the contact page
     - relativeUrl: false
       type: stackbit_page_meta_extra
       name: 'twitter:card'
       keyName: name
-      value: summary_large_image
+      value: summary
     - relativeUrl: false
       type: stackbit_page_meta_extra
       name: 'twitter:title'
       keyName: name
-      value: Features
+      value: Contact
     - relativeUrl: false
       type: stackbit_page_meta_extra
       name: 'twitter:description'
       keyName: name
-      value: This is the features page
-    - relativeUrl: true
-      type: stackbit_page_meta_extra
-      name: 'twitter:image'
-      keyName: name
-      value: images/5.png
-  title: Capabilities
+      value: This is the contact page
+  title: Get Support
 sections:
   - type: hero_section
     image_position: left
     has_background: false
     align: center
     actions: []
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-    title: Capabilities
-  - type: features_section
-    features: []
+    title: Get Expert Support
+  - type: contact_section
 ---
