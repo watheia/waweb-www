@@ -1,8 +1,8 @@
 /** @format */
 
-import React, { useState } from "react"
-import clsx from "clsx"
-import { makeStyles } from "@material-ui/core/styles"
+import React, { useState } from 'react';
+import clsx from 'clsx';
+import { makeStyles } from '@material-ui/core/styles';
 import {
   Toolbar,
   Hidden,
@@ -13,97 +13,97 @@ import {
   Typography,
   IconButton,
   Button,
-} from "@material-ui/core"
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
-import MenuIcon from "@material-ui/icons/Menu"
-import { Image, DarkModeToggler } from "components/atoms"
+} from '@material-ui/core';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import MenuIcon from '@material-ui/icons/Menu';
+import { Image, DarkModeToggler } from 'components/atoms';
 
 const useStyles = makeStyles((theme) => ({
   flexGrow: {
     flexGrow: 1,
   },
   navigationContainer: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
   toolbar: {
     zIndex: 999,
     maxWidth: theme.layout.contentWidth,
-    width: "100%",
-    margin: "0 auto",
+    width: '100%',
+    margin: '0 auto',
     padding: theme.spacing(0, 2),
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up('sm')]: {
       padding: theme.spacing(0, 8),
     },
   },
   navLink: {
-    "&:hover": {
+    '&:hover': {
       color: theme.palette.primary.dark,
     },
   },
   listItem: {
-    cursor: "pointer",
-    "&:hover > .menu-item, &:hover svg": {
+    cursor: 'pointer',
+    '&:hover > .menu-item, &:hover svg': {
       color: theme.palette.primary.dark,
     },
-    "&.menu-item--no-dropdown": {
+    '&.menu-item--no-dropdown': {
       paddingRight: 0,
     },
   },
   listItemActive: {
-    "&> .menu-item": {
+    '&> .menu-item': {
       color: theme.palette.primary.dark,
     },
   },
   listItemText: {
-    flex: "0 0 auto",
+    flex: '0 0 auto',
     marginRight: theme.spacing(2),
-    whiteSpace: "nowrap",
+    whiteSpace: 'nowrap',
   },
   listItemButton: {
-    whiteSpace: "nowrap",
+    whiteSpace: 'nowrap',
   },
   listItemIcon: {
-    minWidth: "auto",
+    minWidth: 'auto',
   },
   popover: {
     padding: theme.spacing(4),
     border: theme.spacing(2),
-    boxShadow: "0 0.5rem 2rem 2px rgba(116, 123, 144, 0.09)",
+    boxShadow: '0 0.5rem 2rem 2px rgba(116, 123, 144, 0.09)',
     minWidth: 350,
     marginTop: theme.spacing(2),
   },
   iconButton: {
     marginLeft: theme.spacing(2),
     padding: 0,
-    "&:hover": {
-      background: "transparent",
+    '&:hover': {
+      background: 'transparent',
     },
   },
   expandOpen: {
-    transform: "rotate(180deg)",
+    transform: 'rotate(180deg)',
     color: theme.palette.primary.dark,
   },
   logoContainer: {
     width: 100,
     height: 28,
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up('md')]: {
       width: 120,
       height: 32,
     },
   },
   logoImage: {
-    width: "100%",
-    height: "100%",
+    width: '100%',
+    height: '100%',
   },
   menu: {
-    display: "flex",
-    justifyContent: "space-between",
+    display: 'flex',
+    justifyContent: 'space-between',
   },
   menuItem: {
     marginRight: theme.spacing(5),
-    "&:last-child": {
+    '&:last-child': {
       marginRight: 0,
     },
   },
@@ -111,16 +111,16 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 0,
   },
   menuGroupTitle: {
-    textTransform: "uppercase",
+    textTransform: 'uppercase',
   },
-}))
+}));
 
 interface Props {
-  className?: string
-  onSidebarOpen: Function
-  pages: PagesProps
-  themeMode: string
-  themeToggler: Function
+  className?: string;
+  onSidebarOpen: Function;
+  pages: PagesProps;
+  themeMode: string;
+  themeToggler: Function;
 }
 
 const Topbar = ({
@@ -131,32 +131,36 @@ const Topbar = ({
   className,
   ...rest
 }: Props): JSX.Element => {
-  const classes = useStyles()
+  const classes = useStyles();
 
-  const [anchorEl, setAnchorEl] = useState<any>(null)
-  const [openedPopoverId, setOpenedPopoverId] = useState<string | null>(null)
+  const [anchorEl, setAnchorEl] = useState<any>(null);
+  const [openedPopoverId, setOpenedPopoverId] = useState<string | null>(null);
 
   const handleClick = (
     event: React.MouseEvent<HTMLElement>,
     popoverId: string | null
   ): void => {
-    setAnchorEl(event.target)
-    setOpenedPopoverId(popoverId)
-  }
+    setAnchorEl(event.target);
+    setOpenedPopoverId(popoverId);
+  };
 
   const handleClose = (): void => {
-    setAnchorEl(null)
-    setOpenedPopoverId(null)
-  }
+    setAnchorEl(null);
+    setOpenedPopoverId(null);
+  };
 
-  const landings = pages.landings
-  const supportedPages = pages.pages
-  const account = pages.account
+  const landings = pages.landings;
+  const supportedPages = pages.pages;
+  const account = pages.account;
 
   const MenuGroup = ({ item }: MenuGroupProps): JSX.Element => (
     <List disablePadding>
       <ListItem disableGutters>
-        <Typography variant="body2" color="primary" className={classes.menuGroupTitle}>
+        <Typography
+          variant="body2"
+          color="primary"
+          className={classes.menuGroupTitle}
+        >
           {item.groupTitle}
         </Typography>
       </ListItem>
@@ -164,9 +168,9 @@ const Topbar = ({
         <ListItem disableGutters key={i} className={classes.menuGroupItem}>
           <Typography
             variant="body1"
-            component={"a"}
+            component={'a'}
             href={page.href}
-            className={clsx(classes.navLink, "submenu-item")}
+            className={clsx(classes.navLink, 'submenu-item')}
             color="textSecondary"
             onClick={handleClose}
           >
@@ -175,10 +179,10 @@ const Topbar = ({
         </ListItem>
       ))}
     </List>
-  )
+  );
 
   const LandingPages = (): JSX.Element => {
-    const { services, apps, web } = landings.children
+    const { services, apps, web } = landings.children;
     return (
       <div className={classes.menu}>
         <div className={classes.menuItem}>
@@ -189,12 +193,12 @@ const Topbar = ({
           <MenuGroup item={web} />
         </div>
       </div>
-    )
-  }
+    );
+  };
 
   const SupportedPages = (): JSX.Element => {
     const { career, helpCenter, company, contact, blog, portfolio } =
-      supportedPages.children
+      supportedPages.children;
     return (
       <div className={classes.menu}>
         <div className={classes.menuItem}>
@@ -210,11 +214,11 @@ const Topbar = ({
           <MenuGroup item={portfolio} />
         </div>
       </div>
-    )
-  }
+    );
+  };
 
   const AccountPages = (): JSX.Element => {
-    const { settings, signup, signin, password, error } = account.children
+    const { settings, signup, signin, password, error } = account.children;
     return (
       <div className={classes.menu}>
         <div className={classes.menuItem}>
@@ -229,21 +233,21 @@ const Topbar = ({
           <MenuGroup item={error} />
         </div>
       </div>
-    )
-  }
+    );
+  };
 
   const renderPages = (id: string): JSX.Element | null => {
-    if (id === "landing-pages") {
-      return <LandingPages />
+    if (id === 'demo-pages') {
+      return <LandingPages />;
     }
-    if (id === "supported-pages") {
-      return <SupportedPages />
+    if (id === 'supported-pages') {
+      return <SupportedPages />;
     }
-    if (id === "account") {
-      return <AccountPages />
+    if (id === 'account') {
+      return <AccountPages />;
     }
-    return null
-  }
+    return null;
+  };
 
   return (
     <Toolbar disableGutters className={classes.toolbar} {...rest}>
@@ -252,9 +256,9 @@ const Topbar = ({
           <Image
             className={classes.logoImage}
             src={
-              themeMode === "light"
-                ? "https://cdn.watheia.org/assets/logo-banner.svg"
-                : "https://cdn.watheia.org/assets/logo-banner-alt.svg"
+              themeMode === 'light'
+                ? 'https://cdn.watheia.org/assets/logo-banner.svg'
+                : 'https://cdn.watheia.org/assets/logo-banner-alt.svg'
             }
             alt="watheia"
             lazy={false}
@@ -271,19 +275,21 @@ const Topbar = ({
                 onClick={(e) => handleClick(e, page.id)}
                 className={clsx(
                   classes.listItem,
-                  openedPopoverId === page.id ? classes.listItemActive : ""
+                  openedPopoverId === page.id ? classes.listItemActive : ''
                 )}
               >
                 <Typography
                   variant="body1"
                   color="textPrimary"
-                  className={clsx(classes.listItemText, "menu-item")}
+                  className={clsx(classes.listItemText, 'menu-item')}
                 >
                   {page.title}
                 </Typography>
                 <ListItemIcon className={classes.listItemIcon}>
                   <ExpandMoreIcon
-                    className={openedPopoverId === page.id ? classes.expandOpen : ""}
+                    className={
+                      openedPopoverId === page.id ? classes.expandOpen : ''
+                    }
                     fontSize="small"
                   />
                 </ListItemIcon>
@@ -295,12 +301,12 @@ const Topbar = ({
                 anchorEl={anchorEl}
                 onClose={handleClose}
                 anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "center",
+                  vertical: 'bottom',
+                  horizontal: 'center',
                 }}
                 transformOrigin={{
-                  vertical: "top",
-                  horizontal: "center",
+                  vertical: 'top',
+                  horizontal: 'center',
                 }}
                 classes={{ paper: classes.popover }}
               >
@@ -308,15 +314,24 @@ const Topbar = ({
               </Popover>
             </div>
           ))}
-          <ListItem className={clsx(classes.listItem, "menu-item--no-dropdown")}>
-            <DarkModeToggler themeMode={themeMode} onClick={() => themeToggler()} />
+          <ListItem
+            className={clsx(classes.listItem, 'menu-item--no-dropdown')}
+          >
+            <DarkModeToggler
+              themeMode={themeMode}
+              onClick={() => themeToggler()}
+            />
           </ListItem>
-          <ListItem className={clsx(classes.listItem, "menu-item--no-dropdown")}>
+          <ListItem
+            className={clsx(classes.listItem, 'menu-item--no-dropdown')}
+          >
             <Button variant="outlined" component="a" href="/documentation">
               Microlab
             </Button>
           </ListItem>
-          <ListItem className={clsx(classes.listItem, "menu-item--no-dropdown")}>
+          <ListItem
+            className={clsx(classes.listItem, 'menu-item--no-dropdown')}
+          >
             <Button
               variant="contained"
               color="primary"
@@ -341,7 +356,7 @@ const Topbar = ({
         </IconButton>
       </Hidden>
     </Toolbar>
-  )
-}
+  );
+};
 
-export default Topbar
+export default Topbar;

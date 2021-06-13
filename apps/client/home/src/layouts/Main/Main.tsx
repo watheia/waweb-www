@@ -4,7 +4,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { useMediaQuery, Divider } from '@material-ui/core';
 import { Topbar, Footer, Sidebar } from './components';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     height: '100%',
   },
@@ -14,7 +14,7 @@ interface Props {
   children: React.ReactNode;
   themeToggler: Function;
   themeMode: string;
-};
+}
 
 const Main = ({ children, themeToggler, themeMode }: Props): JSX.Element => {
   const classes = useStyles();
@@ -26,35 +26,35 @@ const Main = ({ children, themeToggler, themeMode }: Props): JSX.Element => {
 
   const pages = {
     landings: {
-      title: 'Landings',
-      id: 'landing-pages',
+      title: 'Demos',
+      id: 'demo-pages',
       children: {
         services: {
-          groupTitle: 'Services',
+          groupTitle: 'Examples',
           pages: [
             {
               title: 'Coworking',
-              href: '/coworking',
+              href: '/materials/coworking',
             },
             {
               title: 'Rental',
-              href: '/rental',
+              href: '/materials/rental',
             },
             {
               title: 'Job Listing',
-              href: '/job-listing',
+              href: '/materials/job-listing',
             },
             {
               title: 'E-Learning',
-              href: '/e-learning',
+              href: '/materials/e-learning',
             },
             {
               title: 'E-commerce',
-              href: '/e-commerce',
+              href: '/materials/e-commerce',
             },
             {
               title: 'Expo',
-              href: '/expo',
+              href: '/materials/expo',
             },
           ],
         },
@@ -63,11 +63,11 @@ const Main = ({ children, themeToggler, themeMode }: Props): JSX.Element => {
           pages: [
             {
               title: 'Desktop App',
-              href: '/desktop-app',
+              href: '/materials/desktop-app',
             },
             {
               title: 'Mobile App',
-              href: '/mobile-app',
+              href: '/materials/mobile-app',
             },
           ],
         },
@@ -76,43 +76,43 @@ const Main = ({ children, themeToggler, themeMode }: Props): JSX.Element => {
           pages: [
             {
               title: 'Marketing',
-              href: '/',
+              href: '/materials/',
             },
             {
               title: 'Overview',
-              href: '/home',
+              href: '/materials/home',
             },
             {
               title: 'Basic',
-              href: '/web-basic',
+              href: '/materials/web-basic',
             },
             {
               title: 'Service',
-              href: '/service',
+              href: '/materials/service',
             },
             {
               title: 'Startup',
-              href: '/startup',
+              href: '/materials/startup',
             },
             {
               title: 'Enterprise',
-              href: '/enterprise',
+              href: '/materials/enterprise',
             },
             {
               title: 'Cloud Hosting',
-              href: '/cloud-hosting',
+              href: '/materials/cloud-hosting',
             },
             {
               title: 'Agency',
-              href: '/agency',
+              href: '/materials/agency',
             },
             {
               title: 'Design Company',
-              href: '/design-company',
+              href: '/materials/design-company',
             },
             {
               title: 'Logistics',
-              href: '/logistics',
+              href: '/materials/logistics',
             },
           ],
         },
@@ -127,15 +127,15 @@ const Main = ({ children, themeToggler, themeMode }: Props): JSX.Element => {
           pages: [
             {
               title: 'Lising',
-              href: '/career-listing',
+              href: '/materials/career-listing',
             },
             {
               title: 'Lising Minimal',
-              href: '/career-listing-minimal',
+              href: '/materials/career-listing-minimal',
             },
             {
               title: 'Opening',
-              href: '/career-opening',
+              href: '/materials/career-opening',
             },
           ],
         },
@@ -144,11 +144,11 @@ const Main = ({ children, themeToggler, themeMode }: Props): JSX.Element => {
           pages: [
             {
               title: 'Overview',
-              href: '/help-center',
+              href: '/materials/help-center',
             },
             {
               title: 'Article',
-              href: '/help-center-article',
+              href: '/materials/help-center-article',
             },
           ],
         },
@@ -157,19 +157,19 @@ const Main = ({ children, themeToggler, themeMode }: Props): JSX.Element => {
           pages: [
             {
               title: 'About',
-              href: '/about',
+              href: '/materials/about',
             },
             {
               title: 'About (Cover)',
-              href: '/about-side-cover',
+              href: '/materials/about-side-cover',
             },
             {
               title: 'Pricing',
-              href: '/pricing',
+              href: '/materials/pricing',
             },
             {
               title: 'Terms',
-              href: '/company-terms',
+              href: '/materials/company-terms',
             },
           ],
         },
@@ -178,15 +178,15 @@ const Main = ({ children, themeToggler, themeMode }: Props): JSX.Element => {
           pages: [
             {
               title: 'Reach View',
-              href: '/contact-page',
+              href: '/materials/contact-page',
             },
             {
               title: 'Sidebar Map',
-              href: '/contact-sidebar-map',
+              href: '/materials/contact-sidebar-map',
             },
             {
               title: 'Cover',
-              href: '/contact-page-cover',
+              href: '/materials/contact-page-cover',
             },
           ],
         },
@@ -195,19 +195,19 @@ const Main = ({ children, themeToggler, themeMode }: Props): JSX.Element => {
           pages: [
             {
               title: 'Newsroom',
-              href: '/blog-newsroom',
+              href: '/materials/blog-newsroom',
             },
             {
               title: 'Reach View',
-              href: '/blog-reach-view',
+              href: '/materials/blog-reach-view',
             },
             {
               title: 'Search',
-              href: '/blog-search',
+              href: '/materials/blog-search',
             },
             {
               title: 'Article',
-              href: '/blog-article',
+              href: '/materials/blog-article',
             },
           ],
         },
@@ -216,19 +216,19 @@ const Main = ({ children, themeToggler, themeMode }: Props): JSX.Element => {
           pages: [
             {
               title: 'Basic',
-              href: '/portfolio-page',
+              href: '/materials/portfolio-page',
             },
             {
               title: 'Masonry',
-              href: '/portfolio-masonry',
+              href: '/materials/portfolio-masonry',
             },
             {
               title: 'Grid View',
-              href: '/portfolio-grid',
+              href: '/materials/portfolio-grid',
             },
             {
               title: 'Parallax Effect',
-              href: '/agency',
+              href: '/materials/agency',
             },
           ],
         },
@@ -243,19 +243,19 @@ const Main = ({ children, themeToggler, themeMode }: Props): JSX.Element => {
           pages: [
             {
               title: 'General',
-              href: '/account/?pid=general',
+              href: '/materials/account/?pid=general',
             },
             {
               title: 'Security',
-              href: '/account/?pid=security',
+              href: '/materials/account/?pid=security',
             },
             {
               title: 'Notifications',
-              href: '/account/?pid=notifications',
+              href: '/materials/account/?pid=notifications',
             },
             {
               title: 'Billing',
-              href: '/account/?pid=billing',
+              href: '/materials/account/?pid=billing',
             },
           ],
         },
@@ -264,11 +264,11 @@ const Main = ({ children, themeToggler, themeMode }: Props): JSX.Element => {
           pages: [
             {
               title: 'Simple',
-              href: '/signup-simple',
+              href: '/materials/signup-simple',
             },
             {
               title: 'Cover',
-              href: '/signup-cover',
+              href: '/materials/signup-cover',
             },
           ],
         },
@@ -277,11 +277,11 @@ const Main = ({ children, themeToggler, themeMode }: Props): JSX.Element => {
           pages: [
             {
               title: 'Simple',
-              href: '/signin-simple',
+              href: '/materials/signin-simple',
             },
             {
               title: 'Cover',
-              href: '/signin-cover',
+              href: '/materials/signin-cover',
             },
           ],
         },
@@ -290,11 +290,11 @@ const Main = ({ children, themeToggler, themeMode }: Props): JSX.Element => {
           pages: [
             {
               title: 'Simple',
-              href: '/password-reset-simple',
+              href: '/materials/password-reset-simple',
             },
             {
               title: 'Cover',
-              href: '/password-reset-cover',
+              href: '/materials/password-reset-cover',
             },
           ],
         },
@@ -303,11 +303,11 @@ const Main = ({ children, themeToggler, themeMode }: Props): JSX.Element => {
           pages: [
             {
               title: 'Simple',
-              href: '/not-found',
+              href: '/materials/not-found',
             },
             {
               title: 'Cover',
-              href: '/not-found-cover',
+              href: '/materials/not-found-cover',
             },
           ],
         },
@@ -333,7 +333,12 @@ const Main = ({ children, themeToggler, themeMode }: Props): JSX.Element => {
         [classes.root]: true,
       })}
     >
-      <Topbar onSidebarOpen={handleSidebarOpen} pages={pages} themeMode={themeMode} themeToggler={themeToggler} />
+      <Topbar
+        onSidebarOpen={handleSidebarOpen}
+        pages={pages}
+        themeMode={themeMode}
+        themeToggler={themeToggler}
+      />
       <Sidebar
         onClose={handleSidebarClose}
         open={open}
