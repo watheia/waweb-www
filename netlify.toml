@@ -1,0 +1,3 @@
+[build]
+publish = "apps/client/home/public"
+command = "./stackbit-build.sh"

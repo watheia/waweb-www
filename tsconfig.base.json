@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "assets/*": ["src/assets/*", "apps/client/home/src/assets/*"],
+      "components/*": ["src/components/*", "apps/client/home/src/components/*"],
+      "views/*": ["src/views/*", "apps/client/home/src/views/*"],
+      "layouts/*": ["src/layouts/*", "apps/client/home/src/layouts/*"],
+      "WithLayout": ["src/WithLayout", "apps/client/home/src/WithLayout"],
+      "theme": ["src/theme", "apps/client/home/src/theme"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

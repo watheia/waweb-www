@@ -1,0 +1,13 @@
+{
+  "name": "@www/client.home",
+  "private": true,
+  "description": "Watheia Labs Homepage",
+  "version": "0.0.1",
+  "license": "MIT",
+  "dependencies": {
+    "gatsby": "*"
+  },
+  "scripts": {
+    "build": "exit 0"
+  }
+}

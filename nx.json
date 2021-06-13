@@ -1,0 +1,37 @@
+{
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*",
+    ".stylelintrc.json": "*"
+  },
+  "affected": {
+    "defaultBase": "master"
+  },
+  "npmScope": "www",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e", "stylelint"],
+        "accessToken": "YTVlOGZkZjktNDk5MS00NGRkLTljYmMtODE0ZmIyOTY3ODA1fHJlYWQtd3JpdGU=",
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
+    }
+  },
+  "projects": {
+    "server-api": {
+      "tags": []
+    },
+    "client-home": {
+      "tags": []
+    },
+    "client-home-e2e": {
+      "tags": [],
+      "implicitDependencies": ["client-home"]
+    }
+  }
+}
