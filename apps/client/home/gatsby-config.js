@@ -1,9 +1,9 @@
 /** @format */
 
-const siteMetadata = require('./site-metadata.json');
+const siteMetadata = require("./site-metadata.json")
 
 module.exports = {
-  pathPrefix: '/',
+  pathPrefix: "/",
   siteMetadata: siteMetadata,
   flags: { PRESERVE_WEBPACK_CACHE: true },
   plugins: [
@@ -18,7 +18,7 @@ module.exports = {
         pageContextProperty: `menus`,
       },
     },
-    'gatsby-plugin-top-layout',
+    "gatsby-plugin-top-layout",
     // {
     //   resolve: "gatsby-plugin-material-ui",
     //   // If you want to use styled components you should change the injection order.
@@ -39,7 +39,7 @@ module.exports = {
     //   },
     // },
     {
-      resolve: 'gatsby-plugin-react-leaflet',
+      resolve: "gatsby-plugin-react-leaflet",
       options: {
         linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
       },
@@ -52,7 +52,7 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-svgr',
+      resolve: "gatsby-plugin-svgr",
       options: {
         svgo: false,
         ref: true,
@@ -127,4 +127,4 @@ module.exports = {
     //   },
     // },
   ],
-};
+}

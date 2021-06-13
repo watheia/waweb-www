@@ -1,1 +1,1 @@
-export { default } from './AboutMiddle';
+export { default } from "./AboutMiddle"

@@ -1,5 +1,5 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
 import {
   useMediaQuery,
   Grid,
@@ -8,16 +8,16 @@ import {
   Typography,
   Avatar,
   colors,
-} from '@material-ui/core';
-import { SectionHeader, IconAlternate } from 'components/molecules';
+} from "@material-ui/core"
+import { SectionHeader, IconAlternate } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   listItemAvatar: {
     minWidth: 28,
   },
   listItem: {
-    [theme.breakpoints.up('sm')]: {
-      justifyContent: 'center',
+    [theme.breakpoints.up("sm")]: {
+      justifyContent: "center",
     },
   },
   galleryMedia: {
@@ -25,29 +25,29 @@ const useStyles = makeStyles(theme => ({
     height: 80,
     marginLeft: theme.spacing(-2),
     border: `3px solid ${theme.palette.background.paper}`,
-    '&:first-child': {
+    "&:first-child": {
       marginLeft: 0,
     },
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up("sm")]: {
       width: 100,
       height: 100,
     },
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       width: 140,
       height: 140,
     },
   },
-}));
+}))
 
 const Contact = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const { items, team } = data;
+  const { items, team } = data
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -60,7 +60,7 @@ const Contact = ({ data, className, ...rest }: ViewComponentProps): JSX.Element 
                 <span>
                   Our friendly support team
                   <Typography color="secondary" variant="inherit" component="span">
-                    {' '}
+                    {" "}
                     will help you with anything.
                   </Typography>
                 </span>
@@ -111,7 +111,7 @@ const Contact = ({ data, className, ...rest }: ViewComponentProps): JSX.Element 
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

@@ -1,1 +1,1 @@
-export { default } from './QuickStart';
+export { default } from "./QuickStart"

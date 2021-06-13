@@ -1,36 +1,42 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Box, Typography } from '@material-ui/core';
+import React from "react"
+import { makeStyles } from "@material-ui/core/styles"
+import { Box, Typography } from "@material-ui/core"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   title: {
     fontWeight: 700,
     marginBottom: theme.spacing(1),
-    display: 'block',
+    display: "block",
   },
-}));
+}))
 
 interface Props {
   /**
    * External classes
    */
-  className?: string;
+  className?: string
   /**
    * The content
    */
-  children: JSX.Element;
+  children: JSX.Element
   /**
    * Show bottom margin
    */
-  gutterBottom: boolean;
+  gutterBottom: boolean
   /**
    * All other props
    */
-  [x:string]: any;
-};
+  [x: string]: any
+}
 
-const SectionBox = ({ title, children, gutterBottom, className, ...rest }: Props): JSX.Element => {
-  const classes = useStyles();
+const SectionBox = ({
+  title,
+  children,
+  gutterBottom,
+  className,
+  ...rest
+}: Props): JSX.Element => {
+  const classes = useStyles()
 
   return (
     <Box marginBottom={gutterBottom ? 4 : 0} className={className} {...rest}>
@@ -39,7 +45,7 @@ const SectionBox = ({ title, children, gutterBottom, className, ...rest }: Props
       </Typography>
       {children}
     </Box>
-  );
-};
+  )
+}
 
-export default SectionBox;
+export default SectionBox

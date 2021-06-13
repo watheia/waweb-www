@@ -1,36 +1,30 @@
 /** @format */
 
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import {
-  Typography,
-  IconButton,
-  Grid,
-  List,
-  ListItem,
-} from '@material-ui/core';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import PinterestIcon from '@material-ui/icons/Pinterest';
+import React from "react"
+import clsx from "clsx"
+import { makeStyles } from "@material-ui/core/styles"
+import { Typography, IconButton, Grid, List, ListItem } from "@material-ui/core"
+import FacebookIcon from "@material-ui/icons/Facebook"
+import TwitterIcon from "@material-ui/icons/Twitter"
+import InstagramIcon from "@material-ui/icons/Instagram"
+import PinterestIcon from "@material-ui/icons/Pinterest"
 
-import { Image } from 'components/atoms';
+import { Image } from "components/atoms"
 
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(6, 0),
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       padding: theme.spacing(12, 0),
     },
     background: theme.palette.background.footer,
   },
   footerContainer: {
     maxWidth: theme.layout.contentWidth,
-    width: '100%',
-    margin: '0 auto',
+    width: "100%",
+    margin: "0 auto",
     padding: theme.spacing(0, 2),
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up("sm")]: {
       padding: theme.spacing(0, 8),
     },
   },
@@ -42,22 +36,22 @@ const useStyles = makeStyles((theme) => ({
     height: 32,
   },
   logoImage: {
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
   },
   groupTitle: {
-    textTransform: 'uppercase',
+    textTransform: "uppercase",
     color: theme.palette.primary.dark,
     marginBottom: theme.spacing(1),
   },
   socialIcon: {
     padding: 0,
     marginRight: theme.spacing(1),
-    color: 'rgba(255,255,255,.6)',
-    '&:hover': {
-      background: 'transparent',
+    color: "rgba(255,255,255,.6)",
+    "&:hover": {
+      background: "transparent",
     },
-    '&:last-child': {
+    "&:last-child": {
       marginRight: 0,
     },
   },
@@ -65,47 +59,47 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 24,
   },
   menuListContainer: {
-    padding: '0 !important',
+    padding: "0 !important",
   },
   menu: {
-    display: 'flex',
+    display: "flex",
   },
   menuItem: {
     margin: theme.spacing(2),
-    '&:last-child': {
+    "&:last-child": {
       marginBottom: 0,
     },
   },
   menuGroupItem: {
     paddingTop: 0,
     paddingBottom: theme.spacing(1 / 2),
-    '&:last-child': {
+    "&:last-child": {
       paddingBottom: 0,
     },
   },
   menuGroupTitle: {
-    textTransform: 'uppercase',
-    color: 'white',
+    textTransform: "uppercase",
+    color: "white",
   },
   divider: {
-    width: '100%',
+    width: "100%",
   },
   navLink: {
-    color: 'rgba(255,255,255,.6)',
+    color: "rgba(255,255,255,.6)",
   },
-}));
+}))
 
 interface Props {
-  className?: string;
-  pages: PagesProps;
+  className?: string
+  pages: PagesProps
 }
 
 const Footer = ({ pages, className, ...rest }: Props): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const landings = pages.landings;
-  const supportedPages = pages.pages;
-  const account = pages.account;
+  const landings = pages.landings
+  const supportedPages = pages.pages
+  const account = pages.account
 
   const MenuGroup = ({ item }: MenuGroupProps): JSX.Element => (
     <List disablePadding className={classes.menuItem}>
@@ -118,19 +112,19 @@ const Footer = ({ pages, className, ...rest }: Props): JSX.Element => {
         <ListItem disableGutters key={i} className={classes.menuGroupItem}>
           <Typography
             variant="body2"
-            component={'a'}
+            component={"a"}
             href={page.href}
-            className={clsx(classes.navLink, 'submenu-item')}
+            className={clsx(classes.navLink, "submenu-item")}
           >
             {page.title}
           </Typography>
         </ListItem>
       ))}
     </List>
-  );
+  )
 
   const LandingPages = (): JSX.Element => {
-    const { services, apps, web } = landings.children;
+    const { services, apps, web } = landings.children
     return (
       <div className={classes.menu}>
         <div>
@@ -141,12 +135,12 @@ const Footer = ({ pages, className, ...rest }: Props): JSX.Element => {
           <MenuGroup item={web} />
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const SupportedPages = (): JSX.Element => {
     const { career, helpCenter, company, contact, blog, portfolio } =
-      supportedPages.children;
+      supportedPages.children
     return (
       <div className={classes.menu}>
         <div>
@@ -162,11 +156,11 @@ const Footer = ({ pages, className, ...rest }: Props): JSX.Element => {
           <MenuGroup item={portfolio} />
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const AccountPages = (): JSX.Element => {
-    const { settings, signup, signin, password, error } = account.children;
+    const { settings, signup, signin, password, error } = account.children
     return (
       <div className={classes.menu}>
         <div>
@@ -179,8 +173,8 @@ const Footer = ({ pages, className, ...rest }: Props): JSX.Element => {
           <MenuGroup item={error} />
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   return (
     <div {...rest} className={clsx(classes.root, className)}>
@@ -231,11 +225,9 @@ const Footer = ({ pages, className, ...rest }: Props): JSX.Element => {
           </Grid>
         </Grid>
       </div>
-      <div className="copyright">
-        &copy; Watheia Labs, LLC. All rights reserved.
-      </div>
+      <div className="copyright">&copy; Watheia Labs, LLC. All rights reserved.</div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

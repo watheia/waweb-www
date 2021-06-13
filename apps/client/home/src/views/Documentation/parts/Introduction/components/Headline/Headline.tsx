@@ -1,15 +1,15 @@
-import React from 'react';
-import { makeStyles, Button } from '@material-ui/core';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { makeStyles, Button } from "@material-ui/core"
+import { SectionHeader } from "components/molecules"
 
 const useStyles = makeStyles(() => ({
   fontWeightBold: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
-}));
+}))
 
 const Headline = ({ className, ...rest }: any): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <div className={className} {...rest}>
@@ -19,21 +19,21 @@ const Headline = ({ className, ...rest }: any): JSX.Element => {
         align="left"
         titleProps={{
           className: classes.fontWeightBold,
-          color: 'textPrimary',
+          color: "textPrimary",
         }}
         subtitleProps={{
-          color: 'textPrimary',
-          variant: 'body1',
+          color: "textPrimary",
+          variant: "body1",
         }}
         ctaGroup={[
           <Button variant="outlined" component="a" href="/">
             Launch a live demo
-          </Button>
+          </Button>,
         ]}
         disableGutter
       />
     </div>
-  );
-};
+  )
+}
 
-export default Headline;
+export default Headline

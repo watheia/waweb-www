@@ -1,1 +1,1 @@
-export { default } from './CompanyTerms';
+export { default } from "./CompanyTerms"

@@ -1,28 +1,28 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Grid, useMediaQuery, Typography } from '@material-ui/core';
-import { SectionHeader, CountUpNumber } from 'components/molecules';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { Grid, useMediaQuery, Typography } from "@material-ui/core"
+import { SectionHeader, CountUpNumber } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   placementGrid: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    [theme.breakpoints.up('md')]: {
-      justifyContent: 'center',
+    display: "flex",
+    justifyContent: "flex-start",
+    [theme.breakpoints.up("md")]: {
+      justifyContent: "center",
     },
   },
   placementGridItemMiddle: {
     margin: `0 ${theme.spacing(3)}px`,
   },
-}));
+}))
 
 const Locations = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -32,24 +32,22 @@ const Locations = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
             label="locations"
             title={
               <span>
-                <Typography color="secondary" variant="inherit" component="span">Over 400 locations </Typography>
+                <Typography color="secondary" variant="inherit" component="span">
+                  Over 400 locations{" "}
+                </Typography>
                 spread across the entire planet.
               </span>
             }
             subtitle="We picked our office locations to maximize our availability to you! We try to keep locations in every major city, as well as common vacatino destinations in case you need to sneak work in on the side."
             fadeUp
             disableGutter
-            align={isMd ? 'center' : 'left'}
+            align={isMd ? "center" : "left"}
           />
         </Grid>
         <Grid item xs={12}>
           <div className={classes.placementGrid}>
             <div>
-              <CountUpNumber
-                end={125}
-                label="Countries"
-                textColor="secondary"
-              />
+              <CountUpNumber end={125} label="Countries" textColor="secondary" />
             </div>
             <div className={classes.placementGridItemMiddle}>
               <CountUpNumber end={312} label="Cities" textColor="secondary" />
@@ -61,7 +59,7 @@ const Locations = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Locations;
+export default Locations

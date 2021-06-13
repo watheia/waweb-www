@@ -1,1 +1,1 @@
-export { default } from './VerticalTransparent';
+export { default } from "./VerticalTransparent"

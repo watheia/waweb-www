@@ -1,5 +1,5 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
 import {
   useMediaQuery,
   Grid,
@@ -7,27 +7,27 @@ import {
   ListItemAvatar,
   Typography,
   Avatar,
-} from '@material-ui/core';
-import { Image } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+} from "@material-ui/core"
+import { Image } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
 const useStyles = makeStyles(() => ({
   checkBox: {
-    background: 'transparent',
+    background: "transparent",
     borderRadius: 0,
   },
   listItemAvatar: {
-    alignSelf: 'flex-start',
+    alignSelf: "flex-start",
   },
-}));
+}))
 
 const MobileApp = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -36,12 +36,7 @@ const MobileApp = ({ data, className, ...rest }: ViewComponentProps): JSX.Elemen
           <Image src="https://assets.maccarianagency.com/the-front/illustrations/dashboard-extended.svg" />
         </Grid>
         <Grid item xs={12} md={6} data-aos="fade-up">
-          <Grid
-            container
-            alignItems="flex-start"
-            justify="center"
-            direction="column"
-          >
+          <Grid container alignItems="flex-start" justify="center" direction="column">
             <SectionHeader
               label="COMPLETE CONTROL"
               title="Monitor and analyze usage patterns."
@@ -70,7 +65,7 @@ const MobileApp = ({ data, className, ...rest }: ViewComponentProps): JSX.Elemen
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default MobileApp;
+export default MobileApp

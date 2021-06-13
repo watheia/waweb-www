@@ -1,7 +1,7 @@
-import React from 'react';
-import clsx from 'clsx';
-import { useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid, Typography } from '@material-ui/core';
+import React from "react"
+import clsx from "clsx"
+import { useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, Grid, Typography } from "@material-ui/core"
 
 /**
  * Component to display the description with CTA's
@@ -13,7 +13,7 @@ const DescriptionCta = ({
   subtitle,
   primaryCta,
   secondaryCta,
-  align = 'center',
+  align = "center",
   className,
   wrapperProps = {},
   titleProps = {},
@@ -23,16 +23,23 @@ const DescriptionCta = ({
   secondaryButtonWrapperProps = {},
   ...rest
 }: DescriptionCtaProps): JSX.Element => {
-  const theme = useTheme();
-  const isSm = useMediaQuery(theme.breakpoints.up('sm'), {
+  const theme = useTheme()
+  const isSm = useMediaQuery(theme.breakpoints.up("sm"), {
     defaultMatches: true,
-  });
+  })
 
-  let justifyGrid: ('center' | 'flex-start' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly' | undefined) = 'center';
-  if (align === 'left') {
-    justifyGrid = isSm ? 'flex-end' : 'flex-start';
-  } else if (align === 'right') {
-    justifyGrid = isSm ? 'flex-start' : 'flex-end';
+  let justifyGrid:
+    | "center"
+    | "flex-start"
+    | "flex-end"
+    | "space-between"
+    | "space-around"
+    | "space-evenly"
+    | undefined = "center"
+  if (align === "left") {
+    justifyGrid = isSm ? "flex-end" : "flex-start"
+  } else if (align === "right") {
+    justifyGrid = isSm ? "flex-start" : "flex-end"
   }
 
   return (
@@ -41,7 +48,7 @@ const DescriptionCta = ({
       spacing={2}
       justify="space-between"
       alignItems="center"
-      className={clsx('description-cta', className)}
+      className={clsx("description-cta", className)}
       {...rest}
     >
       <Grid item className="description-cta__wrapper" {...wrapperProps}>
@@ -69,7 +76,7 @@ const DescriptionCta = ({
       <Grid item>
         <Grid
           container
-          justify={justifyGrid || 'center'}
+          justify={justifyGrid || "center"}
           spacing={1}
           className="description-cta__button-group"
           {...buttonGroupProps}
@@ -84,7 +91,7 @@ const DescriptionCta = ({
           {secondaryCta && (
             <Grid
               item
-              className={clsx('description-cta__secondary-button-wrapper')}
+              className={clsx("description-cta__secondary-button-wrapper")}
               {...secondaryButtonWrapperProps}
             >
               {secondaryCta}
@@ -93,7 +100,7 @@ const DescriptionCta = ({
         </Grid>
       </Grid>
     </Grid>
-  );
-};
+  )
+}
 
-export default DescriptionCta;
+export default DescriptionCta

@@ -1,35 +1,34 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid } from '@material-ui/core';
-import { LearnMoreLink } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, Grid } from "@material-ui/core"
+import { LearnMoreLink } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   readMoreLink: {
     marginTop: theme.spacing(1),
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       marginTop: theme.spacing(2),
     },
   },
   grid: {
     borderRadius: theme.spacing(1),
-    transition:
-      'box-shadow .25s ease,transform .25s ease,-webkit-transform .25s ease',
-    '&:hover': {
+    transition: "box-shadow .25s ease,transform .25s ease,-webkit-transform .25s ease",
+    "&:hover": {
       boxShadow:
-        '0 1.5rem 2.5rem rgba(22,28,45,.1),0 .3rem 0.5rem -.50rem rgba(22,28,45,.05) !important',
-      transform: 'translate3d(0,-5px,0)',
+        "0 1.5rem 2.5rem rgba(22,28,45,.1),0 .3rem 0.5rem -.50rem rgba(22,28,45,.05) !important",
+      transform: "translate3d(0,-5px,0)",
     },
   },
-}));
+}))
 
 const Advantages = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -64,7 +63,7 @@ const Advantages = ({ data, className, ...rest }: ViewComponentProps): JSX.Eleme
         ))}
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Advantages;
+export default Advantages

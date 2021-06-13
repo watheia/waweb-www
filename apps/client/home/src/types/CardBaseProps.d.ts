@@ -2,39 +2,39 @@ interface CardBaseProps {
   /**
    * External classes
    */
-  className?: string;
+  className?: string
   /**
    * The children content of the basic card
    */
-  children: JSX.Element;
+  children: JSX.Element
   /**
    * Whether to show custom shadow
    */
-  withShadow?: boolean;
+  withShadow?: boolean
   /**
    * Whether to render the card without shadow
    */
-  noShadow?: boolean;
+  noShadow?: boolean
   /**
    * Whether to hide the card borders
    */
-  noBorder?: boolean;
+  noBorder?: boolean
   /**
    * Whether to show transparent background
    */
-  noBg?: boolean;
+  noBg?: boolean
   /**
    * Whether to lift up on hover
    */
-  liftUp?: boolean;
+  liftUp?: boolean
   /**
    * The content alignment
    */
-  align?: 'left' | 'right' | 'center';
+  align?: "left" | "right" | "center"
   /**
    * Additional props to pass to the CardContent component
    */
-  cardContentProps?: object;
+  cardContentProps?: object
   // All other props
-  [x:string]: any;
+  [x: string]: any
 }

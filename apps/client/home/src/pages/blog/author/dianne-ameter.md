@@ -8,42 +8,42 @@ seo:
   extra:
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:type'
+      name: "og:type"
       keyName: property
       value: website
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:title'
+      name: "og:title"
       keyName: property
       value: Posts by Dianne Ameter
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:description'
+      name: "og:description"
       keyName: property
       value: This is the author archive page
     - relativeUrl: true
       type: stackbit_page_meta_extra
-      name: 'og:image'
+      name: "og:image"
       keyName: property
       value: images/1.png
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:card'
+      name: "twitter:card"
       keyName: name
       value: summary_large_image
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:title'
+      name: "twitter:title"
       keyName: name
       value: Posts by Dianne Ameter
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:description'
+      name: "twitter:description"
       keyName: name
       value: This is the author archive page
     - relativeUrl: true
       type: stackbit_page_meta_extra
-      name: 'twitter:image'
+      name: "twitter:image"
       keyName: name
       value: images/1.png
   title: Posts by Dianne Ameter
@@ -61,7 +61,7 @@ sections:
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl
         ligula, cursus id molestie vel, maximus aliquet risus.
       last_name: Ameter
-      photo: 'https://www.datocms-assets.com/49645/1623441765-dianne-ameter.jpg'
+      photo: "https://www.datocms-assets.com/49645/1623441765-dianne-ameter.jpg"
       photo_alt: Dianne Ameter
       first_name: Dianne
       link: blog/author/dianne-ameter

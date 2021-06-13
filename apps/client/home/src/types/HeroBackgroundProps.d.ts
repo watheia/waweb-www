@@ -2,31 +2,31 @@ interface HeroBackgroundProps {
   /**
    * External classes
    */
-  className?: string;
+  className?: string
   /**
    * Children to placed inside the hero
    */
-  children?: JSX.Element;
+  children?: JSX.Element
   /**
    * Background image of the hero
    */
-  backgroundImg?: string;
+  backgroundImg?: string
   /**
    * Background color of the hero
    */
-  backgroundColor?: string;
+  backgroundColor?: string
   /**
    * Background position of the hero
    */
-  backgroundPosition?: string;
+  backgroundPosition?: string
   /**
    * Custom classes for the content section
    */
-  contentSectionClassName?: string;
+  contentSectionClassName?: string
   /**
    * Should disable here cover opacity
    */
-  disbaleCoverOpacity?: boolean;
+  disbaleCoverOpacity?: boolean
   // All other props
-  [x:string]: any;
+  [x: string]: any
 }

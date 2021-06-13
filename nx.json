@@ -32,6 +32,9 @@
     "client-home-e2e": {
       "tags": [],
       "implicitDependencies": ["client-home"]
+    },
+    "utils": {
+      "tags": []
     }
   }
 }

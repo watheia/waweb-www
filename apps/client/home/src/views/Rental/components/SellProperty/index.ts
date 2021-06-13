@@ -1,1 +1,1 @@
-export { default } from './SellProperty';
+export { default } from "./SellProperty"

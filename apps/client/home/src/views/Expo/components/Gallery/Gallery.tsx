@@ -1,22 +1,22 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, GridList, GridListTile } from '@material-ui/core';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, GridList, GridListTile } from "@material-ui/core"
 
-import { Image } from 'components/atoms';
+import { Image } from "components/atoms"
 
 const useStyles = makeStyles(() => ({
   image: {
-    objectFit: 'cover',
+    objectFit: "cover",
   },
-}));
+}))
 
 const Gallery = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -26,14 +26,14 @@ const Gallery = ({ data, className, ...rest }: ViewComponentProps): JSX.Element 
             <Image
               {...item.image}
               alt={item.title}
-              lazyProps={{ width: '100%', height: '100%' }}
+              lazyProps={{ width: "100%", height: "100%" }}
               className={classes.image}
             />
           </GridListTile>
         ))}
       </GridList>
     </div>
-  );
-};
+  )
+}
 
-export default Gallery;
+export default Gallery

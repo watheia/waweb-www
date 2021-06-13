@@ -1,1 +1,1 @@
-export { default } from './Adidas';
+export { default } from "./Adidas"

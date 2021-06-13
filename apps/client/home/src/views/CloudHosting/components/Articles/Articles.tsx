@@ -1,23 +1,17 @@
-import React from 'react';
-import clsx from 'clsx';
-import Swiper from 'swiper';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import {
-  useMediaQuery,
-  Card,
-  CardMedia,
-  CardContent,
-  Typography,
-} from '@material-ui/core';
-import { Image } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import clsx from "clsx"
+import Swiper from "swiper"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, Card, CardMedia, CardContent, Typography } from "@material-ui/core"
+import { Image } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   articleDate: {
     margin: theme.spacing(2, 0),
   },
   card: {
-    boxShadow: 'none',
+    boxShadow: "none",
     border: 0,
     maxWidth: 300,
   },
@@ -25,50 +19,40 @@ const useStyles = makeStyles(theme => ({
     height: 185,
   },
   swiperSlide: {
-    width: 'auto',
+    width: "auto",
   },
-}));
+}))
 
 const Articles = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   React.useEffect(() => {
-    new Swiper('.article-swiper.swiper-container', {
-      slidesPerView: 'auto',
+    new Swiper(".article-swiper.swiper-container", {
+      slidesPerView: "auto",
       spaceBetween: isMd ? 30 : 12,
       pagination: {
-        el: '.article-swiper.swiper-container .swiper-pagination',
-        type: 'bullets',
+        el: ".article-swiper.swiper-container .swiper-pagination",
+        type: "bullets",
         clickable: true,
       },
-    });
-  });
+    })
+  })
 
   return (
     <div className={className} {...rest}>
-      <SectionHeader
-        label="Read our articles"
-        title="Marketing strategies"
-        align="left"
-      />
+      <SectionHeader label="Read our articles" title="Marketing strategies" align="left" />
       <div className="article-swiper swiper-container">
         <div className="swiper-wrapper">
           {data.map((item: any, index: number) => (
-            <div
-              className={clsx('swiper-slide', classes.swiperSlide)}
-              key={index}
-            >
+            <div className={clsx("swiper-slide", classes.swiperSlide)} key={index}>
               <Card className={classes.card}>
                 <CardMedia className={classes.cardMedia}>
-                  <Image
-                    {...item.cover}
-                    lazyProps={{ width: '100%', height: '100%' }}
-                  />
+                  <Image {...item.cover} lazyProps={{ width: "100%", height: "100%" }} />
                 </CardMedia>
                 <CardContent>
                   <Typography
@@ -91,7 +75,7 @@ const Articles = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
         <div className="swiper-pagination" />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Articles;
+export default Articles

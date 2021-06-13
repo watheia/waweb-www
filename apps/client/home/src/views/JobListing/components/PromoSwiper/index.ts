@@ -1,1 +1,1 @@
-export { default } from './PromoSwiper';
+export { default } from "./PromoSwiper"

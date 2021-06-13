@@ -1,10 +1,10 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid, Button, Avatar } from '@material-ui/core';
-import { LearnMoreLink } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, Grid, Button, Avatar } from "@material-ui/core"
+import { LearnMoreLink } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   webinarAvatar: {
     width: 200,
     height: 200,
@@ -13,34 +13,28 @@ const useStyles = makeStyles(theme => ({
     borderRadius: theme.spacing(2),
   },
   listGrid: {
-    overflow: 'hidden',
+    overflow: "hidden",
     marginBottom: theme.spacing(3),
-    '&:last-child': {
+    "&:last-child": {
       marginBottom: theme.spacing(0),
     },
   },
-}));
+}))
 
 const Speakers = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
       <SectionHeader
         title="Meet Our Speakers"
         subtitle="Book a place to participate to the upcoming webinars organised by our top management team."
-        ctaGroup={[
-          <LearnMoreLink
-            title="See all speakers"
-            variant="h6"
-            color="primary"
-          />,
-        ]}
+        ctaGroup={[<LearnMoreLink title="See all speakers" variant="h6" color="primary" />]}
         fadeUp
       />
       <Grid container justify="center">
@@ -49,7 +43,7 @@ const Speakers = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
             key={index}
             item
             container
-            data-aos={'fade-up'}
+            data-aos={"fade-up"}
             justify="space-between"
             spacing={isMd ? 4 : 2}
             className={classes.listGrid}
@@ -65,7 +59,7 @@ const Speakers = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
                   <Button
                     variant="contained"
                     color="primary"
-                    size={isMd ? 'large' : 'medium'}
+                    size={isMd ? "large" : "medium"}
                     fullWidth
                   >
                     Book now
@@ -73,13 +67,13 @@ const Speakers = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
                   <Button
                     variant="outlined"
                     color="primary"
-                    size={isMd ? 'large' : 'medium'}
+                    size={isMd ? "large" : "medium"}
                     fullWidth
                   >
                     Learn More
                   </Button>,
                 ]}
-                align={isMd ? 'left' : 'center'}
+                align={isMd ? "left" : "center"}
                 disableGutter
               />
             </Grid>
@@ -89,7 +83,7 @@ const Speakers = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
               xs={12}
               sm={12}
               md={4}
-              justify={isMd ? 'flex-end' : 'center'}
+              justify={isMd ? "flex-end" : "center"}
               alignItems="center"
             >
               <Avatar
@@ -102,7 +96,7 @@ const Speakers = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
         ))}
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Speakers;
+export default Speakers

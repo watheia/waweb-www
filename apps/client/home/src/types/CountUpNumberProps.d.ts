@@ -2,55 +2,71 @@ interface CountUpNumberProps {
   /**
    * External classes
    */
-  className?: string;
+  className?: string
   /**
    * The Suffix of the count up number
    */
-  suffix?: string;
+  suffix?: string
   /**
    * The Prefix of the count up number
    */
-  prefix?: string;
+  prefix?: string
   /**
    * The label text of the count up number
    */
-  label: string;
+  label: string
   /**
    * Starting number
    */
-  start?: number;
+  start?: number
   /**
    * End number
    */
-  end: number;
+  end: number
   /**
    * Text color
    */
-  textColor?: 'inherit' | 'initial' | 'textPrimary' | 'primary' | 'secondary' | 'textSecondary' | 'error' | undefined;
+  textColor?:
+    | "inherit"
+    | "initial"
+    | "textPrimary"
+    | "primary"
+    | "secondary"
+    | "textSecondary"
+    | "error"
+    | undefined
   /**
    * Label color
    */
-  labelColor?: 'inherit' | 'initial' | 'textPrimary' | 'primary' | 'secondary' | 'textSecondary' | 'error' | undefined;
+  labelColor?:
+    | "inherit"
+    | "initial"
+    | "textPrimary"
+    | "primary"
+    | "secondary"
+    | "textSecondary"
+    | "error"
+    | undefined
   /**
    * Additional properties to pass to the VisibilitySensor Component
    */
-  visibilitySensorProps?: object;
+  visibilitySensorProps?: object
   /**
    * Additional properties to pass to the wrapper div
    */
-  wrapperProps?: object;
+  wrapperProps?: object
   /**
    * Additional properties to pass to the count wrapper Typography component
    */
-  countWrapperProps?: object;
+  countWrapperProps?: object
   /**
    * Additional properties to pass to the CountUp React component
    */
-  countNumberProps?: object;
+  countNumberProps?: object
   /**
    * Additional properties to pass to the label Typography component
    */
-  labelProps?: object;
+  labelProps?: object
   // All other props
-  [x:string]: any;
+  [x: string]: any
 }

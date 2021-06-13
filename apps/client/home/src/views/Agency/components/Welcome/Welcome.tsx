@@ -1,10 +1,10 @@
-import React from 'react';
-import clsx from 'clsx';
-import { Button } from '@material-ui/core';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import clsx from "clsx"
+import { Button } from "@material-ui/core"
+import { SectionHeader } from "components/molecules"
 
 const Welcome = ({ className, ...rest }: ViewComponentProps): JSX.Element => (
-  <div className={clsx('jarallax', className)} {...rest}>
+  <div className={clsx("jarallax", className)} {...rest}>
     <SectionHeader
       title="We craft beautiful websites and digital products."
       titleVariant="h2"
@@ -18,6 +18,6 @@ const Welcome = ({ className, ...rest }: ViewComponentProps): JSX.Element => (
       data-aos="fade-up"
     />
   </div>
-);
+)
 
-export default Welcome;
+export default Welcome

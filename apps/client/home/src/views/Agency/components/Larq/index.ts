@@ -1,1 +1,1 @@
-export { default } from './Larq';
+export { default } from "./Larq"

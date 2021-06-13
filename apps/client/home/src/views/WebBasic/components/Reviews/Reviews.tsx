@@ -1,5 +1,5 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
 import {
   useMediaQuery,
   colors,
@@ -9,46 +9,46 @@ import {
   ListItemAvatar,
   ListItemText,
   Avatar,
-} from '@material-ui/core';
-import { SectionHeader } from 'components/molecules';
+} from "@material-ui/core"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   gridItem: {
     border: 0,
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up("sm")]: {
       borderRight: `1px solid ${colors.blueGrey[100]}`,
-      '&:nth-child(2n)': {
+      "&:nth-child(2n)": {
         borderRight: 0,
       },
-      '&:nth-child(-n+4)': {
+      "&:nth-child(-n+4)": {
         borderBottom: `1px solid ${colors.blueGrey[100]}`,
       },
     },
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       borderRight: `1px solid ${colors.blueGrey[100]}`,
-      '&:nth-child(2n)': {
+      "&:nth-child(2n)": {
         borderRight: `1px solid ${colors.blueGrey[100]}`,
       },
-      '&:nth-child(-n+4)': {
+      "&:nth-child(-n+4)": {
         borderBottom: 0,
       },
-      '&:nth-child(3n)': {
+      "&:nth-child(3n)": {
         borderRight: 0,
       },
-      '&:nth-child(-n+3)': {
+      "&:nth-child(-n+3)": {
         borderBottom: `1px solid ${colors.blueGrey[100]}`,
       },
     },
   },
-}));
+}))
 
 const Reviews = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -79,10 +79,10 @@ const Reviews = ({ data, className, ...rest }: ViewComponentProps): JSX.Element 
                     primary={item.authorName}
                     secondary={item.authorOccupation}
                     primaryTypographyProps={{
-                      variant: 'h6',
+                      variant: "h6",
                     }}
                     secondaryTypographyProps={{
-                      variant: 'body1',
+                      variant: "body1",
                       noWrap: true,
                     }}
                   />
@@ -96,7 +96,7 @@ const Reviews = ({ data, className, ...rest }: ViewComponentProps): JSX.Element 
         ))}
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Reviews;
+export default Reviews

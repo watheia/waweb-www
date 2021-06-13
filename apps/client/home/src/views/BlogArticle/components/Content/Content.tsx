@@ -1,21 +1,27 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Typography, GridList, GridListTile, IconButton } from '@material-ui/core';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import PinterestIcon from '@material-ui/icons/Pinterest';
-import { Image } from 'components/atoms';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import {
+  useMediaQuery,
+  Typography,
+  GridList,
+  GridListTile,
+  IconButton,
+} from "@material-ui/core"
+import FacebookIcon from "@material-ui/icons/Facebook"
+import TwitterIcon from "@material-ui/icons/Twitter"
+import InstagramIcon from "@material-ui/icons/Instagram"
+import PinterestIcon from "@material-ui/icons/Pinterest"
+import { Image } from "components/atoms"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   section: {
     marginBottom: theme.spacing(2),
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       marginBottom: theme.spacing(4),
     },
   },
   image: {
-    objectFit: 'cover',
+    objectFit: "cover",
     borderRadius: theme.spacing(1),
   },
   socialIcon: {
@@ -23,19 +29,19 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(2),
     color: theme.palette.text.primary,
     background: theme.palette.alternate.main,
-    '&:last-child': {
+    "&:last-child": {
       marginRight: 0,
     },
   },
-}));
+}))
 
 const Content = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -48,7 +54,7 @@ const Content = ({ data, className, ...rest }: ViewComponentProps): JSX.Element 
         <Image
           {...data.cover}
           className={classes.image}
-          lazyProps={{ width: '100%', height: '100%' }}
+          lazyProps={{ width: "100%", height: "100%" }}
         />
       </div>
       <div className={classes.section}>
@@ -62,17 +68,13 @@ const Content = ({ data, className, ...rest }: ViewComponentProps): JSX.Element 
         </Typography>
       </div>
       <div className={classes.section}>
-        <GridList
-          cellHeight={isMd ? 360 : 260}
-          cols={2}
-          spacing={isMd ? 24 : 8}
-        >
+        <GridList cellHeight={isMd ? 360 : 260} cols={2} spacing={isMd ? 24 : 8}>
           {data.images.map((item: any, index: number) => (
             <GridListTile key={index} cols={isMd ? item.cols : 2}>
               <Image
                 {...item}
                 className={classes.image}
-                lazyProps={{ width: '100%', height: '100%' }}
+                lazyProps={{ width: "100%", height: "100%" }}
               />
             </GridListTile>
           ))}
@@ -98,7 +100,7 @@ const Content = ({ data, className, ...rest }: ViewComponentProps): JSX.Element 
         </IconButton>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Content;
+export default Content

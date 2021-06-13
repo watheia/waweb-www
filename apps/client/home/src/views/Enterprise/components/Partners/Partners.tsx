@@ -1,8 +1,8 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Typography } from '@material-ui/core';
+import React from "react"
+import { makeStyles } from "@material-ui/core/styles"
+import { Grid, Typography } from "@material-ui/core"
 
-import { Image } from 'components/atoms';
+import { Image } from "components/atoms"
 
 const useStyles = makeStyles(() => ({
   fontWeight700: {
@@ -11,10 +11,10 @@ const useStyles = makeStyles(() => ({
   image: {
     maxWidth: 100,
   },
-}));
+}))
 
 const Partners = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <div className={className} {...rest}>
@@ -45,7 +45,7 @@ const Partners = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Partners;
+export default Partners

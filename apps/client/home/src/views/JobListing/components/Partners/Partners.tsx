@@ -1,16 +1,16 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid } from '@material-ui/core';
-import { Image } from 'components/atoms';
+import React from "react"
+import { makeStyles } from "@material-ui/core/styles"
+import { Grid } from "@material-ui/core"
+import { Image } from "components/atoms"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   promoLogo: {
     maxWidth: 120,
   },
-}));
+}))
 
 const Partners = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <div className={className} {...rest}>
@@ -27,7 +27,7 @@ const Partners = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
         ))}
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Partners;
+export default Partners

@@ -2,51 +2,51 @@ interface CardPricingStandardProps {
   /**
    *  External classes
    */
-  className?: string;
+  className?: string
   /**
    * Title of the pricing card
    */
-  title: string;
+  title: string
   /**
    *  Subtitle of the pricing card
    */
-  subtitle?: string;
+  subtitle?: string
   /**
    * The pricing component of the pricing card
    */
-  priceComponent: JSX.Element;
+  priceComponent: JSX.Element
   /**
    * The features check component of the pricing card
    */
-  featureCheckComponent?: JSX.Element;
+  featureCheckComponent?: JSX.Element
   /**
    * Features array of the pricing card
    */
-  features?: Array<any>;
+  features?: Array<any>
   /**
    *  CTA button of the pricing card
    */
-  cta: JSX.Element;
+  cta: JSX.Element
   /**
    * Diclaimer of the pricing card
    */
-  disclaimer?: string;
+  disclaimer?: string
   /**
    * Additional props to pass to the title Typography component
    */
-  titleProps?: object;
+  titleProps?: object
   /**
    * Additional props to pass to the subtitle Typography component
    */
-  subtitleProps?: object;
+  subtitleProps?: object
   /**
    * Additional props to pass to the disclaimer Typography component
    */
-  disclaimerProps?: object;
+  disclaimerProps?: object
   /**
    * Additional props to pass to the feature title Typography component
    */
-  featureTitleProps?: object;
+  featureTitleProps?: object
   // All other props
-  [x:string]: any;
+  [x: string]: any
 }

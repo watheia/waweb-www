@@ -22,7 +22,7 @@
       "content/*": ["src/content/*", "apps/client/home/src/content/*"],
       "WithLayout": ["src/WithLayout", "apps/client/home/src/WithLayout"],
       "theme": ["src/theme", "apps/client/home/src/theme"],
-      "utils": ["src/utils", "apps/client/home/src/utils"]
+      "@waweb/utils": ["libs/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

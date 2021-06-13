@@ -2,35 +2,43 @@ interface LearnMoreLinkProps {
   /**
    * External classes
    */
-  className?: string;
+  className?: string
   /**
    * The component to load as a main DOM
    */
-  component?: 'Link' | 'a';
+  component?: "Link" | "a"
   /**
    * Title of the link
    */
-  title: string;
+  title: string
   /**
    * Variant of the link
    */
-  variant?: 'h6' | 'subtitle1' | 'subtitle2' | 'body1' | 'body2';
+  variant?: "h6" | "subtitle1" | "subtitle2" | "body1" | "body2"
   /**
    * Href of the link
    */
-  href?: string;
+  href?: string
   /**
    * Color of the link
    */
-  color?: 'inherit' | 'initial' | 'primary' | 'secondary' | 'textPrimary' | 'textSecondary' | 'error' | undefined;
+  color?:
+    | "inherit"
+    | "initial"
+    | "primary"
+    | "secondary"
+    | "textPrimary"
+    | "textSecondary"
+    | "error"
+    | undefined
   /**
    * Additional properties to pass to the Icon component
    */
-  iconProps?: object;
+  iconProps?: object
   /**
    * Additional properties to pass to the Typography component
    */
-  typographyProps?: object;
+  typographyProps?: object
   // All other props
-  [x:string]: any;
+  [x: string]: any
 }

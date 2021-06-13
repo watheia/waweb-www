@@ -1,1 +1,1 @@
-export { default } from './BlogNewsroom';
+export { default } from "./BlogNewsroom"

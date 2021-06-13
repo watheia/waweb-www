@@ -2,27 +2,27 @@ interface CardJobMinimalProps {
   /**
    * External classes
    */
-  className?: string;
+  className?: string
   /**
    * Job title of the card
    */
-  title: string;
+  title: string
   /**
    * Job subtitle of the card
    */
-  subtitle: string;
+  subtitle: string
   /**
    * Should show arrow or not
    */
-  showArrow?: boolean;
+  showArrow?: boolean
   /**
    * Additional props to pass to the title Typography component
    */
-  titleProps?: object;
+  titleProps?: object
   /**
    * Additional props to pass to the subtitle Typography component
    */
-  subtitleProps?: object;
+  subtitleProps?: object
   // All other props
-  [x:string]: any;
+  [x: string]: any
 }

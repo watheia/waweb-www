@@ -1,55 +1,48 @@
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import {
-  Grid,
-  Button,
-  Card,
-  CardMedia,
-  CardContent,
-  Typography,
-} from '@material-ui/core';
-import { Image } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import clsx from "clsx"
+import { makeStyles } from "@material-ui/core/styles"
+import { Grid, Button, Card, CardMedia, CardContent, Typography } from "@material-ui/core"
+import { Image } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   card: {
     borderRadius: theme.spacing(2),
   },
   cardMedia: {
     height: 290,
     padding: theme.spacing(3, 3, 0, 3),
-    position: 'relative',
+    position: "relative",
   },
   cardContent: {
     padding: theme.spacing(3),
   },
   image: {
-    objectFit: 'contain',
+    objectFit: "contain",
   },
   fontWeightBold: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   priceCta: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
     margin: theme.spacing(1, 0),
   },
   gridItem: {
-    '& .latest-products__card-media': {
+    "& .latest-products__card-media": {
       background: theme.palette.secondary.main,
     },
-    '&:nth-child(2n)': {
-      '& .latest-products__card-media': {
+    "&:nth-child(2n)": {
+      "& .latest-products__card-media": {
         background: theme.palette.primary.main,
       },
     },
   },
-}));
+}))
 
 const LatestProducts = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <div className={className} {...rest}>
@@ -73,22 +66,17 @@ const LatestProducts = ({ data, className, ...rest }: ViewComponentProps): JSX.E
             className={classes.gridItem}
           >
             <Card
-              className={clsx(classes.card, 'latest-products__card')}
+              className={clsx(classes.card, "latest-products__card")}
               variant="outlined"
             >
-              <CardMedia
-                className={clsx(
-                  classes.cardMedia,
-                  'latest-products__card-media',
-                )}
-              >
+              <CardMedia className={clsx(classes.cardMedia, "latest-products__card-media")}>
                 <Image
                   {...item.image}
                   alt={item.title}
                   className={classes.image}
                   lazyProps={{
-                    width: '100%',
-                    height: '100%',
+                    width: "100%",
+                    height: "100%",
                   }}
                 />
               </CardMedia>
@@ -119,7 +107,7 @@ const LatestProducts = ({ data, className, ...rest }: ViewComponentProps): JSX.E
         ))}
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default LatestProducts;
+export default LatestProducts

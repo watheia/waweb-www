@@ -1,25 +1,25 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid } from '@material-ui/core';
-import { Image } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, Grid } from "@material-ui/core"
+import { Image } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   promoLogo: {
     maxWidth: 120,
   },
   title: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
-}));
+}))
 
 const Partners = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -30,7 +30,7 @@ const Partners = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
             subtitle="We are registered as a distributor with AMFI, as an investment advisor with SEBI and platform partners with BSE."
             fadeUp
             disableGutter
-            align={isMd ? 'left' : 'center'}
+            align={isMd ? "left" : "center"}
             titleProps={{
               className: classes.title,
             }}
@@ -58,7 +58,7 @@ const Partners = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Partners;
+export default Partners

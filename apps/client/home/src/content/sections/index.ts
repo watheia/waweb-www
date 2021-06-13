@@ -1,12 +1,12 @@
 /** @format */
 
-import BlogFeedSection from './BlogFeedSection';
-import ContactSection from './ContactSection';
-import ContentSection from './ContentSection';
-import CtaSection from './CtaSection';
-import FeaturesSection from './FeaturesSection';
-import HeroSection from './HeroSection';
-import TeamSection from './TeamSection';
+import BlogFeedSection from "./BlogFeedSection"
+import ContactSection from "./ContactSection"
+import ContentSection from "./ContentSection"
+import CtaSection from "./CtaSection"
+import FeaturesSection from "./FeaturesSection"
+import HeroSection from "./HeroSection"
+import TeamSection from "./TeamSection"
 
 export {
   BlogFeedSection,
@@ -16,7 +16,7 @@ export {
   FeaturesSection,
   HeroSection,
   TeamSection,
-};
+}
 
 export default {
   BlogFeedSection,
@@ -26,4 +26,4 @@ export default {
   FeaturesSection,
   HeroSection,
   TeamSection,
-};
+}

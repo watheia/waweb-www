@@ -1,6 +1,6 @@
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import React from "react"
+import clsx from "clsx"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
 import {
   useMediaQuery,
   colors,
@@ -10,32 +10,32 @@ import {
   CardMedia,
   CardContent,
   Typography,
-} from '@material-ui/core';
-import { Image } from 'components/atoms';
-import { SectionHeader, IconAlternate } from 'components/molecules';
+} from "@material-ui/core"
+import { Image } from "components/atoms"
+import { SectionHeader, IconAlternate } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   card: {
-    boxShadow: '0 9px 18px 0 rgba(0, 0, 0, 0.1)',
+    boxShadow: "0 9px 18px 0 rgba(0, 0, 0, 0.1)",
     borderRadius: theme.spacing(2),
   },
   cardMedia: {
     height: 290,
     padding: theme.spacing(3, 3, 0, 3),
-    position: 'relative',
+    position: "relative",
     background: colors.indigo[50],
   },
   cardContent: {
     padding: theme.spacing(3),
   },
   image: {
-    objectFit: 'contain',
+    objectFit: "contain",
   },
   fontWeightBold: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   hearIconContainer: {
-    position: 'absolute',
+    position: "absolute",
     top: theme.spacing(3),
     right: theme.spacing(3),
   },
@@ -47,36 +47,33 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(1 / 2),
   },
   priceCta: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
-}));
+}))
 
 const Products = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   const rating = (count: number) => {
-    const ratingArray = [];
+    const ratingArray = []
     for (let i = 1; i <= 5; i += 1) {
       ratingArray.push(
         <i
-          className={clsx(
-            i <= count ? 'fas fa-star' : 'far fa-star',
-            classes.ratingIcon,
-          )}
+          className={clsx(i <= count ? "fas fa-star" : "far fa-star", classes.ratingIcon)}
           key={i}
-        />,
-      );
+        />
+      )
     }
 
-    return ratingArray;
-  };
+    return ratingArray
+  }
 
   return (
     <div className={className} {...rest}>
@@ -95,8 +92,8 @@ const Products = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
                   alt={item.title}
                   className={classes.image}
                   lazyProps={{
-                    width: '100%',
-                    height: '100%',
+                    width: "100%",
+                    height: "100%",
                   }}
                 />
                 <div className={classes.hearIconContainer}>
@@ -116,9 +113,7 @@ const Products = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
                 >
                   {item.title}
                 </Typography>
-                <div className={classes.ratingContainer}>
-                  {rating(item.rating)}
-                </div>
+                <div className={classes.ratingContainer}>{rating(item.rating)}</div>
                 <div className={classes.priceCta}>
                   <Typography
                     color="primary"
@@ -142,7 +137,7 @@ const Products = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Products;
+export default Products

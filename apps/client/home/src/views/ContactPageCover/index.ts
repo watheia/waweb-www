@@ -1,1 +1,1 @@
-export { default } from './ContactPageCover';
+export { default } from "./ContactPageCover"

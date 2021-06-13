@@ -1,1 +1,1 @@
-export { default } from './CardPromo';
+export { default } from "./CardPromo"

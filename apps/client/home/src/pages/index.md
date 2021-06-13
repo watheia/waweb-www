@@ -8,42 +8,42 @@ seo:
   extra:
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:type'
+      name: "og:type"
       keyName: property
       value: website
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:title'
+      name: "og:title"
       keyName: property
       value: Stackbit Starter Theme
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:description'
+      name: "og:description"
       keyName: property
       value: The preview of the Starter theme
     - relativeUrl: true
       type: stackbit_page_meta_extra
-      name: 'og:image'
+      name: "og:image"
       keyName: property
       value: images/starter-preview.png
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:card'
+      name: "twitter:card"
       keyName: name
       value: summary_large_image
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:title'
+      name: "twitter:title"
       keyName: name
       value: Stackbit Starter Theme
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:description'
+      name: "twitter:description"
       keyName: name
       value: The preview of the Starter theme
     - relativeUrl: true
       type: stackbit_page_meta_extra
-      name: 'twitter:image'
+      name: "twitter:image"
       keyName: name
       value: images/starter-preview.png
   title: Stackbit Starter Theme
@@ -53,7 +53,7 @@ sections:
       background_image_size: cover
       type: hero_section_background
       background_image_opacity: 25
-      background_image: 'https://www.datocms-assets.com/49645/1623443608-cover.jpg'
+      background_image: "https://www.datocms-assets.com/49645/1623443608-cover.jpg"
       background_color: blue
     type: hero_section
     image_position: right
@@ -80,7 +80,7 @@ sections:
   - capabilities:
       - title: Capability 1
         align: left
-        image: 'https://www.datocms-assets.com/49645/1623441765-feature.svg'
+        image: "https://www.datocms-assets.com/49645/1623441765-feature.svg"
         content: >-
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           maximus nec sapien et porta. Vestibulum ante ipsum primis in faucibus
@@ -97,7 +97,7 @@ sections:
         type: feature
       - title: Capability 2
         align: right
-        image: 'https://www.datocms-assets.com/49645/1623441765-feature.svg'
+        image: "https://www.datocms-assets.com/49645/1623441765-feature.svg"
         content: >-
           id rutrum lectus dignissim maximus. Donec dictum dictum orci, sit amet
           posuere velit aliquam et. Nam nec lorem elementum, fermentum nulla
@@ -112,13 +112,13 @@ sections:
             new_window: false
             no_follow: false
             style: link
-            url: '#'
+            url: "#"
             label: Learn More
         image_alt: Placeholder
         type: feature
       - title: Capability 3
         align: left
-        image: 'https://www.datocms-assets.com/49645/1623441765-feature.svg'
+        image: "https://www.datocms-assets.com/49645/1623441765-feature.svg"
         content: >-
           Morbi aliquam orci et lacus cursus, dictum gravida velit cursus.
           Aliquam elementum rutrum libero sed vulputate. Fusce finibus vel

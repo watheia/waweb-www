@@ -1,22 +1,16 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import {
-  useMediaQuery,
-  Grid,
-  Typography,
-  TextField,
-  Button,
-} from '@material-ui/core';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, Grid, Typography, TextField, Button } from "@material-ui/core"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   form: {
     maxWidth: 550,
     margin: `0 auto`,
-    '& .MuiTextField-root': {
+    "& .MuiTextField-root": {
       background: theme.palette.background.paper,
     },
-    '& .MuiOutlinedInput-input': {
+    "& .MuiOutlinedInput-input": {
       background: theme.palette.background.paper,
     },
   },
@@ -24,15 +18,15 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 700,
     marginBottom: theme.spacing(1),
   },
-}));
+}))
 
 const Form = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -40,11 +34,11 @@ const Form = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
         title="Can't find the answer you need?"
         subtitle="Keep track of what's happening with your data, change permissions, and run reports against your data anywhere in the world. Keep track of what's happening with your data, change permissions."
         subtitleProps={{
-          variant: 'body1',
-          color: 'textPrimary',
+          variant: "body1",
+          color: "textPrimary",
         }}
         data-aos="fade-up"
-        align={isMd ? 'center' : 'left'}
+        align={isMd ? "center" : "left"}
       />
       <div className={classes.form}>
         <Grid container spacing={isMd ? 4 : 2}>
@@ -100,19 +94,14 @@ const Form = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
             />
           </Grid>
           <Grid item container justify="center" xs={12}>
-            <Button
-              variant="contained"
-              type="submit"
-              color="primary"
-              size="large"
-            >
+            <Button variant="contained" type="submit" color="primary" size="large">
               submit
             </Button>
           </Grid>
         </Grid>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Form;
+export default Form

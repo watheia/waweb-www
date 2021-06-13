@@ -1,8 +1,8 @@
 # Add files here to ignore them from prettier formatting
 
-/dist
-/coverage
+dist
+coverage
 
-/apps/home/node_modules
-/apps/home/public
-/apps/home/.cache
+node_modules
+public
+.cache

@@ -1,24 +1,24 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Grid, useMediaQuery, colors } from '@material-ui/core';
-import { LearnMoreLink } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { Grid, useMediaQuery, colors } from "@material-ui/core"
+import { LearnMoreLink } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   gridItemBorder: {
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       borderRight: `1px solid ${colors.grey[200]}`,
     },
   },
-}));
+}))
 
 const Support = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -47,7 +47,7 @@ const Support = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Support;
+export default Support

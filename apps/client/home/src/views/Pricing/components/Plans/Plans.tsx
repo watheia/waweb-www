@@ -1,14 +1,14 @@
-import React from 'react';
-import { useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid } from '@material-ui/core';
-import { LearnMoreLink } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, Grid } from "@material-ui/core"
+import { LearnMoreLink } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
 const Plans = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -31,25 +31,22 @@ const Plans = ({ data, className, ...rest }: ViewComponentProps): JSX.Element =>
               title={item.title}
               subtitle={item.subtitle}
               titleProps={{
-                variant: 'h6',
+                variant: "h6",
               }}
               subtitleProps={{
-                variant: 'body1',
-                color: 'textPrimary',
+                variant: "body1",
+                color: "textPrimary",
               }}
               align="left"
               disableGutter
             />
             <div style={{ flexGrow: 1 }} />
-            <LearnMoreLink
-              title="Learn more"
-              variant="subtitle1"
-            />
+            <LearnMoreLink title="Learn more" variant="subtitle1" />
           </Grid>
         ))}
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Plans;
+export default Plans

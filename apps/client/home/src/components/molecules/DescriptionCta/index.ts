@@ -1,1 +1,1 @@
-export { default } from './DescriptionCta';
+export { default } from "./DescriptionCta"

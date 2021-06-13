@@ -6,32 +6,32 @@ seo:
   extra:
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:type'
+      name: "og:type"
       keyName: property
       value: website
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:title'
+      name: "og:title"
       keyName: property
       value: Privacy and Terms
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:description'
+      name: "og:description"
       keyName: property
       value: This is the privacy and terms page
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:card'
+      name: "twitter:card"
       keyName: name
       value: summary
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:title'
+      name: "twitter:title"
       keyName: name
       value: Privacy and Terms
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:description'
+      name: "twitter:description"
       keyName: name
       value: This is the privacy and terms page
   title: Privacy and Terms

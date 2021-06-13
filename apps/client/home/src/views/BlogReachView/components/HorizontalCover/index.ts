@@ -1,1 +1,1 @@
-export { default } from './HorizontalCover';
+export { default } from "./HorizontalCover"

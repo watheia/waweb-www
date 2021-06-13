@@ -1,10 +1,10 @@
-import React from 'react';
-import { makeStyles, List, Chip } from '@material-ui/core';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { makeStyles, List, Chip } from "@material-ui/core"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   fontWeightBold: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   chip: {
     marginRight: theme.spacing(1),
@@ -13,10 +13,10 @@ const useStyles = makeStyles(theme => ({
   list: {
     marginBottom: theme.spacing(-1),
   },
-}));
+}))
 
 const Technologies = ({ className, ...rest }: any): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <div className={className} {...rest}>
@@ -25,7 +25,7 @@ const Technologies = ({ className, ...rest }: any): JSX.Element => {
         align="left"
         titleProps={{
           className: classes.fontWeightBold,
-          color: 'textPrimary',
+          color: "textPrimary",
         }}
         disableGutter
       />
@@ -39,7 +39,7 @@ const Technologies = ({ className, ...rest }: any): JSX.Element => {
         <Chip label="Figma & Sketch" className={classes.chip} />
       </List>
     </div>
-  );
-};
+  )
+}
 
-export default Technologies;
+export default Technologies

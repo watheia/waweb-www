@@ -1,1 +1,1 @@
-export { default } from './DescriptionListIconExample';
+export { default } from "./DescriptionListIconExample"

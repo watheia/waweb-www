@@ -1,36 +1,30 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid } from '@material-ui/core';
-import { Image } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, Grid } from "@material-ui/core"
+import { Image } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   title: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   image: {
     maxWidth: 400,
   },
-}));
+}))
 
 const AboutBottom = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
       <Grid container spacing={isMd ? 4 : 2}>
-        <Grid
-          item
-          container
-          justify={isMd ? 'flex-start' : 'center'}
-          xs={12}
-          md={6}
-        >
+        <Grid item container justify={isMd ? "flex-start" : "center"} xs={12} md={6}>
           <Image
             src="https://assets.maccarianagency.com/the-front/photos/logistics/about-cover.png"
             srcSet="https://assets.maccarianagency.com/the-front/photos/logistics/about-cover@2x.png 2x"
@@ -49,7 +43,7 @@ const AboutBottom = ({ className, ...rest }: ViewComponentProps): JSX.Element =>
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default AboutBottom;
+export default AboutBottom

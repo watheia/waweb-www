@@ -1,1 +1,1 @@
-export { default } from './MapHero';
+export { default } from "./MapHero"

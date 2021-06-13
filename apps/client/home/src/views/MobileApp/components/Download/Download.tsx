@@ -1,15 +1,15 @@
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import { Image } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import clsx from "clsx"
+import { makeStyles } from "@material-ui/core/styles"
+import { Image } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(6, 4),
     backgroundColor: theme.palette.secondary.main,
     borderRadius: theme.spacing(3),
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       padding: theme.spacing(6, 9),
     },
   },
@@ -17,17 +17,17 @@ const useStyles = makeStyles(theme => ({
     maxWidth: 152,
   },
   googlePlayBtn: {
-    border: '1px solid #A6A6A6',
-    borderRadius: '5px',
-    maxWidth: '150px',
+    border: "1px solid #A6A6A6",
+    borderRadius: "5px",
+    maxWidth: "150px",
   },
   textWhite: {
-    color: 'white',
+    color: "white",
   },
-}));
+}))
 
 const Download = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
@@ -39,8 +39,8 @@ const Download = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
         }
         subtitle={
           <span className={classes.textWhite}>
-            Don't listen to what they say go and see. Travelling with our app is
-            easy. Join the biggest community of travellers.
+            Don't listen to what they say go and see. Travelling with our app is easy. Join
+            the biggest community of travellers.
           </span>
         }
         ctaGroup={[
@@ -62,7 +62,7 @@ const Download = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
         data-aos="fade-up"
       />
     </div>
-  );
-};
+  )
+}
 
-export default Download;
+export default Download

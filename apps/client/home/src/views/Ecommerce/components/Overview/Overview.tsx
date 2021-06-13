@@ -1,42 +1,42 @@
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Button } from '@material-ui/core';
-import { Image } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import clsx from "clsx"
+import { makeStyles } from "@material-ui/core/styles"
+import { Grid, Button } from "@material-ui/core"
+import { Image } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     background: theme.palette.primary.dark,
     borderRadius: theme.spacing(2),
     paddingBottom: theme.spacing(2),
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       paddingBottom: 0,
     },
   },
   textWhite: {
-    color: 'white',
+    color: "white",
     fontSize: 16,
   },
   title: {
     fontSize: 22,
   },
   image: {
-    objectFit: 'contain',
-    maxWidth: '90%',
+    objectFit: "contain",
+    maxWidth: "90%",
     width: 300,
   },
   imageLeft: {
-    objectFit: 'cover',
+    objectFit: "cover",
   },
   copy: {
     margin: theme.spacing(2, 0),
     padding: theme.spacing(0, 2),
   },
-}));
+}))
 
 const Overview = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
@@ -49,14 +49,7 @@ const Overview = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
             lazy={false}
           />
         </Grid>
-        <Grid
-          item
-          container
-          alignItems="center"
-          xs={12}
-          md={4}
-          className={classes.copy}
-        >
+        <Grid item container alignItems="center" xs={12} md={4} className={classes.copy}>
           <SectionHeader
             title={
               <span className={clsx(classes.textWhite, classes.title)}>
@@ -65,8 +58,8 @@ const Overview = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
             }
             subtitle={
               <span className={classes.textWhite}>
-                If we're no longer the right solution for you, we'll allow you
-                to export and take your data at anytime for any reason.
+                If we're no longer the right solution for you, we'll allow you to export and
+                take your data at anytime for any reason.
               </span>
             }
             ctaGroup={[
@@ -88,7 +81,7 @@ const Overview = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Overview;
+export default Overview

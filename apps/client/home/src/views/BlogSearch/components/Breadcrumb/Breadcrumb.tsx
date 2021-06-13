@@ -1,5 +1,5 @@
-import React from 'react';
-import { Breadcrumbs, Typography, Link } from '@material-ui/core';
+import React from "react"
+import { Breadcrumbs, Typography, Link } from "@material-ui/core"
 
 const Breadcrumb = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => (
   <div className={className} {...rest}>
@@ -15,6 +15,6 @@ const Breadcrumb = ({ data, className, ...rest }: ViewComponentProps): JSX.Eleme
       ))}
     </Breadcrumbs>
   </div>
-);
+)
 
-export default Breadcrumb;
+export default Breadcrumb

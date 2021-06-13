@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react"
 import {
   Box,
   Button,
@@ -7,63 +7,60 @@ import {
   List,
   Typography,
   ListItem,
-  makeStyles
-} from '@material-ui/core';
-import NavItem from './components/NavItem';
-import { components } from './data';
+  makeStyles,
+} from "@material-ui/core"
+import NavItem from "./components/NavItem"
+import { components } from "./data"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   mobileDrawer: {
-    width: 256
+    width: 256,
   },
   desktopDrawer: {
     width: 256,
     top: 64,
-    height: 'calc(100% - 64px)'
+    height: "calc(100% - 64px)",
   },
   title: {
     fontWeight: 700,
   },
   navGroup: {
     marginBottom: theme.spacing(2),
-    '&:last-child': {
+    "&:last-child": {
       marginBottom: 0,
     },
   },
   navGroupTitle: {
     paddingBottom: 0,
   },
-}));
+}))
 
 interface Props {
-  onMobileClose: Function;
-  openMobile: boolean;
-};
+  onMobileClose: Function
+  openMobile: boolean
+}
 
 const Navbar = ({ onMobileClose, openMobile = false }: Props): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   const content = (
-    <Box
-      height="100%"
-      display="flex"
-      flexDirection="column"
-    >
+    <Box height="100%" display="flex" flexDirection="column">
       <Box p={2} paddingBottom={0}>
         <List>
           {components.map((item) => (
             <div key={item.id}>
               <ListItem className={classes.navGroupTitle}>
-                <Typography variant="button" color="textSecondary" className={classes.title}>{item.title}</Typography>
+                <Typography
+                  variant="button"
+                  color="textSecondary"
+                  className={classes.title}
+                >
+                  {item.title}
+                </Typography>
               </ListItem>
               <List disablePadding className={classes.navGroup}>
                 {item.pages.map((page) => (
-                  <NavItem
-                    href={page.href}
-                    key={page.id}
-                    title={page.title}
-                    id={page.id}
-                  />
+                  <NavItem href={page.href} key={page.id} title={page.title} id={page.id} />
                 ))}
               </List>
             </div>
@@ -72,26 +69,12 @@ const Navbar = ({ onMobileClose, openMobile = false }: Props): JSX.Element => {
       </Box>
       <Box flexGrow={1} />
       <Box p={2} paddingTop={0}>
-        <Box
-          display="flex"
-          justifyContent="center"
-          mt={2}
-        >
-          <Button
-            color="primary"
-            component="a"
-            href="/"
-            variant="outlined"
-            fullWidth
-          >
+        <Box display="flex" justifyContent="center" mt={2}>
+          <Button color="primary" component="a" href="/" variant="outlined" fullWidth>
             SEE ALL PAGES
           </Button>
         </Box>
-        <Box
-          display="flex"
-          justifyContent="center"
-          mt={2}
-        >
+        <Box display="flex" justifyContent="center" mt={2}>
           <Button
             color="primary"
             component="a"
@@ -105,7 +88,7 @@ const Navbar = ({ onMobileClose, openMobile = false }: Props): JSX.Element => {
         </Box>
       </Box>
     </Box>
-  );
+  )
 
   return (
     <>
@@ -131,7 +114,7 @@ const Navbar = ({ onMobileClose, openMobile = false }: Props): JSX.Element => {
         </Drawer>
       </Hidden>
     </>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

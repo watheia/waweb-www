@@ -1,32 +1,32 @@
 /* eslint-disable react/no-multi-comp */
 /* eslint-disable react/display-name */
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
+import React from "react"
+import clsx from "clsx"
+import { makeStyles } from "@material-ui/core/styles"
 import {
   Typography,
   Grid,
   Accordion as MuiAccordion,
   AccordionSummary as MuiAccordionSummary,
   AccordionDetails as MuiAccordionDetails,
-} from '@material-ui/core';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+} from "@material-ui/core"
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 
-import { LearnMoreLink } from 'components/atoms';
+import { LearnMoreLink } from "components/atoms"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
-    flexDirection: 'column',
+    display: "flex",
+    flexDirection: "column",
   },
   expandOpen: {
-    transform: 'rotate(180deg)',
+    transform: "rotate(180deg)",
     color: theme.palette.primary.dark,
   },
   listItem: {
-    cursor: 'pointer',
+    cursor: "pointer",
   },
-}));
+}))
 
 /**
  * Component to display accordion view
@@ -42,24 +42,20 @@ const Accordion = ({
   linkProps = {},
   ...rest
 }: AccordionProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
-    <div {...rest} className={clsx('accordion', classes.root, className)}>
-      {items.map(item => (
+    <div {...rest} className={clsx("accordion", classes.root, className)}>
+      {items.map((item) => (
         <MuiAccordion
-          className={clsx('accordion__item-wrapper', classes.listItem)}
+          className={clsx("accordion__item-wrapper", classes.listItem)}
           key={item.id}
         >
           <MuiAccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls={`${item.id}-content`}
           >
-            <Grid
-              container
-              spacing={0}
-              className="accorion__item-text-container"
-            >
+            <Grid container spacing={0} className="accorion__item-text-container">
               <Grid item xs={12} className="accorion__item-title-container">
                 <Typography
                   variant="h6"
@@ -85,16 +81,8 @@ const Accordion = ({
             </Grid>
           </MuiAccordionSummary>
           <MuiAccordionDetails>
-            <Grid
-              container
-              spacing={2}
-              className="accordion__collapsable-text-container"
-            >
-              <Grid
-                item
-                xs={12}
-                className="accordion__collapsable-text-wrapper"
-              >
+            <Grid container spacing={2} className="accordion__collapsable-text-container">
+              <Grid item xs={12} className="accordion__collapsable-text-wrapper">
                 <Typography
                   variant="body1"
                   color="textPrimary"
@@ -105,11 +93,7 @@ const Accordion = ({
                 </Typography>
               </Grid>
               {item.link && (
-                <Grid
-                  item
-                  xs={12}
-                  className="accordion__collapsable-link-wrapper"
-                >
+                <Grid item xs={12} className="accordion__collapsable-link-wrapper">
                   <LearnMoreLink
                     title={item.link}
                     variant="body1"
@@ -123,7 +107,7 @@ const Accordion = ({
         </MuiAccordion>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default Accordion;
+export default Accordion

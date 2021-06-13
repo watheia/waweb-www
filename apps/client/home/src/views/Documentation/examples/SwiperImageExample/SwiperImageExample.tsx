@@ -1,35 +1,41 @@
-import React from 'react';
-import { Box } from '@material-ui/core';
-import { Headline, CodeHighlighter, PropsHighlighter, SectionBox } from '../../components';
-import { SwiperImage } from 'components/molecules';
+import React from "react"
+import { Box } from "@material-ui/core"
+import { Headline, CodeHighlighter, PropsHighlighter, SectionBox } from "../../components"
+import { SwiperImage } from "components/molecules"
 
 const importCodeString = `
 import { SwiperImage } from 'components/molecules';
 // or
 import SwiperImage from 'components/molecules/SwiperImage';
-`;
+`
 
-const dataProperties = [{
-  name: 'items',
-  type: 'object[]',
-  default: '',
-  description: 'The array of images object which should consist of src, alt and srcset attributes',
-}, {
-  name: 'className',
-  type: 'string',
-  default: '',
-  description: 'External classes',
-}, {
-  name: 'imageClassName',
-  type: 'string',
-  default: '',
-  description: 'External classes for the images',
-}, {
-  name: 'navigationButtonStyle',
-  type: 'string',
-  default: '',
-  description: 'Styles classes of the navigation button',
-}];
+const dataProperties = [
+  {
+    name: "items",
+    type: "object[]",
+    default: "",
+    description:
+      "The array of images object which should consist of src, alt and srcset attributes",
+  },
+  {
+    name: "className",
+    type: "string",
+    default: "",
+    description: "External classes",
+  },
+  {
+    name: "imageClassName",
+    type: "string",
+    default: "",
+    description: "External classes for the images",
+  },
+  {
+    name: "navigationButtonStyle",
+    type: "string",
+    default: "",
+    description: "Styles classes of the navigation button",
+  },
+]
 
 const exampleCode = `
 import React from 'react';
@@ -58,7 +64,7 @@ export default function Example() {
     </Box>
   );
 }
-`;
+`
 
 const SwiperImageExample = ({ ...rest }: any): JSX.Element => (
   <div {...rest}>
@@ -77,27 +83,40 @@ const SwiperImageExample = ({ ...rest }: any): JSX.Element => (
     </SectionBox>
     <SectionBox title="Example" gutterBottom>
       <>
-        <Box marginBottom={2} display="flex" justifyContent="space-evenly" alignItems="center" padding={2} border="1px solid #ccc" borderRadius="4px">
+        <Box
+          marginBottom={2}
+          display="flex"
+          justifyContent="space-evenly"
+          alignItems="center"
+          padding={2}
+          border="1px solid #ccc"
+          borderRadius="4px"
+        >
           <SwiperImage
             style={{
-                width: 700,
-                height: 500,
+              width: 700,
+              height: 500,
             }}
-            items={[{
-                src: 'https://assets.maccarianagency.com/the-front/photos/coworking/place2.jpg',
-                srcset: 'https://assets.maccarianagency.com/the-front/photos/coworking/place2.jpg 2x',
-                alt: '...'
-            }, {
-                src: 'https://assets.maccarianagency.com/the-front/photos/coworking/place3.jpg',
-                srcset: 'https://assets.maccarianagency.com/the-front/photos/coworking/place3.jpg 2x',
-                alt: '...'
-            }]}
+            items={[
+              {
+                src: "https://assets.maccarianagency.com/the-front/photos/coworking/place2.jpg",
+                srcset:
+                  "https://assets.maccarianagency.com/the-front/photos/coworking/place2.jpg 2x",
+                alt: "...",
+              },
+              {
+                src: "https://assets.maccarianagency.com/the-front/photos/coworking/place3.jpg",
+                srcset:
+                  "https://assets.maccarianagency.com/the-front/photos/coworking/place3.jpg 2x",
+                alt: "...",
+              },
+            ]}
           />
         </Box>
         <CodeHighlighter code={exampleCode} />
       </>
     </SectionBox>
   </div>
-);
+)
 
-export default SwiperImageExample;
+export default SwiperImageExample

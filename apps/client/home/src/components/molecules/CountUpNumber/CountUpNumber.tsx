@@ -1,8 +1,8 @@
-import React from 'react';
-import VisibilitySensor from 'react-visibility-sensor';
-import CountUp from 'react-countup';
-import clsx from 'clsx';
-import { Typography } from '@material-ui/core';
+import React from "react"
+import VisibilitySensor from "react-visibility-sensor"
+import CountUp from "react-countup"
+import clsx from "clsx"
+import { Typography } from "@material-ui/core"
 
 /**
  * Component to display the Count Up Numbers
@@ -25,19 +25,19 @@ const CountUpNumber = ({
   labelProps = {},
   ...rest
 }: CountUpNumberProps): JSX.Element => {
-  const [viewPortEntered, setViewPortEntered] = React.useState<boolean>(false);
+  const [viewPortEntered, setViewPortEntered] = React.useState<boolean>(false)
   const setViewPortVisibility = (isVisible: boolean) => {
     if (viewPortEntered) {
-      return;
+      return
     }
 
-    setViewPortEntered(isVisible);
-  };
+    setViewPortEntered(isVisible)
+  }
 
   return (
-    <div className={clsx('countup-number', className)} {...rest}>
+    <div className={clsx("countup-number", className)} {...rest}>
       <VisibilitySensor
-        onChange={isVisible => setViewPortVisibility(isVisible)}
+        onChange={(isVisible) => setViewPortVisibility(isVisible)}
         delayedCall
         {...visibilitySensorProps}
       >
@@ -46,7 +46,7 @@ const CountUpNumber = ({
             variant="h4"
             gutterBottom
             align="center"
-            color={textColor || 'textPrimary'}
+            color={textColor || "textPrimary"}
             className="countup-number__count-wrapper"
             {...countWrapperProps}
           >
@@ -55,15 +55,15 @@ const CountUpNumber = ({
               redraw={false}
               end={viewPortEntered ? end : start}
               start={start}
-              suffix={suffix || ''}
-              prefix={prefix || ''}
+              suffix={suffix || ""}
+              prefix={prefix || ""}
               className="countup-number__count"
               {...countNumberProps}
             />
           </Typography>
           <Typography
             variant="subtitle1"
-            color={labelColor || 'textSecondary'}
+            color={labelColor || "textSecondary"}
             align="center"
             className="countup-number__label"
             {...labelProps}
@@ -73,7 +73,7 @@ const CountUpNumber = ({
         </div>
       </VisibilitySensor>
     </div>
-  );
-};
+  )
+}
 
-export default CountUpNumber;
+export default CountUpNumber

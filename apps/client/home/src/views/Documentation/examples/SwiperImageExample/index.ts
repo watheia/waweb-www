@@ -1,1 +1,1 @@
-export { default } from './SwiperImageExample';
+export { default } from "./SwiperImageExample"

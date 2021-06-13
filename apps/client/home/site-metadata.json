@@ -1,97 +1,97 @@
 {
-    "footer": {
-        "links": [],
-        "type": "footer",
-        "content": "&copy; Watheia Labs, LLC. All rights reserved.",
-        "has_social": false,
-        "social_links": [
-            {
-                "type": "action",
-                "new_window": true,
-                "no_follow": false,
-                "style": "link",
-                "url": "https://twitter.com/",
-                "label": "Twitter"
-            },
-            {
-                "type": "action",
-                "new_window": true,
-                "no_follow": false,
-                "style": "link",
-                "url": "https://github.com/",
-                "label": "GitHub"
-            },
-            {
-                "type": "action",
-                "new_window": true,
-                "no_follow": false,
-                "style": "link",
-                "url": "https://www.linkedin.com/",
-                "label": "LinkedIn"
-            }
-        ],
-        "has_nav": true,
-        "nav_links": [
-            {
-                "type": "action",
-                "new_window": false,
-                "no_follow": false,
-                "style": "link",
-                "url": "/contact",
-                "label": "Contact Us"
-            },
-            {
-                "type": "action",
-                "new_window": false,
-                "no_follow": false,
-                "style": "link",
-                "url": "/terms",
-                "label": "Privacy and Terms"
-            }
-        ]
-    },
-    "header": {
-        "type": "header",
-        "nav_links": [
-            {
-                "type": "action",
-                "new_window": false,
-                "no_follow": false,
-                "style": "link",
-                "url": "/about",
-                "label": "About Us"
-            },
-            {
-                "type": "action",
-                "new_window": false,
-                "no_follow": false,
-                "style": "link",
-                "url": "/capabilities",
-                "label": "Capabilities"
-            },
-            {
-                "type": "action",
-                "new_window": false,
-                "no_follow": false,
-                "style": "link",
-                "url": "/blog",
-                "label": "Case Studies"
-            },
-            {
-                "type": "action",
-                "new_window": false,
-                "no_follow": false,
-                "style": "primary",
-                "url": "/contact",
-                "label": "Get Support"
-            }
-        ],
-        "has_nav": true,
-        "logo": "https://www.datocms-assets.com/49645/1623443234-logo-lightldpi.png",
-        "logo_alt": "Watheia Labs",
-        "title": "Home"
-    },
-    "favicon": "https://www.datocms-assets.com/49645/1623446188-drkstrlarge.png",
-    "title": "Micro Frontends by Watheia Labs",
-    "domain": "https://watheia.app"
+  "footer": {
+    "links": [],
+    "type": "footer",
+    "content": "&copy; Watheia Labs, LLC. All rights reserved.",
+    "has_social": false,
+    "social_links": [
+      {
+        "type": "action",
+        "new_window": true,
+        "no_follow": false,
+        "style": "link",
+        "url": "https://twitter.com/",
+        "label": "Twitter"
+      },
+      {
+        "type": "action",
+        "new_window": true,
+        "no_follow": false,
+        "style": "link",
+        "url": "https://github.com/",
+        "label": "GitHub"
+      },
+      {
+        "type": "action",
+        "new_window": true,
+        "no_follow": false,
+        "style": "link",
+        "url": "https://www.linkedin.com/",
+        "label": "LinkedIn"
+      }
+    ],
+    "has_nav": true,
+    "nav_links": [
+      {
+        "type": "action",
+        "new_window": false,
+        "no_follow": false,
+        "style": "link",
+        "url": "/contact",
+        "label": "Contact Us"
+      },
+      {
+        "type": "action",
+        "new_window": false,
+        "no_follow": false,
+        "style": "link",
+        "url": "/terms",
+        "label": "Privacy and Terms"
+      }
+    ]
+  },
+  "header": {
+    "type": "header",
+    "nav_links": [
+      {
+        "type": "action",
+        "new_window": false,
+        "no_follow": false,
+        "style": "link",
+        "url": "/about",
+        "label": "About Us"
+      },
+      {
+        "type": "action",
+        "new_window": false,
+        "no_follow": false,
+        "style": "link",
+        "url": "/capabilities",
+        "label": "Capabilities"
+      },
+      {
+        "type": "action",
+        "new_window": false,
+        "no_follow": false,
+        "style": "link",
+        "url": "/blog",
+        "label": "Case Studies"
+      },
+      {
+        "type": "action",
+        "new_window": false,
+        "no_follow": false,
+        "style": "primary",
+        "url": "/contact",
+        "label": "Get Support"
+      }
+    ],
+    "has_nav": true,
+    "logo": "https://www.datocms-assets.com/49645/1623443234-logo-lightldpi.png",
+    "logo_alt": "Watheia Labs",
+    "title": "Home"
+  },
+  "favicon": "https://www.datocms-assets.com/49645/1623446188-drkstrlarge.png",
+  "title": "Micro Frontends by Watheia Labs",
+  "domain": "https://watheia.app"
 }

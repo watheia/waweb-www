@@ -1,5 +1,5 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
 import {
   useMediaQuery,
   Grid,
@@ -7,32 +7,32 @@ import {
   CardMedia,
   CardContent,
   Typography,
-} from '@material-ui/core';
-import { Image } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+} from "@material-ui/core"
+import { Image } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   image: {
-    objectFit: 'contain',
+    objectFit: "contain",
     height: 120,
   },
   fontWeightBold: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   cardMedia: {
     padding: theme.spacing(2, 2, 0, 2),
-    display: 'flex',
-    justifyContent: 'center',
+    display: "flex",
+    justifyContent: "center",
   },
-}));
+}))
 
 const Sales = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -49,11 +49,7 @@ const Sales = ({ data, className, ...rest }: ViewComponentProps): JSX.Element =>
           <Grid item xs={12} sm={6} md={3} key={index} data-aos="fade-up">
             <Card>
               <CardMedia className={classes.cardMedia}>
-                <Image
-                  {...item.image}
-                  alt={item.title}
-                  className={classes.image}
-                />
+                <Image {...item.image} alt={item.title} className={classes.image} />
               </CardMedia>
               <CardContent>
                 <Typography
@@ -70,7 +66,7 @@ const Sales = ({ data, className, ...rest }: ViewComponentProps): JSX.Element =>
         ))}
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Sales;
+export default Sales

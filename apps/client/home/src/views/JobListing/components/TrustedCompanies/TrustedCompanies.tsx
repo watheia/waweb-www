@@ -1,22 +1,26 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid } from '@material-ui/core';
-import { Image } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, Grid } from "@material-ui/core"
+import { Image } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
 const useStyles = makeStyles(() => ({
   promoLogo: {
     maxWidth: 120,
   },
-}));
+}))
 
-const TrustedCompanies = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+const TrustedCompanies = ({
+  data,
+  className,
+  ...rest
+}: ViewComponentProps): JSX.Element => {
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -27,7 +31,7 @@ const TrustedCompanies = ({ data, className, ...rest }: ViewComponentProps): JSX
             subtitle="We are registered as a distributor with AMFI, as an investment advisor with SEBI and platform partners with BSE."
             fadeUp
             disableGutter
-            align={isMd ? 'left' : 'center'}
+            align={isMd ? "left" : "center"}
           />
         </Grid>
         <Grid item container xs={12} md={6}>
@@ -52,7 +56,7 @@ const TrustedCompanies = ({ data, className, ...rest }: ViewComponentProps): JSX
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default TrustedCompanies;
+export default TrustedCompanies

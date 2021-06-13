@@ -1,33 +1,33 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Fab from '@material-ui/core/Fab';
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
-import Zoom from '@material-ui/core/Zoom';
+import React from "react"
+import { makeStyles } from "@material-ui/core/styles"
+import useScrollTrigger from "@material-ui/core/useScrollTrigger"
+import Fab from "@material-ui/core/Fab"
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp"
+import Zoom from "@material-ui/core/Zoom"
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    position: 'fixed',
+    position: "fixed",
     bottom: theme.spacing(2),
     right: theme.spacing(2),
   },
-}));
+}))
 
 const ScrollTop = (): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 100,
-  });
+  })
 
   const handleClick = (): void => {
     if (window) {
       window.scrollTo({
         top: 0,
-        behavior: 'smooth'
-      });
+        behavior: "smooth",
+      })
     }
-  };
+  }
 
   return (
     <Zoom in={trigger}>
@@ -37,7 +37,7 @@ const ScrollTop = (): JSX.Element => {
         </Fab>
       </div>
     </Zoom>
-  );
+  )
 }
 
-export default ScrollTop;
+export default ScrollTop

@@ -1,23 +1,23 @@
-import React from 'react';
-import { makeStyles, List, Typography } from '@material-ui/core';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { makeStyles, List, Typography } from "@material-ui/core"
+import { SectionHeader } from "components/molecules"
 
-import { CodeHighlighter } from '../../components';
+import { CodeHighlighter } from "../../components"
 
 const useStyles = makeStyles((theme) => ({
   fontWeightBold: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   list: {
     marginBottom: theme.spacing(3),
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       marginBottom: theme.spacing(4),
     },
   },
-}));
+}))
 
 const QuickStart = ({ className, ...rest }: any): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <div className={className} {...rest}>
@@ -25,17 +25,17 @@ const QuickStart = ({ className, ...rest }: any): JSX.Element => {
         title="Quick start with React Scripts"
         subtitle={
           <Typography variant="h6" component="p" color="textPrimary">
-            Open{' '}
+            Open{" "}
             <Typography color="primary" component="span" variant="h6">
               `./react-scripts`
-            </Typography>{' '}
+            </Typography>{" "}
             folder and do the following:
           </Typography>
         }
         align="left"
         titleProps={{
           className: classes.fontWeightBold,
-          color: 'textPrimary',
+          color: "textPrimary",
         }}
         disableGutter
       />
@@ -62,17 +62,17 @@ const QuickStart = ({ className, ...rest }: any): JSX.Element => {
         title="Quick start with NextJS"
         subtitle={
           <Typography variant="h6" component="p" color="textPrimary">
-            Open{' '}
+            Open{" "}
             <Typography color="primary" component="span" variant="h6">
               `./nextjs`
-            </Typography>{' '}
+            </Typography>{" "}
             folder and do the following:
           </Typography>
         }
         align="left"
         titleProps={{
           className: classes.fontWeightBold,
-          color: 'textPrimary',
+          color: "textPrimary",
         }}
         disableGutter
       />
@@ -105,16 +105,16 @@ const QuickStart = ({ className, ...rest }: any): JSX.Element => {
         align="left"
         subtitle={
           <Typography variant="h6" component="p" color="textPrimary">
-            Open{' '}
+            Open{" "}
             <Typography color="primary" component="span" variant="h6">
               `./gatsbyjs`
-            </Typography>{' '}
+            </Typography>{" "}
             folder and do the following:
           </Typography>
         }
         titleProps={{
           className: classes.fontWeightBold,
-          color: 'textPrimary',
+          color: "textPrimary",
         }}
         disableGutter
       />
@@ -138,7 +138,7 @@ const QuickStart = ({ className, ...rest }: any): JSX.Element => {
         />
       </List>
     </div>
-  );
-};
+  )
+}
 
-export default QuickStart;
+export default QuickStart

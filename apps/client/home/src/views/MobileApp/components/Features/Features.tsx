@@ -1,5 +1,5 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
 import {
   useMediaQuery,
   colors,
@@ -10,16 +10,16 @@ import {
   ListItemText,
   Typography,
   Avatar,
-} from '@material-ui/core';
-import { Image } from 'components/atoms';
-import { SectionHeader, IconAlternate } from 'components/molecules';
+} from "@material-ui/core"
+import { Image } from "components/atoms"
+import { SectionHeader, IconAlternate } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   listItemAvatar: {
     marginRight: theme.spacing(2),
   },
   coverImage: {
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down("sm")]: {
       maxWidth: 400,
     },
   },
@@ -29,21 +29,21 @@ const useStyles = makeStyles(theme => ({
     marginLeft: theme.spacing(-2),
     border: `4px solid ${theme.palette.background.paper}`,
     boxShadow: `0 2px 10px 0 ${theme.palette.cardShadow}`,
-    '&:first-child': {
+    "&:first-child": {
       marginLeft: 0,
     },
   },
-}));
+}))
 
 const Features = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
-  const { items, people } = data;
+  const { items, people } = data
 
   return (
     <div className={className} {...rest}>
@@ -73,7 +73,7 @@ const Features = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
                   <span>
                     <Typography color="secondary" variant="inherit" component="span">
                       Share your memories
-                    </Typography>{' '}
+                    </Typography>{" "}
                     with your travel buddies
                   </span>
                 }
@@ -91,10 +91,7 @@ const Features = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
                         color={colors.deepOrange}
                       />
                     </ListItemAvatar>
-                    <ListItemText
-                      primary={item.title}
-                      secondary={item.subtitle}
-                    />
+                    <ListItemText primary={item.title} secondary={item.subtitle} />
                   </ListItem>
                 ))}
               </List>
@@ -105,14 +102,16 @@ const Features = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
           <Grid
             container
             spacing={isMd ? 4 : 2}
-            direction={isMd ? 'row' : 'column-reverse'}
+            direction={isMd ? "row" : "column-reverse"}
           >
             <Grid item xs={12} md={6} data-aos="fade-up">
               <SectionHeader
                 label="popular travellers"
                 title={
                   <span>
-                    <Typography color="secondary" variant="inherit" component="span">Know the people</Typography>{' '}
+                    <Typography color="secondary" variant="inherit" component="span">
+                      Know the people
+                    </Typography>{" "}
                     you are going to meet
                   </span>
                 }
@@ -123,24 +122,19 @@ const Features = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
               <List disablePadding>
                 <ListItem disableGutters data-aos="fade-up">
                   <Typography variant="body1">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
                   </Typography>
                 </ListItem>
                 <ListItem disableGutters data-aos="fade-up">
                   {people.map((item: any, index: number) => (
-                    <Avatar
-                      key={index}
-                      className={classes.avatar}
-                      {...item.authorPhoto}
-                    />
+                    <Avatar key={index} className={classes.avatar} {...item.authorPhoto} />
                   ))}
                 </ListItem>
                 <ListItem disableGutters data-aos="fade-up">
                   <Typography variant="body1">
-                    Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                    officia deserunt mollit anim id est laborum.
                   </Typography>
                 </ListItem>
               </List>
@@ -165,7 +159,7 @@ const Features = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Features;
+export default Features

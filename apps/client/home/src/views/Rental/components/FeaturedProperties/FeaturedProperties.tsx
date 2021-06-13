@@ -1,6 +1,6 @@
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import React from "react"
+import clsx from "clsx"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
 import {
   useMediaQuery,
   colors,
@@ -16,25 +16,25 @@ import {
   ListItemText,
   Button,
   NoSsr,
-} from '@material-ui/core';
-import { SectionHeader } from 'components/molecules';
+} from "@material-ui/core"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   card: {
-    boxShadow: '0 7px 14px 0 rgba(0, 0, 0, 0.1)',
+    boxShadow: "0 7px 14px 0 rgba(0, 0, 0, 0.1)",
   },
   cardMedia: {
     minHeight: 280,
-    position: 'relative',
-    display: 'flex',
-    alignItems: 'flex-end',
+    position: "relative",
+    display: "flex",
+    alignItems: "flex-end",
   },
   pricingContainer: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
     padding: theme.spacing(3),
-    width: '100%',
+    width: "100%",
   },
   cardCta: {
     padding: theme.spacing(1 / 2, 1),
@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
   },
   listItemIcon: {
     minWidth: theme.spacing(3),
-    '& i': {
+    "& i": {
       color: colors.blueGrey[500],
     },
   },
@@ -54,7 +54,7 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 500,
   },
   propertyList: {
-    display: 'flex',
+    display: "flex",
   },
   pin: {
     color: `${colors.deepOrange[500]} !important`,
@@ -62,15 +62,19 @@ const useStyles = makeStyles(theme => ({
   divider: {
     margin: theme.spacing(3, 0, 2, 0),
   },
-}));
+}))
 
-const FeaturedProperties = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+const FeaturedProperties = ({
+  data,
+  className,
+  ...rest
+}: ViewComponentProps): JSX.Element => {
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -96,7 +100,9 @@ const FeaturedProperties = ({ data, className, ...rest }: ViewComponentProps): J
                   </div>
                   <div className={classes.cardCta}>
                     <Typography color="primary" variant="subtitle1">
-                      <NoSsr><i className="far fa-heart" /></NoSsr>
+                      <NoSsr>
+                        <i className="far fa-heart" />
+                      </NoSsr>
                     </Typography>
                   </div>
                 </div>
@@ -106,9 +112,7 @@ const FeaturedProperties = ({ data, className, ...rest }: ViewComponentProps): J
                   <ListItem disableGutters>
                     <ListItemIcon className={classes.listItemIcon}>
                       <NoSsr>
-                        <i
-                          className={clsx('fas fa-map-marker-alt', classes.pin)}
-                        />
+                        <i className={clsx("fas fa-map-marker-alt", classes.pin)} />
                       </NoSsr>
                     </ListItemIcon>
                     <ListItemText primary={item.location} />
@@ -127,7 +131,9 @@ const FeaturedProperties = ({ data, className, ...rest }: ViewComponentProps): J
                     <List disablePadding>
                       <ListItem disableGutters className={classes.listItem}>
                         <ListItemIcon className={classes.listItemIcon}>
-                          <NoSsr><i className="fas fa-home" /></NoSsr>
+                          <NoSsr>
+                            <i className="fas fa-home" />
+                          </NoSsr>
                         </ListItemIcon>
                         <ListItemText primary={item.size} />
                       </ListItem>
@@ -137,19 +143,25 @@ const FeaturedProperties = ({ data, className, ...rest }: ViewComponentProps): J
                     <List disablePadding className={classes.propertyList}>
                       <ListItem disableGutters className={classes.listItem}>
                         <ListItemIcon className={classes.listItemIcon}>
-                          <NoSsr><i className="fas fa-parking" /></NoSsr>
+                          <NoSsr>
+                            <i className="fas fa-parking" />
+                          </NoSsr>
                         </ListItemIcon>
                         <ListItemText primary={item.garages} />
                       </ListItem>
                       <ListItem disableGutters className={classes.listItem}>
                         <ListItemIcon className={classes.listItemIcon}>
-                          <NoSsr><i className="fas fa-bath" /></NoSsr>
+                          <NoSsr>
+                            <i className="fas fa-bath" />
+                          </NoSsr>
                         </ListItemIcon>
                         <ListItemText primary={item.baths} />
                       </ListItem>
                       <ListItem disableGutters className={classes.listItem}>
                         <ListItemIcon className={classes.listItemIcon}>
-                          <NoSsr><i className="fas fa-door-open" /></NoSsr>
+                          <NoSsr>
+                            <i className="fas fa-door-open" />
+                          </NoSsr>
                         </ListItemIcon>
                         <ListItemText primary={item.rooms} />
                       </ListItem>
@@ -167,7 +179,7 @@ const FeaturedProperties = ({ data, className, ...rest }: ViewComponentProps): J
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default FeaturedProperties;
+export default FeaturedProperties

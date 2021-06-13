@@ -2,31 +2,31 @@ interface CardJobCompanyProps {
   /**
    * External classes
    */
-  className?: string;
+  className?: string
   /**
    * Job title of the card
    */
-  jobTitle: string;
+  jobTitle: string
   /**
    * Job location of the card
    */
-  jobLocation: string;
+  jobLocation: string
   /**
    * Company logo of the card
    */
-  companyLogo: string;
+  companyLogo: string
   /**
    * Company name of the card
    */
-  companyName: string;
+  companyName: string
   /**
    * Count of the jobs in the the card
    */
-  jobsCount: string;
+  jobsCount: string
   /**
    * Company info in the card
    */
-  companyInfo: string;
+  companyInfo: string
   // All other props
-  [x:string]: any;
+  [x: string]: any
 }

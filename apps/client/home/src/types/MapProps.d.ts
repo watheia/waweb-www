@@ -1,28 +1,28 @@
 interface MarkerProps {
   location: {
-    x: number,
-    y: number,
-    address?: string,
-  },
+    x: number
+    y: number
+    address?: string
+  }
 }
 
 interface MapProps {
   /**
    * External classes
    */
-  className?: string;
+  className?: string
   /**
    * Map zoom
    */
-  zoom?: number;
+  zoom?: number
   /**
    * Map center
    */
-  center: Array<number>;
+  center: Array<number>
   /**
    * data of the locations. Example: [{ location: { x: number, y: number } }]
    */
-  pins: Array<MarkerProps>;
+  pins: Array<MarkerProps>
   // All other props
-  [x:string]: any;
+  [x: string]: any
 }

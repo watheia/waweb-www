@@ -1,5 +1,5 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
 import {
   useMediaQuery,
   Grid,
@@ -7,43 +7,34 @@ import {
   ListItemAvatar,
   Typography,
   Avatar,
-} from '@material-ui/core';
-import { Image } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+} from "@material-ui/core"
+import { Image } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
 const useStyles = makeStyles(() => ({
   checkBox: {
-    background: 'transparent',
+    background: "transparent",
     borderRadius: 0,
   },
   image: {
     maxWidth: 450,
-    height: 'auto',
+    height: "auto",
   },
-}));
+}))
 
 const Team = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
-      <Grid
-        container
-        spacing={isMd ? 4 : 2}
-        direction={isMd ? 'row' : 'column-reverse'}
-      >
+      <Grid container spacing={isMd ? 4 : 2} direction={isMd ? "row" : "column-reverse"}>
         <Grid item xs={12} md={6} data-aos="fade-up">
-          <Grid
-            container
-            alignItems="flex-start"
-            justify="center"
-            direction="column"
-          >
+          <Grid container alignItems="flex-start" justify="center" direction="column">
             <SectionHeader
               title="Our leaders will help you"
               subtitle="We develop intelligent solutions for companies to reduce their operational costs, increase their profitability and improve service quality."
@@ -73,7 +64,7 @@ const Team = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => 
         <Grid
           item
           container
-          justify={isMd ? 'flex-end' : 'center'}
+          justify={isMd ? "flex-end" : "center"}
           alignItems="center"
           xs={12}
           md={6}
@@ -88,7 +79,7 @@ const Team = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => 
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Team;
+export default Team

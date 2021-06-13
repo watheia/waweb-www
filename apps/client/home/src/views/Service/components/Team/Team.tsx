@@ -1,28 +1,28 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery } from '@material-ui/core';
-import { Grid, Typography, Button, Avatar } from '@material-ui/core';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { useMediaQuery } from "@material-ui/core"
+import { Grid, Typography, Button, Avatar } from "@material-ui/core"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   teamAvatar: {
     maxWidth: 200,
     maxHeight: 200,
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
     border: `${theme.spacing(1)}px solid ${theme.palette.background.paper}`,
     boxShadow: `0 2px 10px 0 ${theme.palette.cardShadow}`,
     marginTop: theme.spacing(1 / 2),
   },
-}));
+}))
 
 const Team = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} data-aos="fade-up" {...rest}>
@@ -30,11 +30,7 @@ const Team = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => 
         title="Why Work with Us"
         subtitle="We are a small agency of talented designers & developers. Unlike teams from big agencies, we will treat your project as ours. We will walk you through our smooth and simple process."
         ctaGroup={[
-          <Button
-            variant="contained"
-            size={isMd ? 'large' : 'medium'}
-            color="primary"
-          >
+          <Button variant="contained" size={isMd ? "large" : "medium"} color="primary">
             Contact us
           </Button>,
         ]}
@@ -67,7 +63,7 @@ const Team = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => 
         ))}
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Team;
+export default Team

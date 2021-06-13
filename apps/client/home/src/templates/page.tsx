@@ -1,9 +1,9 @@
-import React from 'react';
-import _ from 'lodash';
-import { graphql } from 'gatsby';
+import React from "react"
+import _ from "lodash"
+import { graphql } from "gatsby"
 
-import { Layout } from '../components/index';
-import { htmlToReact } from 'utils';
+import { Layout } from "../components/index"
+import { htmlToReact } from "@waweb/utils"
 
 // this minimal GraphQL query ensures that when 'gatsby develop' is running,
 // any changes to content files are reflected in browser
@@ -13,7 +13,7 @@ export const query = graphql`
       id
     }
   }
-`;
+`
 
 export default class Page extends React.Component {
   render() {
@@ -23,15 +23,15 @@ export default class Page extends React.Component {
           <div className="container container--md">
             <header className="page__header">
               <h1 className="page__title">
-                {_.get(this.props, 'pageContext.frontmatter.title', null)}
+                {_.get(this.props, "pageContext.frontmatter.title", null)}
               </h1>
             </header>
             <div className="page__copy">
-              {htmlToReact(_.get(this.props, 'pageContext.html', null))}
+              {htmlToReact(_.get(this.props, "pageContext.html", null))}
             </div>
           </div>
         </article>
       </Layout>
-    );
+    )
   }
 }

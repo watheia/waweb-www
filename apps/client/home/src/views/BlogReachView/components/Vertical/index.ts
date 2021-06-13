@@ -1,1 +1,1 @@
-export { default } from './Vertical';
+export { default } from "./Vertical"

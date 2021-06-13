@@ -1,1 +1,1 @@
-export { default } from './TypedTextExample';
+export { default } from "./TypedTextExample"

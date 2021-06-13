@@ -1,45 +1,52 @@
-import React from 'react';
-import { Box } from '@material-ui/core';
-import { Headline, CodeHighlighter, PropsHighlighter, SectionBox } from '../../components';
-import { Image } from 'components/atoms';
+import React from "react"
+import { Box } from "@material-ui/core"
+import { Headline, CodeHighlighter, PropsHighlighter, SectionBox } from "../../components"
+import { Image } from "components/atoms"
 
 const importCodeString = `
 import { Image } from 'components/atoms';
 // or
 import Image from 'components/atoms/Image';
-`;
+`
 
-const dataProperties = [{
-  name: 'src',
-  type: 'string',
-  default: '',
-  description: 'Source of the image',
-}, {
-  name: 'alt',
-  type: 'string',
-  default: '...',
-  description: 'Image title',
-}, {
-  name: 'className',
-  type: 'string',
-  default: '',
-  description: 'External classes',
-}, {
-  name: 'lazy',
-  type: 'boolean',
-  default: 'true',
-  description: 'Should lazy load the image',
-}, {
-  name: 'lazyProps',
-  type: 'object',
-  default: '',
-  description: 'Lazy loading properties',
-}, {
-  name: 'srcSet',
-  type: 'string',
-  default: '',
-  description: 'Source set for the responsive images',
-}];
+const dataProperties = [
+  {
+    name: "src",
+    type: "string",
+    default: "",
+    description: "Source of the image",
+  },
+  {
+    name: "alt",
+    type: "string",
+    default: "...",
+    description: "Image title",
+  },
+  {
+    name: "className",
+    type: "string",
+    default: "",
+    description: "External classes",
+  },
+  {
+    name: "lazy",
+    type: "boolean",
+    default: "true",
+    description: "Should lazy load the image",
+  },
+  {
+    name: "lazyProps",
+    type: "object",
+    default: "",
+    description: "Lazy loading properties",
+  },
+  {
+    name: "srcSet",
+    type: "string",
+    default: "",
+    description: "Source set for the responsive images",
+  },
+]
 
 const exampleCode = `
 import React from 'react';
@@ -53,7 +60,7 @@ export default function Example() {
     </Box>
   );
 }
-`;
+`
 
 const ImageExample = ({ ...rest }: any): JSX.Element => (
   <div {...rest}>
@@ -72,13 +79,21 @@ const ImageExample = ({ ...rest }: any): JSX.Element => (
     </SectionBox>
     <SectionBox title="Example" gutterBottom>
       <>
-        <Box marginBottom={2} display="flex" justifyContent="space-between" alignItems="center" padding={2} border="1px solid #ccc" borderRadius="4px">
+        <Box
+          marginBottom={2}
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
+          padding={2}
+          border="1px solid #ccc"
+          borderRadius="4px"
+        >
           <Image src="https://assets.maccarianagency.com/the-front/illustrations/brand-platform.svg" />
         </Box>
         <CodeHighlighter code={exampleCode} />
       </>
     </SectionBox>
   </div>
-);
+)
 
-export default ImageExample;
+export default ImageExample

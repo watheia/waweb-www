@@ -1,1 +1,1 @@
-export { default } from './AboutSideCover';
+export { default } from "./AboutSideCover"

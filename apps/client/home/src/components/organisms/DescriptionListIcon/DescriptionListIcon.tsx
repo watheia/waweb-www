@@ -1,13 +1,13 @@
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Typography } from '@material-ui/core';
+import React from "react"
+import clsx from "clsx"
+import { makeStyles } from "@material-ui/core/styles"
+import { Grid, Typography } from "@material-ui/core"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   title: {
     fontWeight: 700,
   },
-}));
+}))
 
 /**
  * Component to display the description list with icon
@@ -18,22 +18,29 @@ const DescriptionListIcon = ({
   title,
   subtitle,
   icon,
-  align = 'center',
-  titleVariant = 'h6',
-  subtitleVariant = 'body1',
+  align = "center",
+  titleVariant = "h6",
+  subtitleVariant = "body1",
   className,
   titleProps = {},
   subtitleProps = {},
   ...rest
 }: DescriptionListIconProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  let gridJustify: ('center' | 'flex-start' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly' | undefined) = 'center';
+  let gridJustify:
+    | "center"
+    | "flex-start"
+    | "flex-end"
+    | "space-between"
+    | "space-around"
+    | "space-evenly"
+    | undefined = "center"
 
-  if (align === 'left') {
-    gridJustify = 'flex-start';
-  } else if (align === 'right') {
-    gridJustify = 'flex-end';
+  if (align === "left") {
+    gridJustify = "flex-start"
+  } else if (align === "right") {
+    gridJustify = "flex-end"
   }
 
   return (
@@ -41,7 +48,7 @@ const DescriptionListIcon = ({
       container
       spacing={2}
       {...rest}
-      className={clsx('description-list-icon', className)}
+      className={clsx("description-list-icon", className)}
     >
       <Grid
         item
@@ -57,7 +64,7 @@ const DescriptionListIcon = ({
           variant={titleVariant}
           color="textPrimary"
           align={align}
-          className={clsx(classes.title, 'description-list-icon__title')}
+          className={clsx(classes.title, "description-list-icon__title")}
           {...titleProps}
         >
           {title}
@@ -76,7 +83,7 @@ const DescriptionListIcon = ({
         </Grid>
       )}
     </Grid>
-  );
-};
+  )
+}
 
-export default DescriptionListIcon;
+export default DescriptionListIcon

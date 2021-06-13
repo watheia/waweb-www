@@ -2,24 +2,24 @@ interface SectionProps {
   /**
    * External classes
    */
-  className?: string;
+  className?: string
   /**
    * Children to placed inside the section
    */
-  children?: JSX.Element;
+  children?: JSX.Element
   /**
    * Should show narrow sections
    */
-  narrow?: boolean;
+  narrow?: boolean
   /**
    * Should the section be full width
    */
-  fullWidth?: boolean;
+  fullWidth?: boolean
   /**
    * Should the section render with no padding
    */
-  disablePadding?: boolean;
+  disablePadding?: boolean
 
   // All other props
-  [x:string]: any;
+  [x: string]: any
 }

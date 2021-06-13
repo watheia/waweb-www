@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import { trim, split, filter, isEqual } from "lodash"
 
 /**
  * Get all the pages located under the provided `urlPath`, not including the
@@ -25,12 +25,15 @@ import _ from 'lodash';
  * @param {string} urlPath The url path to filter pages by
  * @return {Array}
  */
-export default function getPages(pages, urlPath) {
-    urlPath = _.trim(urlPath, '/');
-    const urlPathParts = _.split(urlPath, '/');
-    return _.filter(pages, page => {
-        const pageUrlPath = _.trim(page.url, '/');
-        const pageUrlParts = _.split(pageUrlPath, '/');
-        return pageUrlParts.length > urlPathParts.length && _.isEqual(pageUrlParts.slice(0, urlPathParts.length), urlPathParts);
-    });
+export default function getPages(pages: any, urlPath: any) {
+  urlPath = trim(urlPath, "/")
+  const urlPathParts = split(urlPath, "/")
+  return filter(pages, (page) => {
+    const pageUrlPath = trim(page.url, "/")
+    const pageUrlParts = split(pageUrlPath, "/")
+    return (
+      pageUrlParts.length > urlPathParts.length &&
+      isEqual(pageUrlParts.slice(0, urlPathParts.length), urlPathParts)
+    )
+  })
 }

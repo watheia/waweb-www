@@ -8,42 +8,42 @@ seo:
   extra:
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:type'
+      name: "og:type"
       keyName: property
       value: website
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:title'
+      name: "og:title"
       keyName: property
       value: Who We Are
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:description'
+      name: "og:description"
       keyName: property
       value: This is the about us page
     - relativeUrl: true
       type: stackbit_page_meta_extra
-      name: 'og:image'
+      name: "og:image"
       keyName: property
       value: images/1.png
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:card'
+      name: "twitter:card"
       keyName: name
       value: summary_large_image
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:title'
+      name: "twitter:title"
       keyName: name
       value: Who We Are
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:description'
+      name: "twitter:description"
       keyName: name
       value: This is the about us page
     - relativeUrl: true
       type: stackbit_page_meta_extra
-      name: 'twitter:image'
+      name: "twitter:image"
       keyName: name
       value: images/1.png
   title: Who We Are
@@ -76,7 +76,7 @@ sections:
           Aliquam vestibulum morbi blandit cursus risus at ultrices mi. Massa
           placerat duis ultricies lacus. Amet justo donec enim diam.
         last_name: Tone
-        photo: 'https://www.datocms-assets.com/49645/1623441766-miles-tone.jpg'
+        photo: "https://www.datocms-assets.com/49645/1623441766-miles-tone.jpg"
         photo_alt: Miles Tone
         first_name: Miles
         link: blog/author/miles-tone
@@ -86,7 +86,7 @@ sections:
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl
           ligula, cursus id molestie vel, maximus aliquet risus.
         last_name: Ameter
-        photo: 'https://www.datocms-assets.com/49645/1623441765-dianne-ameter.jpg'
+        photo: "https://www.datocms-assets.com/49645/1623441765-dianne-ameter.jpg"
         photo_alt: Dianne Ameter
         first_name: Dianne
         link: blog/author/dianne-ameter
@@ -96,7 +96,7 @@ sections:
           Enim sit amet venenatis urna cursus eget nunc scelerisque viverra.
           Ligula ullamcorper malesuada proin libero nunc consequat interdum.
         last_name: Carr
-        photo: 'https://www.datocms-assets.com/49645/1623441765-eleanor-carr.jpg'
+        photo: "https://www.datocms-assets.com/49645/1623441765-eleanor-carr.jpg"
         photo_alt: Eleanor Carr
         first_name: Eleanor
         id: eleanor-carr
@@ -106,7 +106,7 @@ sections:
           ultricies nunc. Nam iaculis commodo dui quis suscipit. Ut eu porttitor
           enim.
         last_name: Deck
-        photo: 'https://www.datocms-assets.com/49645/1623441766-hanson-deck.jpg'
+        photo: "https://www.datocms-assets.com/49645/1623441766-hanson-deck.jpg"
         photo_alt: Hanson Deck
         first_name: Hanson
         id: hanson-deck
@@ -115,7 +115,7 @@ sections:
           Sagittis nisl rhoncus mattis rhoncus urna neque viverra. In est ante
           in nibh mauris cursus mattis molestie porta non pulvinar neque.
         last_name: Norman
-        photo: 'https://www.datocms-assets.com/49645/1623441766-gordon-norman.jpg'
+        photo: "https://www.datocms-assets.com/49645/1623441766-gordon-norman.jpg"
         photo_alt: Gordon Norman
         first_name: Gordon
         link: blog/author/gordon-norman
@@ -130,6 +130,6 @@ sections:
         style: secondary
         url: /contact
         label: Contact Us
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     title: Join the Team
 ---

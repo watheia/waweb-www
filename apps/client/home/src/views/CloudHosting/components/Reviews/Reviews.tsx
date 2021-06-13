@@ -1,44 +1,44 @@
-import React from 'react';
-import clsx from 'clsx';
-import Swiper from 'swiper';
-import { makeStyles } from '@material-ui/core/styles';
-import { Typography } from '@material-ui/core';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import clsx from "clsx"
+import Swiper from "swiper"
+import { makeStyles } from "@material-ui/core/styles"
+import { Typography } from "@material-ui/core"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   textWhite: {
-    color: 'white',
+    color: "white",
   },
   title: {
     marginBottom: theme.spacing(4),
   },
   swiperSlide: {
-    width: 'auto',
+    width: "auto",
   },
   swiperWrapper: {
     marginBottom: theme.spacing(7),
   },
   swiperContainer: {
-    '& .swiper-pagination-bullet-active': {
-      background: 'white',
+    "& .swiper-pagination-bullet-active": {
+      background: "white",
     },
   },
-}));
+}))
 
 const Reviews = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   React.useEffect(() => {
-    new Swiper('.review-swiper.swiper-container', {
+    new Swiper(".review-swiper.swiper-container", {
       slidesPerView: 1,
       spaceBetween: 30,
       pagination: {
-        el: '.review-swiper.swiper-container .swiper-pagination',
-        type: 'bullets',
+        el: ".review-swiper.swiper-container .swiper-pagination",
+        type: "bullets",
         clickable: true,
       },
-    });
-  });
+    })
+  })
 
   return (
     <div className={className} {...rest}>
@@ -49,19 +49,10 @@ const Reviews = ({ data, className, ...rest }: ViewComponentProps): JSX.Element 
           </span>
         }
       />
-      <div
-        className={clsx(
-          'review-swiper',
-          'swiper-container',
-          classes.swiperContainer,
-        )}
-      >
-        <div className={clsx('swiper-wrapper', classes.swiperWrapper)}>
+      <div className={clsx("review-swiper", "swiper-container", classes.swiperContainer)}>
+        <div className={clsx("swiper-wrapper", classes.swiperWrapper)}>
           {data.map((item: any, index: number) => (
-            <div
-              className={clsx('swiper-slide', classes.swiperSlide)}
-              key={index}
-            >
+            <div className={clsx("swiper-slide", classes.swiperSlide)} key={index}>
               <Typography
                 variant="h6"
                 align="center"
@@ -93,7 +84,7 @@ const Reviews = ({ data, className, ...rest }: ViewComponentProps): JSX.Element 
         <div className="swiper-pagination" />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Reviews;
+export default Reviews

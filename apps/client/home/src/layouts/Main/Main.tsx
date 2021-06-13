@@ -1,331 +1,331 @@
-import React, { useState } from 'react';
-import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Divider } from '@material-ui/core';
-import { Topbar, Footer, Sidebar } from './components';
+import React, { useState } from "react"
+import clsx from "clsx"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, Divider } from "@material-ui/core"
+import { Topbar, Footer, Sidebar } from "./components"
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: '100%',
+    height: "100%",
   },
-}));
+}))
 
 interface Props {
-  children: React.ReactNode;
-  themeToggler: Function;
-  themeMode: string;
+  children: React.ReactNode
+  themeToggler: Function
+  themeMode: string
 }
 
 const Main = ({ children, themeToggler, themeMode }: Props): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   const pages = {
     landings: {
-      title: 'Demos',
-      id: 'demo-pages',
+      title: "Demos",
+      id: "demo-pages",
       children: {
         services: {
-          groupTitle: 'Domains',
+          groupTitle: "Domains",
           pages: [
             {
-              title: 'Coworking',
-              href: '/materials/coworking',
+              title: "Coworking",
+              href: "/materials/coworking",
             },
             {
-              title: 'Rental',
-              href: '/materials/rental',
+              title: "Rental",
+              href: "/materials/rental",
             },
             {
-              title: 'Job Listing',
-              href: '/materials/job-listing',
+              title: "Job Listing",
+              href: "/materials/job-listing",
             },
             {
-              title: 'E-Learning',
-              href: '/materials/e-learning',
+              title: "E-Learning",
+              href: "/materials/e-learning",
             },
             {
-              title: 'E-commerce',
-              href: '/materials/e-commerce',
+              title: "E-commerce",
+              href: "/materials/e-commerce",
             },
             {
-              title: 'Expo',
-              href: '/materials/expo',
+              title: "Expo",
+              href: "/materials/expo",
             },
           ],
         },
         apps: {
-          groupTitle: 'Apps',
+          groupTitle: "Apps",
           pages: [
             {
-              title: 'Desktop App',
-              href: '/materials/desktop-app',
+              title: "Desktop App",
+              href: "/materials/desktop-app",
             },
             {
-              title: 'Mobile App',
-              href: '/materials/mobile-app',
+              title: "Mobile App",
+              href: "/materials/mobile-app",
             },
           ],
         },
         web: {
-          groupTitle: 'Web',
+          groupTitle: "Web",
           pages: [
             {
-              title: 'Marketing',
-              href: '/materials/',
+              title: "Marketing",
+              href: "/materials/",
             },
             {
-              title: 'Overview',
-              href: '/materials/home',
+              title: "Overview",
+              href: "/materials/home",
             },
             {
-              title: 'Basic',
-              href: '/materials/web-basic',
+              title: "Basic",
+              href: "/materials/web-basic",
             },
             {
-              title: 'Service',
-              href: '/materials/service',
+              title: "Service",
+              href: "/materials/service",
             },
             {
-              title: 'Startup',
-              href: '/materials/startup',
+              title: "Startup",
+              href: "/materials/startup",
             },
             {
-              title: 'Enterprise',
-              href: '/materials/enterprise',
+              title: "Enterprise",
+              href: "/materials/enterprise",
             },
             {
-              title: 'Cloud Hosting',
-              href: '/materials/cloud-hosting',
+              title: "Cloud Hosting",
+              href: "/materials/cloud-hosting",
             },
             {
-              title: 'Agency',
-              href: '/materials/agency',
+              title: "Agency",
+              href: "/materials/agency",
             },
             {
-              title: 'Design Company',
-              href: '/materials/design-company',
+              title: "Design Company",
+              href: "/materials/design-company",
             },
             {
-              title: 'Logistics',
-              href: '/materials/logistics',
+              title: "Logistics",
+              href: "/materials/logistics",
             },
           ],
         },
       },
     },
     pages: {
-      title: 'Pages',
-      id: 'supported-pages',
+      title: "Pages",
+      id: "supported-pages",
       children: {
         career: {
-          groupTitle: 'Career',
+          groupTitle: "Career",
           pages: [
             {
-              title: 'Lising',
-              href: '/materials/career-listing',
+              title: "Lising",
+              href: "/materials/career-listing",
             },
             {
-              title: 'Lising Minimal',
-              href: '/materials/career-listing-minimal',
+              title: "Lising Minimal",
+              href: "/materials/career-listing-minimal",
             },
             {
-              title: 'Opening',
-              href: '/materials/career-opening',
+              title: "Opening",
+              href: "/materials/career-opening",
             },
           ],
         },
         helpCenter: {
-          groupTitle: 'Help center',
+          groupTitle: "Help center",
           pages: [
             {
-              title: 'Overview',
-              href: '/materials/help-center',
+              title: "Overview",
+              href: "/materials/help-center",
             },
             {
-              title: 'Article',
-              href: '/materials/help-center-article',
+              title: "Article",
+              href: "/materials/help-center-article",
             },
           ],
         },
         company: {
-          groupTitle: 'Company',
+          groupTitle: "Company",
           pages: [
             {
-              title: 'About',
-              href: '/materials/about',
+              title: "About",
+              href: "/materials/about",
             },
             {
-              title: 'About (Cover)',
-              href: '/materials/about-side-cover',
+              title: "About (Cover)",
+              href: "/materials/about-side-cover",
             },
             {
-              title: 'Pricing',
-              href: '/materials/pricing',
+              title: "Pricing",
+              href: "/materials/pricing",
             },
             {
-              title: 'Terms',
-              href: '/materials/company-terms',
+              title: "Terms",
+              href: "/materials/company-terms",
             },
           ],
         },
         contact: {
-          groupTitle: 'Contact',
+          groupTitle: "Contact",
           pages: [
             {
-              title: 'Reach View',
-              href: '/materials/contact-page',
+              title: "Reach View",
+              href: "/materials/contact-page",
             },
             {
-              title: 'Sidebar Map',
-              href: '/materials/contact-sidebar-map',
+              title: "Sidebar Map",
+              href: "/materials/contact-sidebar-map",
             },
             {
-              title: 'Cover',
-              href: '/materials/contact-page-cover',
+              title: "Cover",
+              href: "/materials/contact-page-cover",
             },
           ],
         },
         blog: {
-          groupTitle: 'Blog',
+          groupTitle: "Blog",
           pages: [
             {
-              title: 'Newsroom',
-              href: '/materials/blog-newsroom',
+              title: "Newsroom",
+              href: "/materials/blog-newsroom",
             },
             {
-              title: 'Reach View',
-              href: '/materials/blog-reach-view',
+              title: "Reach View",
+              href: "/materials/blog-reach-view",
             },
             {
-              title: 'Search',
-              href: '/materials/blog-search',
+              title: "Search",
+              href: "/materials/blog-search",
             },
             {
-              title: 'Article',
-              href: '/materials/blog-article',
+              title: "Article",
+              href: "/materials/blog-article",
             },
           ],
         },
         portfolio: {
-          groupTitle: 'Portfolio',
+          groupTitle: "Portfolio",
           pages: [
             {
-              title: 'Basic',
-              href: '/materials/portfolio-page',
+              title: "Basic",
+              href: "/materials/portfolio-page",
             },
             {
-              title: 'Masonry',
-              href: '/materials/portfolio-masonry',
+              title: "Masonry",
+              href: "/materials/portfolio-masonry",
             },
             {
-              title: 'Grid View',
-              href: '/materials/portfolio-grid',
+              title: "Grid View",
+              href: "/materials/portfolio-grid",
             },
             {
-              title: 'Parallax Effect',
-              href: '/materials/agency',
+              title: "Parallax Effect",
+              href: "/materials/agency",
             },
           ],
         },
       },
     },
     account: {
-      title: 'Account',
-      id: 'account',
+      title: "Account",
+      id: "account",
       children: {
         settings: {
-          groupTitle: 'Settings',
+          groupTitle: "Settings",
           pages: [
             {
-              title: 'General',
-              href: '/materials/account/?pid=general',
+              title: "General",
+              href: "/materials/account/?pid=general",
             },
             {
-              title: 'Security',
-              href: '/materials/account/?pid=security',
+              title: "Security",
+              href: "/materials/account/?pid=security",
             },
             {
-              title: 'Notifications',
-              href: '/materials/account/?pid=notifications',
+              title: "Notifications",
+              href: "/materials/account/?pid=notifications",
             },
             {
-              title: 'Billing',
-              href: '/materials/account/?pid=billing',
+              title: "Billing",
+              href: "/materials/account/?pid=billing",
             },
           ],
         },
         signup: {
-          groupTitle: 'Sign up',
+          groupTitle: "Sign up",
           pages: [
             {
-              title: 'Simple',
-              href: '/materials/signup-simple',
+              title: "Simple",
+              href: "/materials/signup-simple",
             },
             {
-              title: 'Cover',
-              href: '/materials/signup-cover',
+              title: "Cover",
+              href: "/materials/signup-cover",
             },
           ],
         },
         signin: {
-          groupTitle: 'Sign in',
+          groupTitle: "Sign in",
           pages: [
             {
-              title: 'Simple',
-              href: '/materials/signin-simple',
+              title: "Simple",
+              href: "/materials/signin-simple",
             },
             {
-              title: 'Cover',
-              href: '/materials/signin-cover',
+              title: "Cover",
+              href: "/materials/signin-cover",
             },
           ],
         },
         password: {
-          groupTitle: 'Password reset',
+          groupTitle: "Password reset",
           pages: [
             {
-              title: 'Simple',
-              href: '/materials/password-reset-simple',
+              title: "Simple",
+              href: "/materials/password-reset-simple",
             },
             {
-              title: 'Cover',
-              href: '/materials/password-reset-cover',
+              title: "Cover",
+              href: "/materials/password-reset-cover",
             },
           ],
         },
         error: {
-          groupTitle: 'Error',
+          groupTitle: "Error",
           pages: [
             {
-              title: 'Simple',
-              href: '/materials/not-found',
+              title: "Simple",
+              href: "/materials/not-found",
             },
             {
-              title: 'Cover',
-              href: '/materials/not-found-cover',
+              title: "Cover",
+              href: "/materials/not-found-cover",
             },
           ],
         },
       },
     },
-  };
+  }
 
-  const [openSidebar, setOpenSidebar] = useState<boolean>(false);
+  const [openSidebar, setOpenSidebar] = useState<boolean>(false)
 
   const handleSidebarOpen = (): void => {
-    setOpenSidebar(true);
-  };
+    setOpenSidebar(true)
+  }
 
   const handleSidebarClose = (): void => {
-    setOpenSidebar(false);
-  };
+    setOpenSidebar(false)
+  }
 
-  const open = isMd ? false : openSidebar;
+  const open = isMd ? false : openSidebar
 
   return (
     <div
@@ -339,19 +339,14 @@ const Main = ({ children, themeToggler, themeMode }: Props): JSX.Element => {
         themeMode={themeMode}
         themeToggler={themeToggler}
       />
-      <Sidebar
-        onClose={handleSidebarClose}
-        open={open}
-        variant="temporary"
-        pages={pages}
-      />
+      <Sidebar onClose={handleSidebarClose} open={open} variant="temporary" pages={pages} />
       <main>
         <Divider />
         {children}
       </main>
       <Footer pages={pages} />
     </div>
-  );
-};
+  )
+}
 
-export default Main;
+export default Main

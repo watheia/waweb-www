@@ -1,30 +1,30 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid, Typography } from '@material-ui/core';
-import { Image } from 'components/atoms';
-import { SectionHeader, CountUpNumber } from 'components/molecules';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, Grid, Typography } from "@material-ui/core"
+import { Image } from "components/atoms"
+import { SectionHeader, CountUpNumber } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   placementGrid: {
     maxWidth: 320,
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'space-between',
+    width: "100%",
+    display: "flex",
+    justifyContent: "space-between",
   },
   coverImage: {
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down("sm")]: {
       maxWidth: 500,
     },
   },
-}));
+}))
 
 const Features = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -59,20 +59,10 @@ const Features = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
                   />
                 </div>
                 <div>
-                  <CountUpNumber
-                    end={24}
-                    label="Support"
-                    textColor="primary"
-                    suffix="/7"
-                  />
+                  <CountUpNumber end={24} label="Support" textColor="primary" suffix="/7" />
                 </div>
                 <div>
-                  <CountUpNumber
-                    end={80}
-                    label="Desks"
-                    textColor="primary"
-                    suffix="K +"
-                  />
+                  <CountUpNumber end={80} label="Desks" textColor="primary" suffix="K +" />
                 </div>
               </div>
             </Grid>
@@ -95,7 +85,7 @@ const Features = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Features;
+export default Features

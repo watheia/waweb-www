@@ -1,5 +1,5 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
 import {
   useMediaQuery,
   Grid,
@@ -9,9 +9,9 @@ import {
   Switch,
   Button,
   Divider,
-} from '@material-ui/core';
+} from "@material-ui/core"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   inputTitle: {
     fontWeight: 700,
     marginBottom: theme.spacing(1),
@@ -20,19 +20,19 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 700,
   },
   titleCta: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
-}));
+}))
 
 const Security = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -138,18 +138,13 @@ const Security = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
           />
         </Grid>
         <Grid item container justify="flex-start" xs={12}>
-          <Button
-            variant="contained"
-            type="submit"
-            color="primary"
-            size="large"
-          >
+          <Button variant="contained" type="submit" color="primary" size="large">
             save
           </Button>
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Security;
+export default Security

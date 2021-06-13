@@ -1,22 +1,22 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid } from '@material-ui/core';
-import { Image } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, Grid } from "@material-ui/core"
+import { Image } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
 const useStyles = makeStyles(() => ({
   image: {
     maxWidth: 420,
   },
-}));
+}))
 
 const Story = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -24,7 +24,7 @@ const Story = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
         container
         justify="space-between"
         spacing={isMd ? 4 : 2}
-        direction={isMd ? 'row' : 'column-reverse'}
+        direction={isMd ? "row" : "column-reverse"}
       >
         <Grid
           item
@@ -33,7 +33,7 @@ const Story = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
           justify="flex-start"
           xs={12}
           md={6}
-          data-aos={'fade-up'}
+          data-aos={"fade-up"}
         >
           <div>
             <SectionHeader
@@ -42,8 +42,8 @@ const Story = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
               align="left"
               disableGutter
               subtitleProps={{
-                color: 'textPrimary',
-                variant: 'body1',
+                color: "textPrimary",
+                variant: "body1",
               }}
             />
           </div>
@@ -51,11 +51,11 @@ const Story = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
         <Grid
           item
           container
-          justify={isMd ? 'flex-end' : 'flex-start'}
+          justify={isMd ? "flex-end" : "flex-start"}
           alignItems="center"
           xs={12}
           md={6}
-          data-aos={'fade-up'}
+          data-aos={"fade-up"}
         >
           <Image
             src="https://assets.maccarianagency.com/the-front/illustrations/working-on-sofa.svg"
@@ -65,7 +65,7 @@ const Story = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Story;
+export default Story

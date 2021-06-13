@@ -1,1 +1,1 @@
-export { default } from './PasswordResetCover';
+export { default } from "./PasswordResetCover"

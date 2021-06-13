@@ -1,33 +1,33 @@
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid, Typography, TextField, Button } from '@material-ui/core';
-import { Image } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import clsx from "clsx"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, Grid, Typography, TextField, Button } from "@material-ui/core"
+import { Image } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(3, 2),
     borderRadius: theme.spacing(2),
     background: theme.palette.alternate.dark,
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       padding: theme.spacing(3),
     },
   },
   cover: {
     width: 200,
     height: 200,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    margin: '0 auto',
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    margin: "0 auto",
     marginBottom: theme.spacing(3),
   },
   form: {
-    '& .MuiTextField-root': {
+    "& .MuiTextField-root": {
       background: theme.palette.background.paper,
     },
-    '& .MuiOutlinedInput-input': {
+    "& .MuiOutlinedInput-input": {
       background: theme.palette.background.paper,
     },
   },
@@ -35,15 +35,15 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 700,
     marginBottom: theme.spacing(1),
   },
-}));
+}))
 
 const Form = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
@@ -54,12 +54,12 @@ const Form = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
         title="Email newsletter"
         subtitle="Subscribe to our Newsletter for new blog posts, tips & new photos"
         titleProps={{
-          variant: 'h4',
-          color: 'textPrimary',
+          variant: "h4",
+          color: "textPrimary",
         }}
         subtitleProps={{
-          variant: 'body1',
-          color: 'textPrimary',
+          variant: "body1",
+          color: "textPrimary",
         }}
         data-aos="fade-up"
         align="left"
@@ -101,12 +101,7 @@ const Form = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
             />
           </Grid>
           <Grid item container justify="center" xs={12}>
-            <Button
-              variant="contained"
-              type="submit"
-              color="primary"
-              size="large"
-            >
+            <Button variant="contained" type="submit" color="primary" size="large">
               Subscribe
             </Button>
           </Grid>
@@ -118,7 +113,7 @@ const Form = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
         </Grid>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Form;
+export default Form

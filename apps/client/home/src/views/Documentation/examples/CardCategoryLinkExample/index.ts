@@ -1,1 +1,1 @@
-export { default } from './CardCategoryLinkExample';
+export { default } from "./CardCategoryLinkExample"

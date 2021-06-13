@@ -1,15 +1,15 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid, Button, Typography } from '@material-ui/core';
-import { Image } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, Grid, Button, Typography } from "@material-ui/core"
+import { Image } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   price: {
     color: theme.palette.text.primary,
     fontSize: 32,
-    fontWeight: 'normal',
-    [theme.breakpoints.up('md')]: {
+    fontWeight: "normal",
+    [theme.breakpoints.up("md")]: {
       fontSize: 48,
     },
   },
@@ -17,20 +17,20 @@ const useStyles = makeStyles(theme => ({
     borderRadius: theme.spacing(2),
     padding: theme.spacing(1 / 2, 1),
     background: theme.palette.alternate.main,
-    display: 'inline-block',
+    display: "inline-block",
   },
   image: {
     maxWidth: 600,
   },
-}));
+}))
 
 const Hero = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -38,9 +38,9 @@ const Hero = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
         container
         justify="space-between"
         spacing={isMd ? 4 : 2}
-        direction={isMd ? 'row' : 'column-reverse'}
+        direction={isMd ? "row" : "column-reverse"}
       >
-        <Grid item xs={12} md={6} data-aos={'fade-up'}>
+        <Grid item xs={12} md={6} data-aos={"fade-up"}>
           <SectionHeader
             title="Experience your music like never before."
             subtitle={<span className={classes.price}>$299.95</span>}
@@ -59,14 +59,7 @@ const Hero = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
             </Typography>
           </div>
         </Grid>
-        <Grid
-          item
-          container
-          justify="center"
-          xs={12}
-          md={6}
-          data-aos={'fade-up'}
-        >
+        <Grid item container justify="center" xs={12} md={6} data-aos={"fade-up"}>
           <Image
             src="https://assets.maccarianagency.com/the-front/photos/ecommerce/hero-cover.png"
             srcSet="https://assets.maccarianagency.com/the-front/photos/ecommerce/hero-cover@2x.png 2x"
@@ -76,7 +69,7 @@ const Hero = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

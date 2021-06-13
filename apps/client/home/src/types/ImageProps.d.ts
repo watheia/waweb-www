@@ -2,27 +2,27 @@ interface ImageProps {
   /**
    * External classes
    */
-  className?: string;
+  className?: string
   /**
    * Source of the image
    */
-  src: string;
+  src: string
   /**
    * Source set for the responsive images
    */
-  srcSet?: string;
+  srcSet?: string
   /**
    * Image title
    */
-  alt?: string;
+  alt?: string
   /**
    * Lazy loading properties
    */
-  lazyProps?: object;
+  lazyProps?: object
   /**
    * Should lazy load the image
    */
-  lazy?: boolean;
+  lazy?: boolean
   // All other props
-  [x:string]: any;
+  [x: string]: any
 }

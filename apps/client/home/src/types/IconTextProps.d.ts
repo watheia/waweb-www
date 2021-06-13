@@ -2,27 +2,27 @@ interface IconTextProps {
   /**
    * External classes
    */
-  className?: string;
+  className?: string
   /**
    * The classes of the font icon
    */
-  fontIconClass: string;
+  fontIconClass: string
   /**
    * Source set for the responsive images
    */
-  color?: string;
+  color?: string
   /**
    * Title of the icon-text
    */
-  title: string;
+  title: string
   /**
    * Additional properties to pass to the Icon component
    */
-  iconProps?: object;
+  iconProps?: object
   /**
    * Additional properties to pass to the Typography component
    */
-  typographyProps?: object;
+  typographyProps?: object
   // All other props
-  [x:string]: any;
+  [x: string]: any
 }

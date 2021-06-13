@@ -2,19 +2,19 @@ interface IconProps {
   /**
    * External classes
    */
-  className?: string;
+  className?: string
   /**
    * The classes of the font icon
    */
-  fontIconClass: string;
+  fontIconClass: string
   /**
    * Source set for the responsive images
    */
-  size?: 'extraSmall' | 'small' | 'medium' | 'large';
+  size?: "extraSmall" | "small" | "medium" | "large"
   /**
    * Color of the icon
    */
-  fontIconColor?: string;
+  fontIconColor?: string
   // All other props
-  [x:string]: any;
+  [x: string]: any
 }

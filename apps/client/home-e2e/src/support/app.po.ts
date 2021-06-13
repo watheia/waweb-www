@@ -1,1 +1,1 @@
-export const getCopyright = () => cy.get('div');
+export const getCopyright = () => cy.get("div")

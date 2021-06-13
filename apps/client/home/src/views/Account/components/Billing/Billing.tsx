@@ -1,5 +1,5 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
 import {
   useMediaQuery,
   Grid,
@@ -7,22 +7,22 @@ import {
   TextField,
   Button,
   Divider,
-} from '@material-ui/core';
+} from "@material-ui/core"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   inputTitle: {
     fontWeight: 700,
     marginBottom: theme.spacing(1),
   },
-}));
+}))
 
 const Billing = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -77,12 +77,7 @@ const Billing = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
           >
             CVV
           </Typography>
-          <TextField
-            placeholder="Card CVV"
-            variant="outlined"
-            name="cvv"
-            fullWidth
-          />
+          <TextField placeholder="Card CVV" variant="outlined" name="cvv" fullWidth />
         </Grid>
         <Grid item xs={12} sm={8}>
           <Typography
@@ -119,18 +114,13 @@ const Billing = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
           />
         </Grid>
         <Grid item container justify="flex-start" xs={12}>
-          <Button
-            variant="contained"
-            type="submit"
-            color="primary"
-            size="large"
-          >
+          <Button variant="contained" type="submit" color="primary" size="large">
             save
           </Button>
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Billing;
+export default Billing

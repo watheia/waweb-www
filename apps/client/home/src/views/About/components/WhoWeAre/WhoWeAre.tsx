@@ -1,13 +1,13 @@
-import React from 'react';
-import { useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid } from '@material-ui/core';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, Grid } from "@material-ui/core"
+import { SectionHeader } from "components/molecules"
 
 const WhoWeAre = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -19,8 +19,8 @@ const WhoWeAre = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
             disableGutter
             align="left"
             subtitleProps={{
-              variant: 'body1',
-              color: 'textPrimary',
+              variant: "body1",
+              color: "textPrimary",
             }}
           />
         </Grid>
@@ -31,14 +31,14 @@ const WhoWeAre = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
             disableGutter
             align="left"
             subtitleProps={{
-              variant: 'body1',
-              color: 'textPrimary',
+              variant: "body1",
+              color: "textPrimary",
             }}
           />
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default WhoWeAre;
+export default WhoWeAre

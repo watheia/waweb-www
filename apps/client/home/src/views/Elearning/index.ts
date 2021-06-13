@@ -1,1 +1,1 @@
-export { default } from './Elearning';
+export { default } from "./Elearning"

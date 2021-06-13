@@ -1,1 +1,1 @@
-export { default } from './FolderStructure';
+export { default } from "./FolderStructure"

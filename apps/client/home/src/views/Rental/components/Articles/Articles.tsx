@@ -1,14 +1,14 @@
-import React from 'react';
-import { useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid } from '@material-ui/core';
-import { LearnMoreLink } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, Grid } from "@material-ui/core"
+import { LearnMoreLink } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
 const Articles = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -21,9 +21,7 @@ const Articles = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
               subtitle={item.subtitle}
               subtitleColor="textPrimary"
               subtitleVariant="body1"
-              ctaGroup={[
-                <LearnMoreLink title="Learn more" variant="subtitle1" />,
-              ]}
+              ctaGroup={[<LearnMoreLink title="Learn more" variant="subtitle1" />]}
               align="left"
               disableGutter
             />
@@ -31,7 +29,7 @@ const Articles = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
         ))}
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Articles;
+export default Articles

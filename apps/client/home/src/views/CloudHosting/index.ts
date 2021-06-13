@@ -1,1 +1,1 @@
-export { default } from './CloudHosting';
+export { default } from "./CloudHosting"

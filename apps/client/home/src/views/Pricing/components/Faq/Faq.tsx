@@ -1,29 +1,29 @@
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid, ListItem, ListItemText } from '@material-ui/core';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import clsx from "clsx"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, Grid, ListItem, ListItemText } from "@material-ui/core"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   fontWeightBold: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   faqTitle: {
-    display: 'block',
+    display: "block",
     marginBottom: theme.spacing(1),
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       marginBottom: theme.spacing(2),
     },
   },
-}));
+}))
 
 const Faq = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -41,12 +41,12 @@ const Faq = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
                 primary={item.title}
                 secondary={item.text}
                 primaryTypographyProps={{
-                  variant: 'h6',
+                  variant: "h6",
                   className: clsx(classes.fontWeightBold, classes.faqTitle),
                 }}
                 secondaryTypographyProps={{
-                  variant: 'subtitle1',
-                  color: 'textPrimary',
+                  variant: "subtitle1",
+                  color: "textPrimary",
                 }}
               />
             </ListItem>
@@ -54,7 +54,7 @@ const Faq = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
         ))}
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Faq;
+export default Faq

@@ -1,20 +1,20 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Grid, Typography, useMediaQuery } from '@material-ui/core';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { Grid, Typography, useMediaQuery } from "@material-ui/core"
 
 const useStyles = makeStyles(() => ({
   title: {
     fontWeight: 700,
   },
-}));
+}))
 
 const Info = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -30,8 +30,8 @@ const Info = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
             What is it about?
           </Typography>
           <Typography variant="subtitle1" align="left" color="textSecondary">
-            Fill out our standardized application on our platform. Most
-            applicants finish in under an hour.
+            Fill out our standardized application on our platform. Most applicants finish in
+            under an hour.
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6} data-aos="fade-up">
@@ -45,13 +45,13 @@ const Info = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
             Who is it for?
           </Typography>
           <Typography variant="subtitle1" color="textSecondary" align="left">
-            Fill out our standardized application on our platform. Most
-            applicants finish in under an hour.
+            Fill out our standardized application on our platform. Most applicants finish in
+            under an hour.
           </Typography>
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Info;
+export default Info

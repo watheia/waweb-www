@@ -1,38 +1,38 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, GridList, GridListTile } from '@material-ui/core';
-import { Image } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, GridList, GridListTile } from "@material-ui/core"
+import { Image } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   image: {
-    objectFit: 'cover',
+    objectFit: "cover",
     borderRadius: theme.spacing(1),
   },
   textWhite: {
-    color: 'white',
+    color: "white",
   },
   gridListTile: {
-    position: 'relative',
-    maxWidth: '100%',
+    position: "relative",
+    maxWidth: "100%",
   },
   gridListSection: {
-    position: 'absolute',
+    position: "absolute",
     bottom: 0,
     left: 0,
     right: 0,
     padding: theme.spacing(2),
-    background: '#0000007a',
+    background: "#0000007a",
   },
-}));
+}))
 
 const News = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -53,17 +53,15 @@ const News = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => 
               alt={item.location}
               className={classes.image}
               lazyProps={{
-                width: '100%',
-                height: '100%',
+                width: "100%",
+                height: "100%",
               }}
             />
             <div className={classes.gridListSection}>
               <SectionHeader
                 title={<span className={classes.textWhite}>{item.title}</span>}
                 subtitle={
-                  <span className={classes.textWhite}>
-                    {item.subtitle} Properties
-                  </span>
+                  <span className={classes.textWhite}>{item.subtitle} Properties</span>
                 }
                 disableGutter
                 align="left"
@@ -75,7 +73,7 @@ const News = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => 
         ))}
       </GridList>
     </div>
-  );
-};
+  )
+}
 
-export default News;
+export default News

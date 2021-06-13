@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react"
 import {
   Table,
   TableBody,
@@ -6,27 +6,27 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-} from '@material-ui/core';
+} from "@material-ui/core"
 
 interface Props {
   /**
    * External classes
    */
-  className?: string;
+  className?: string
   /**
    * Description
    */
   dataProperties: Array<{
-    name: string,
-    type: string,
-    default: string,
-    description: string,
-  }>;
+    name: string
+    type: string
+    default: string
+    description: string
+  }>
   /**
    * All other props
    */
-  [x:string]: any;
-};
+  [x: string]: any
+}
 
 const PropsHighlighter = ({ dataProperties, className, ...rest }: Props): JSX.Element => (
   <div className={className} {...rest}>
@@ -34,17 +34,27 @@ const PropsHighlighter = ({ dataProperties, className, ...rest }: Props): JSX.El
       <Table aria-label="props & mthods">
         <TableHead>
           <TableRow>
-            <TableCell><b>Name</b></TableCell>
-            <TableCell><b>Type</b></TableCell>
-            <TableCell><b>Default</b></TableCell>
-            <TableCell><b>Description</b></TableCell>
+            <TableCell>
+              <b>Name</b>
+            </TableCell>
+            <TableCell>
+              <b>Type</b>
+            </TableCell>
+            <TableCell>
+              <b>Default</b>
+            </TableCell>
+            <TableCell>
+              <b>Description</b>
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {dataProperties.map((row) => (
             <TableRow key={row.name}>
               <TableCell>{row.name}</TableCell>
-              <TableCell><i>{row.type}</i></TableCell>
+              <TableCell>
+                <i>{row.type}</i>
+              </TableCell>
               <TableCell>{row.default}</TableCell>
               <TableCell>{row.description}</TableCell>
             </TableRow>
@@ -53,6 +63,6 @@ const PropsHighlighter = ({ dataProperties, className, ...rest }: Props): JSX.El
       </Table>
     </TableContainer>
   </div>
-);
+)
 
-export default PropsHighlighter;
+export default PropsHighlighter

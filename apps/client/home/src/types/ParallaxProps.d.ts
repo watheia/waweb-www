@@ -2,16 +2,16 @@ interface ParallaxProps {
   /**
    * External classes
    */
-  className?: string;
+  className?: string
   /**
    * The content
    */
-  children?: JSX.Element;
+  children?: JSX.Element
   /**
    * The parallax background image
    */
-  backgroundImage: string;
+  backgroundImage: string
 
   // All other props
-  [x:string]: any;
+  [x: string]: any
 }

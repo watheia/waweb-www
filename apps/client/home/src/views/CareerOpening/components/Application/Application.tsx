@@ -1,12 +1,12 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid, Typography, TextField, Button } from '@material-ui/core';
-import { IconText } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, Grid, Typography, TextField, Button } from "@material-ui/core"
+import { IconText } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   icon: {
-    background: 'transparent',
+    background: "transparent",
     borderRadius: 0,
   },
   iconText: {
@@ -14,10 +14,10 @@ const useStyles = makeStyles(theme => ({
     marginLeft: theme.spacing(2),
   },
   form: {
-    '& .MuiTextField-root': {
+    "& .MuiTextField-root": {
       background: theme.palette.background.paper,
     },
-    '& .MuiOutlinedInput-input': {
+    "& .MuiOutlinedInput-input": {
       background: theme.palette.background.paper,
     },
   },
@@ -26,27 +26,27 @@ const useStyles = makeStyles(theme => ({
     marginBottom: theme.spacing(1),
   },
   uploadButton: {
-    display: 'flex',
-    justifyContent: 'center',
-    border: '1px solid transparent',
+    display: "flex",
+    justifyContent: "center",
+    border: "1px solid transparent",
     background: theme.palette.alternate.dark,
-    textTransform: 'lowercase',
-    '& .icon-text': {
-      width: 'auto',
+    textTransform: "lowercase",
+    "& .icon-text": {
+      width: "auto",
     },
-    [theme.breakpoints.down('xs')]: {
-      justifyContent: 'flex-start',
+    [theme.breakpoints.down("xs")]: {
+      justifyContent: "flex-start",
     },
   },
-}));
+}))
 
 const Application = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -54,11 +54,11 @@ const Application = ({ className, ...rest }: ViewComponentProps): JSX.Element =>
         title="Apply fo this job"
         subtitle="After 3 days all of your offers will arrive and you will have another 7 days to select your new company."
         subtitleProps={{
-          variant: 'body1',
-          color: 'textPrimary',
+          variant: "body1",
+          color: "textPrimary",
         }}
         data-aos="fade-up"
-        align={isMd ? 'center' : 'left'}
+        align={isMd ? "center" : "left"}
       />
       <div className={classes.form}>
         <Grid container spacing={isMd ? 4 : 2}>
@@ -113,7 +113,7 @@ const Application = ({ className, ...rest }: ViewComponentProps): JSX.Element =>
                   className: classes.iconText,
                 }}
               />
-              <input type="file" style={{ display: 'none' }} />
+              <input type="file" style={{ display: "none" }} />
             </Button>
           </Grid>
           <Grid item xs={12} sm={6} data-aos="fade-up">
@@ -133,7 +133,7 @@ const Application = ({ className, ...rest }: ViewComponentProps): JSX.Element =>
                   className: classes.iconText,
                 }}
               />
-              <input type="file" style={{ display: 'none' }} />
+              <input type="file" style={{ display: "none" }} />
             </Button>
           </Grid>
           <Grid item xs={12} data-aos="fade-up">
@@ -154,19 +154,14 @@ const Application = ({ className, ...rest }: ViewComponentProps): JSX.Element =>
             />
           </Grid>
           <Grid item container justify="center" xs={12}>
-            <Button
-              variant="contained"
-              type="submit"
-              color="primary"
-              size="large"
-            >
+            <Button variant="contained" type="submit" color="primary" size="large">
               Apply now
             </Button>
           </Grid>
         </Grid>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Application;
+export default Application

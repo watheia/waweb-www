@@ -1,1 +1,1 @@
-export { default } from './CareerListingMinimal';
+export { default } from "./CareerListingMinimal"

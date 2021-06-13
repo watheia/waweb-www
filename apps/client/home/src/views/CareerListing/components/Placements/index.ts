@@ -1,1 +1,1 @@
-export { default } from './Placements';
+export { default } from "./Placements"

@@ -1,82 +1,80 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Typography, Grid, Button, TextField } from '@material-ui/core';
-import validate from 'validate.js';
-import { LearnMoreLink } from 'components/atoms';
+import React from "react"
+import { makeStyles } from "@material-ui/core/styles"
+import { Typography, Grid, Button, TextField } from "@material-ui/core"
+import validate from "validate.js"
+import { LearnMoreLink } from "components/atoms"
 
 const useStyles = makeStyles(() => ({
   root: {
-    width: '100%',
+    width: "100%",
   },
-}));
+}))
 
 const schema = {
   email: {
-    presence: { allowEmpty: false, message: 'is required' },
+    presence: { allowEmpty: false, message: "is required" },
     email: true,
     length: {
       maximum: 300,
     },
   },
-};
+}
 
 const Form = (): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   const [formState, setFormState] = React.useState<FormStateProps>({
     isValid: false,
     values: {},
     touched: {},
     errors: {},
-  });
+  })
 
   React.useEffect(() => {
-    const errors = validate(formState.values, schema);
+    const errors = validate(formState.values, schema)
 
-    setFormState(formState => ({
+    setFormState((formState) => ({
       ...formState,
       isValid: errors ? false : true,
       errors: errors || {},
-    }));
-  }, [formState.values]);
+    }))
+  }, [formState.values])
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    event.persist();
+    event.persist()
 
-    setFormState(formState => ({
+    setFormState((formState) => ({
       ...formState,
       values: {
         ...formState.values,
         [event.target.name]:
-          event.target.type === 'checkbox'
-            ? event.target.checked
-            : event.target.value,
+          event.target.type === "checkbox" ? event.target.checked : event.target.value,
       },
       touched: {
         ...formState.touched,
         [event.target.name]: true,
       },
-    }));
-  };
+    }))
+  }
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+    event.preventDefault()
 
     if (formState.isValid) {
-      window.location.replace('/');
+      window.location.replace("/")
     }
 
-    setFormState(formState => ({
+    setFormState((formState) => ({
       ...formState,
       touched: {
         ...formState.touched,
         ...formState.errors,
       },
-    }));
-  };
+    }))
+  }
 
-  const hasError = (field: string ): boolean =>
-    formState.touched[field] && formState.errors[field] ? true : false;
+  const hasError = (field: string): boolean =>
+    formState.touched[field] && formState.errors[field] ? true : false
 
   return (
     <div className={classes.root}>
@@ -90,11 +88,11 @@ const Form = (): JSX.Element => {
               size="medium"
               name="email"
               fullWidth
-              helperText={hasError('email') ? formState.errors.email[0] : null}
-              error={hasError('email')}
+              helperText={hasError("email") ? formState.errors.email[0] : null}
+              error={hasError("email")}
               onChange={handleChange}
               type="email"
-              value={formState.values.email || ''}
+              value={formState.values.email || ""}
             />
           </Grid>
           <Grid item xs={12}>
@@ -116,19 +114,15 @@ const Form = (): JSX.Element => {
             </Button>
           </Grid>
           <Grid item xs={12}>
-            <Typography
-              variant="subtitle1"
-              color="textSecondary"
-              align="center"
-            >
-              Remember your password?{' '}
+            <Typography variant="subtitle1" color="textSecondary" align="center">
+              Remember your password?{" "}
               <LearnMoreLink title="Sign in here" href="/signin-cover" />
             </Typography>
           </Grid>
         </Grid>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default Form;
+export default Form

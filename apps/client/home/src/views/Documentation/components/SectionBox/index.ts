@@ -1,1 +1,1 @@
-export { default } from './SectionBox';
+export { default } from "./SectionBox"

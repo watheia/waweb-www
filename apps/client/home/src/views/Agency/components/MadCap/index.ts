@@ -1,1 +1,1 @@
-export { default } from './MadCap';
+export { default } from "./MadCap"

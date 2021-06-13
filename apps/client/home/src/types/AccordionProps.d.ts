@@ -1,37 +1,36 @@
-
 interface AccoundionItemProps {
-  id: number | string;
-  title: string;
-  subtitle: string;
-  text: string;
-  link: string;
+  id: number | string
+  title: string
+  subtitle: string
+  text: string
+  link: string
 }
 
 interface AccordionProps {
   /**
    * Classname from the parent component
    */
-  className?: string;
+  className?: string
   /**
    * Items to show inside the accordion
    */
-  items: Array<AccoundionItemProps>;
+  items: Array<AccoundionItemProps>
   /**
    * Additional properties to pass to the title Typography component
    */
-  titleProps?: object;
+  titleProps?: object
   /**
    * Additional properties to pass to the subtitle Typography component
    */
-  subtitleProps?: object;
+  subtitleProps?: object
   /**
    * Additional properties to pass to the text Typography component
    */
-  textProps?: object;
+  textProps?: object
   /**
    * Additional properties to pass to the link component
    */
-  linkProps?: object;
+  linkProps?: object
   // All other props
-  [x:string]: any;
+  [x: string]: any
 }

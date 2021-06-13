@@ -1,11 +1,11 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery } from '@material-ui/core';
-import { Grid, Button, Avatar, Typography } from '@material-ui/core';
-import { LearnMoreLink } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { useMediaQuery } from "@material-ui/core"
+import { Grid, Button, Avatar, Typography } from "@material-ui/core"
+import { LearnMoreLink } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   teamAvatar: {
     width: 250,
     height: 250,
@@ -14,29 +14,31 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(1 / 2),
   },
   listGrid: {
-    overflow: 'hidden',
+    overflow: "hidden",
     marginBottom: theme.spacing(3),
-    '&:last-child': {
+    "&:last-child": {
       marginBottom: theme.spacing(0),
     },
   },
-}));
+}))
 
 const Webinars = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
       <SectionHeader
         title={
           <span>
-            We’re focused on{' '}
-            <Typography color="secondary" variant="inherit" component="span">your brand, not ours</Typography>
+            We’re focused on{" "}
+            <Typography color="secondary" variant="inherit" component="span">
+              your brand, not ours
+            </Typography>
           </span>
         }
         subtitle="Book a place to participate to the upcoming webinars organised by our top management team."
@@ -48,11 +50,11 @@ const Webinars = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
             key={index}
             item
             container
-            data-aos={'fade-up'}
-            justify={isMd ? 'space-between' : 'center'}
+            data-aos={"fade-up"}
+            justify={isMd ? "space-between" : "center"}
             spacing={isMd ? 4 : 2}
             className={classes.listGrid}
-            direction={index % 2 === 1 ? 'row-reverse' : 'row'}
+            direction={index % 2 === 1 ? "row-reverse" : "row"}
           >
             <Grid item container xs={12} sm={12} md={7} alignItems="center">
               <SectionHeader
@@ -64,13 +66,13 @@ const Webinars = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
                   <Button
                     variant="outlined"
                     color="secondary"
-                    size={isMd ? 'large' : 'medium'}
+                    size={isMd ? "large" : "medium"}
                   >
                     Book now
                   </Button>,
                   <LearnMoreLink title="Learn more" variant="body1" />,
                 ]}
-                align={isMd ? 'left' : 'center'}
+                align={isMd ? "left" : "center"}
                 disableGutter
               />
             </Grid>
@@ -85,7 +87,7 @@ const Webinars = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
         ))}
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Webinars;
+export default Webinars

@@ -1,23 +1,23 @@
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid } from '@material-ui/core';
-import { Image } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import clsx from "clsx"
+import { makeStyles } from "@material-ui/core/styles"
+import { Grid } from "@material-ui/core"
+import { Image } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
+    width: "100%",
   },
   noBg: {
-    background: 'transparent',
+    background: "transparent",
   },
   copy: {
-    textAlign: 'center',
+    textAlign: "center",
     maxWidth: 700,
-    margin: '0 auto',
+    margin: "0 auto",
     padding: theme.spacing(2, 2, 0, 2),
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       padding: theme.spacing(4, 2, 0, 2),
     },
   },
@@ -30,10 +30,10 @@ const useStyles = makeStyles(theme => ({
   fontWeight700: {
     fontWeight: 700,
   },
-}));
+}))
 
 const Partners = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <div className={clsx(classes.root, className)} data-aos="fade-up" {...rest}>
@@ -58,7 +58,7 @@ const Partners = ({ data, className, ...rest }: ViewComponentProps): JSX.Element
         </Grid>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Partners;
+export default Partners

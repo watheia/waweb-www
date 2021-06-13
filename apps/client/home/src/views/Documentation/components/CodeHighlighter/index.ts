@@ -1,1 +1,1 @@
-export { default } from './CodeHighlighter';
+export { default } from "./CodeHighlighter"

@@ -2,19 +2,19 @@ interface DarkModeTogglerProps {
   /**
    * External classes
    */
-  className?: string;
+  className?: string
   /**
    * The theme mode
    */
-  themeMode?: string;
+  themeMode?: string
   /**
    * Theme toggler function
    */
-  onClick: (event: React.MouseEvent) => void;
+  onClick: (event: React.MouseEvent) => void
   /**
    * Color of the icon
    */
-  fontIconColor?: string;
+  fontIconColor?: string
   // All other props
-  [x:string]: any;
-};
+  [x: string]: any
+}

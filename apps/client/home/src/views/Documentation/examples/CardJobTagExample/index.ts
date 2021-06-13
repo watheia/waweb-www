@@ -1,1 +1,1 @@
-export { default } from './CardJobTagExample';
+export { default } from "./CardJobTagExample"

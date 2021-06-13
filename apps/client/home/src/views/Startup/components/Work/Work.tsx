@@ -1,27 +1,27 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import {} from '@material-ui/core';
-import { useMediaQuery, Grid, Button } from '@material-ui/core';
-import { Image, LearnMoreLink } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import {} from "@material-ui/core"
+import { useMediaQuery, Grid, Button } from "@material-ui/core"
+import { Image, LearnMoreLink } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   listGrid: {
-    overflow: 'hidden',
+    overflow: "hidden",
     marginBottom: theme.spacing(3),
-    '&:last-child': {
+    "&:last-child": {
       marginBottom: theme.spacing(0),
     },
   },
-}));
+}))
 
 const Work = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} data-aos="fade-up" {...rest}>
@@ -38,7 +38,7 @@ const Work = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => 
             container
             xs={12}
             spacing={isMd ? 4 : 2}
-            direction={index % 2 === 1 ? 'row-reverse' : 'row'}
+            direction={index % 2 === 1 ? "row-reverse" : "row"}
             className={classes.listGrid}
           >
             <Grid item xs={12} sm={6}>
@@ -63,7 +63,7 @@ const Work = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => 
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Work;
+export default Work

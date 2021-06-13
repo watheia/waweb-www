@@ -1,51 +1,53 @@
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid } from '@material-ui/core';
-import { Image } from 'components/atoms';
+import React from "react"
+import clsx from "clsx"
+import { makeStyles } from "@material-ui/core/styles"
+import { Grid } from "@material-ui/core"
+import { Image } from "components/atoms"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   imageGrid: {
-    padding: '.25rem',
-    width: '150%',
-    boxShadow: '0 1.5rem 4rem rgba(22,28,45,.1)',
+    padding: ".25rem",
+    width: "150%",
+    boxShadow: "0 1.5rem 4rem rgba(22,28,45,.1)",
     background: theme.palette.background.paper,
-    '& img': {
-      maxWidth: '100%',
-      height: 'auto',
-      verticalAlign: 'middle',
-      borderStyle: 'none',
+    "& img": {
+      maxWidth: "100%",
+      height: "auto",
+      verticalAlign: "middle",
+      borderStyle: "none",
     },
   },
   imageGridFirstItem: {
-    marginTop: '4rem',
+    marginTop: "4rem",
   },
   imageGridLastItem: {
-    marginTop: '6rem',
-    float: 'right',
+    marginTop: "6rem",
+    float: "right",
   },
-}));
+}))
 
 /**
  * Component to display the overlaped images
  *
  * @param {Object} props
  */
-const OverlapedImages = ({ image1, image2, image3, className, ...rest }: OverlapedImagesProps): JSX.Element => {
-  const classes = useStyles();
+const OverlapedImages = ({
+  image1,
+  image2,
+  image3,
+  className,
+  ...rest
+}: OverlapedImagesProps): JSX.Element => {
+  const classes = useStyles()
 
   return (
-    <Grid
-      container
-      className={clsx('overlaped-images', className)}
-      {...rest}
-    >
+    <Grid container className={clsx("overlaped-images", className)} {...rest}>
       <Grid item xs={4} className="overlaped-images__item-container">
         <div
           className={clsx(
-            'overlaped-images__item-wrapper',
+            "overlaped-images__item-wrapper",
             classes.imageGrid,
-            classes.imageGridFirstItem,
+            classes.imageGridFirstItem
           )}
         >
           <Image
@@ -57,9 +59,7 @@ const OverlapedImages = ({ image1, image2, image3, className, ...rest }: Overlap
         </div>
       </Grid>
       <Grid item xs={4} className="overlaped-images__item-container">
-        <div
-          className={clsx('overlaped-images__item-wrapper', classes.imageGrid)}
-        >
+        <div className={clsx("overlaped-images__item-wrapper", classes.imageGrid)}>
           <Image
             src={image2.src}
             srcSet={image2.srcSet}
@@ -71,9 +71,9 @@ const OverlapedImages = ({ image1, image2, image3, className, ...rest }: Overlap
       <Grid item xs={4} className="overlaped-images__item-container">
         <div
           className={clsx(
-            'overlaped-images__item-wrapper',
+            "overlaped-images__item-wrapper",
             classes.imageGrid,
-            classes.imageGridLastItem,
+            classes.imageGridLastItem
           )}
         >
           <Image
@@ -85,7 +85,7 @@ const OverlapedImages = ({ image1, image2, image3, className, ...rest }: Overlap
         </div>
       </Grid>
     </Grid>
-  );
-};
+  )
+}
 
-export default OverlapedImages;
+export default OverlapedImages

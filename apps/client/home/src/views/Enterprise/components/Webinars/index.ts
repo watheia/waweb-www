@@ -1,1 +1,1 @@
-export { default } from './Webinars';
+export { default } from "./Webinars"

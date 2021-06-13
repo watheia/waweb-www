@@ -1,79 +1,79 @@
-import React from 'react';
-import clsx from 'clsx';
-import Swiper from 'swiper';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid, Typography } from '@material-ui/core';
-import { Image } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import clsx from "clsx"
+import Swiper from "swiper"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, Grid, Typography } from "@material-ui/core"
+import { Image } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   reviewAuthor: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginTop: theme.spacing(3),
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       marginTop: theme.spacing(5),
     },
   },
   authorPhoto: {
-    width: '100%',
+    width: "100%",
     height: 300,
     maxWidth: 400,
   },
   image: {
-    objectFit: 'cover',
+    objectFit: "cover",
     borderRadius: theme.spacing(3),
   },
   swiperContainer: {
-    position: 'relative',
+    position: "relative",
   },
   swiperWrapper: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down("xs")]: {
       marginBottom: theme.spacing(7),
     },
   },
   swiperNav: {
-    '& .swiper-button-prev, & .swiper-button-next': {
+    "& .swiper-button-prev, & .swiper-button-next": {
       width: theme.spacing(6),
       height: theme.spacing(6),
       padding: theme.spacing(3),
       background: theme.palette.primary.main,
-      borderRadius: '100%',
+      borderRadius: "100%",
       boxShadow: `0 2px 10px 0 ${theme.palette.cardShadow}`,
       border: `2px solid ${theme.palette.background.paper}`,
-      '&:after': {
-        fontSize: 'initial',
+      "&:after": {
+        fontSize: "initial",
         color: theme.palette.background.paper,
       },
     },
   },
-}));
+}))
 
 const Reviews = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
-  const isXs = useMediaQuery(theme.breakpoints.down('xs'), {
+  })
+  const isXs = useMediaQuery(theme.breakpoints.down("xs"), {
     defaultMatches: true,
-  });
+  })
 
   React.useEffect(() => {
-    new Swiper('.swiper-container', {
+    new Swiper(".swiper-container", {
       slidesPerView: 1,
       spaceBetween: isXs ? 16 : 0,
       pagination: {
-        el: '.swiper-container .swiper-pagination',
-        type: 'bullets',
+        el: ".swiper-container .swiper-pagination",
+        type: "bullets",
         clickable: true,
       },
       navigation: {
-        nextEl: '.swiper-container .swiper-button-next',
-        prevEl: '.swiper-container .swiper-button-prev',
+        nextEl: ".swiper-container .swiper-button-next",
+        prevEl: ".swiper-container .swiper-button-prev",
       },
-    });
-  });
+    })
+  })
 
   return (
     <div className={className} {...rest}>
@@ -81,34 +81,31 @@ const Reviews = ({ data, className, ...rest }: ViewComponentProps): JSX.Element 
         title="What Our Clients Say"
         subtitle="After 3 days all of your offers will arrive and you will have another 7 days to select your new company."
       />
-      <div className={clsx('swiper-container', classes.swiperContainer)}>
-        <div className={clsx('swiper-wrapper', classes.swiperWrapper)}>
+      <div className={clsx("swiper-container", classes.swiperContainer)}>
+        <div className={clsx("swiper-wrapper", classes.swiperWrapper)}>
           {data.map((item: any, index: number) => (
-            <div
-              className="swiper-slide"
-              key={index}
-            >
+            <div className="swiper-slide" key={index}>
               <Grid container spacing={isMd ? 4 : 2}>
                 <Grid
                   item
                   xs={12}
                   md={6}
                   container
-                  justify={!isMd ? 'center' : 'flex-start'}
+                  justify={!isMd ? "center" : "flex-start"}
                   alignItems="center"
                 >
                   <div className={classes.authorPhoto}>
                     <Image
                       {...item.authorPhoto}
                       className={classes.image}
-                      lazyProps={{ width: '100%', height: '100%' }}
+                      lazyProps={{ width: "100%", height: "100%" }}
                     />
                   </div>
                 </Grid>
                 <Grid
                   item
                   container
-                  justify={!isMd ? 'center' : 'flex-start'}
+                  justify={!isMd ? "center" : "flex-start"}
                   alignItems="center"
                   xs={12}
                   md={6}
@@ -117,7 +114,7 @@ const Reviews = ({ data, className, ...rest }: ViewComponentProps): JSX.Element 
                     <Typography
                       variant="h5"
                       color="textPrimary"
-                      align={!isMd ? 'center' : 'left'}
+                      align={!isMd ? "center" : "left"}
                     >
                       {item.feedback}
                     </Typography>
@@ -126,14 +123,14 @@ const Reviews = ({ data, className, ...rest }: ViewComponentProps): JSX.Element 
                       color="textPrimary"
                       gutterBottom
                       className={classes.reviewAuthor}
-                      align={!isMd ? 'center' : 'left'}
+                      align={!isMd ? "center" : "left"}
                     >
                       {item.authorName}
                     </Typography>
                     <Typography
                       variant="subtitle1"
                       color="textSecondary"
-                      align={!isMd ? 'center' : 'left'}
+                      align={!isMd ? "center" : "left"}
                     >
                       {item.authorOccupation}
                     </Typography>
@@ -146,13 +143,13 @@ const Reviews = ({ data, className, ...rest }: ViewComponentProps): JSX.Element 
         {!isXs ? null : <div className="swiper-pagination" />}
         {isXs ? null : (
           <div className={classes.swiperNav}>
-            <div className={clsx('swiper-button-prev')} />
-            <div className={clsx('swiper-button-next')} />
+            <div className={clsx("swiper-button-prev")} />
+            <div className={clsx("swiper-button-next")} />
           </div>
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Reviews;
+export default Reviews

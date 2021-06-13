@@ -1,1 +1,1 @@
-export { default } from './VerticalOverlaped';
+export { default } from "./VerticalOverlaped"

@@ -1,1 +1,1 @@
-export { default } from './HorizontalTransparent';
+export { default } from "./HorizontalTransparent"

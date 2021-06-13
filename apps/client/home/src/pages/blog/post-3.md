@@ -3,46 +3,46 @@ stackbit_url_path: /blog/post-3
 template: post
 seo:
   type: stackbit_page_meta
-  description: 'Quis est, qui non oderit libidinosam, protervam adolescentiam'
+  description: "Quis est, qui non oderit libidinosam, protervam adolescentiam"
   extra:
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:type'
+      name: "og:type"
       keyName: property
       value: article
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:title'
+      name: "og:title"
       keyName: property
       value: Cur Ipse Pythagoras Et Aegyptum Lustravit
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:description'
+      name: "og:description"
       keyName: property
-      value: 'Quis est, qui non oderit libidinosam, protervam adolescentiam'
+      value: "Quis est, qui non oderit libidinosam, protervam adolescentiam"
     - relativeUrl: true
       type: stackbit_page_meta_extra
-      name: 'og:image'
+      name: "og:image"
       keyName: property
       value: images/3.png
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:card'
+      name: "twitter:card"
       keyName: name
       value: summary_large_image
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:title'
+      name: "twitter:title"
       keyName: name
       value: Cur Ipse Pythagoras Et Aegyptum Lustravit
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:description'
+      name: "twitter:description"
       keyName: name
-      value: 'Quis est, qui non oderit libidinosam, protervam adolescentiam'
+      value: "Quis est, qui non oderit libidinosam, protervam adolescentiam"
     - relativeUrl: true
       type: stackbit_page_meta_extra
-      name: 'twitter:image'
+      name: "twitter:image"
       keyName: name
       value: images/3.png
   title: Cur Ipse Pythagoras Et Aegyptum Lustravit
@@ -51,15 +51,15 @@ excerpt: >-
   dici possunt in hanc sententiam, sed non necesse est. Putabam equidem satis,
   inquit, me dixisse.
 image_alt: Post 3 placeholder image
-date: '2020-05-28'
-image: 'https://www.datocms-assets.com/49645/1623441765-3.png'
+date: "2020-05-28"
+image: "https://www.datocms-assets.com/49645/1623441765-3.png"
 author:
   type: person
   bio: >-
     Sagittis nisl rhoncus mattis rhoncus urna neque viverra. In est ante in nibh
     mauris cursus mattis molestie porta non pulvinar neque.
   last_name: Norman
-  photo: 'https://www.datocms-assets.com/49645/1623441766-gordon-norman.jpg'
+  photo: "https://www.datocms-assets.com/49645/1623441766-gordon-norman.jpg"
   photo_alt: Gordon Norman
   first_name: Gordon
   link: blog/author/gordon-norman

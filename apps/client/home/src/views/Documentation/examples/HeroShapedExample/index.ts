@@ -1,1 +1,1 @@
-export { default } from './HeroShapedExample';
+export { default } from "./HeroShapedExample"

@@ -2,23 +2,23 @@ interface HeroSimpleBackgroundProps {
   /**
    * External classes
    */
-  className?: string;
+  className?: string
   /**
    * The main content
    */
-  children: JSX.Element;
+  children: JSX.Element
   /**
    * The background image of the hero
    */
-  backgroundImage: string;
+  backgroundImage: string
   /**
    * The background size of the hero
    */
-  backgroundSize?: string | number;
+  backgroundSize?: string | number
   /**
    * The background position of the hero
    */
-  backgroundPosition?: string | number;
+  backgroundPosition?: string | number
   // All other props
-  [x:string]: any;
+  [x: string]: any
 }

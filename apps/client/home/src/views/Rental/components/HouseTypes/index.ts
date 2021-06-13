@@ -1,1 +1,1 @@
-export { default } from './HouseTypes';
+export { default } from "./HouseTypes"

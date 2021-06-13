@@ -1,1 +1,1 @@
-export { default } from './PropsHighlighter';
+export { default } from "./PropsHighlighter"

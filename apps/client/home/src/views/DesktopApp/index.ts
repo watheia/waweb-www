@@ -1,1 +1,1 @@
-export { default } from './DesktopApp';
+export { default } from "./DesktopApp"

@@ -1,12 +1,12 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid, Typography, Button } from '@material-ui/core';
-import { Image } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, Grid, Typography, Button } from "@material-ui/core"
+import { Image } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   title: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   image: {
     maxWidth: 140,
@@ -15,22 +15,22 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(2),
     background: theme.palette.alternate.main,
     borderRadius: theme.spacing(2),
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       padding: theme.spacing(4),
     },
   },
   subtitle: {
     margin: theme.spacing(2, 0),
   },
-}));
+}))
 
 const Search = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -41,16 +41,11 @@ const Search = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
       />
       <Grid container spacing={4}>
         <Grid item xs={12} md={6}>
-          <Grid
-            container
-            className={classes.gridCard}
-            data-aos="fade-up"
-            spacing={2}
-          >
+          <Grid container className={classes.gridCard} data-aos="fade-up" spacing={2}>
             <Grid
               item
               container
-              justify={isMd ? 'flex-start' : 'center'}
+              justify={isMd ? "flex-start" : "center"}
               alignItems="center"
               xs={12}
               md={6}
@@ -64,7 +59,7 @@ const Search = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
               item
               container
               justify="space-between"
-              alignItems={isMd ? 'flex-start' : 'center'}
+              alignItems={isMd ? "flex-start" : "center"}
               xs={12}
               md={6}
               direction="column"
@@ -73,14 +68,14 @@ const Search = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
                 variant="h6"
                 className={classes.title}
                 color="textPrimary"
-                align={isMd ? 'left' : 'center'}
+                align={isMd ? "left" : "center"}
               >
                 Logistics Solutions
               </Typography>
               <Typography
                 variant="subtitle1"
                 color="textPrimary"
-                align={isMd ? 'left' : 'center'}
+                align={isMd ? "left" : "center"}
                 className={classes.subtitle}
               >
                 Over 20,000 users searching a place
@@ -92,16 +87,11 @@ const Search = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
           </Grid>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Grid
-            container
-            className={classes.gridCard}
-            data-aos="fade-up"
-            spacing={2}
-          >
+          <Grid container className={classes.gridCard} data-aos="fade-up" spacing={2}>
             <Grid
               item
               container
-              justify={isMd ? 'flex-start' : 'center'}
+              justify={isMd ? "flex-start" : "center"}
               alignItems="center"
               xs={12}
               md={6}
@@ -115,7 +105,7 @@ const Search = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
               item
               container
               justify="space-between"
-              alignItems={isMd ? 'flex-start' : 'center'}
+              alignItems={isMd ? "flex-start" : "center"}
               xs={12}
               md={6}
               direction="column"
@@ -124,14 +114,14 @@ const Search = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
                 variant="h6"
                 className={classes.title}
                 color="textPrimary"
-                align={isMd ? 'left' : 'center'}
+                align={isMd ? "left" : "center"}
               >
                 Delivery Solutions
               </Typography>
               <Typography
                 variant="subtitle1"
                 color="textPrimary"
-                align={isMd ? 'left' : 'center'}
+                align={isMd ? "left" : "center"}
                 className={classes.subtitle}
               >
                 Over 20,000 users searching a place
@@ -144,7 +134,7 @@ const Search = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Search;
+export default Search

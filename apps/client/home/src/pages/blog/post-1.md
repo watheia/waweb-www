@@ -3,46 +3,46 @@ stackbit_url_path: /blog/post-1
 template: post
 seo:
   type: stackbit_page_meta
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
   extra:
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:type'
+      name: "og:type"
       keyName: property
       value: article
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:title'
+      name: "og:title"
       keyName: property
       value: Utrum Igitur Tibi Litteram Videor An Totas Paginas
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:description'
+      name: "og:description"
       keyName: property
-      value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+      value: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
     - relativeUrl: true
       type: stackbit_page_meta_extra
-      name: 'og:image'
+      name: "og:image"
       keyName: property
       value: images/1.png
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:card'
+      name: "twitter:card"
       keyName: name
       value: summary_large_image
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:title'
+      name: "twitter:title"
       keyName: name
       value: Utrum Igitur Tibi Litteram Videor An Totas Paginas
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:description'
+      name: "twitter:description"
       keyName: name
-      value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+      value: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
     - relativeUrl: true
       type: stackbit_page_meta_extra
-      name: 'twitter:image'
+      name: "twitter:image"
       keyName: name
       value: images/1.png
   title: Utrum Igitur Tibi Litteram Videor An Totas Paginas
@@ -50,15 +50,15 @@ excerpt: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ea mala virtuti
   magnitudine obruebantur. Duo Reges: constructio interrete.
 image_alt: Post 1 placeholder image
-date: '2020-04-16'
-image: 'https://www.datocms-assets.com/49645/1623441764-1.png'
+date: "2020-04-16"
+image: "https://www.datocms-assets.com/49645/1623441764-1.png"
 author:
   type: person
   bio: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl ligula,
     cursus id molestie vel, maximus aliquet risus.
   last_name: Ameter
-  photo: 'https://www.datocms-assets.com/49645/1623441765-dianne-ameter.jpg'
+  photo: "https://www.datocms-assets.com/49645/1623441765-dianne-ameter.jpg"
   photo_alt: Dianne Ameter
   first_name: Dianne
   link: blog/author/dianne-ameter

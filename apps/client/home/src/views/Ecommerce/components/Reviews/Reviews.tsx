@@ -1,5 +1,5 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
 import {
   useMediaQuery,
   Grid,
@@ -9,12 +9,12 @@ import {
   Avatar,
   ListItemText,
   Typography,
-} from '@material-ui/core';
-import { SectionHeader } from 'components/molecules';
+} from "@material-ui/core"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   textWhite: {
-    color: 'white',
+    color: "white",
   },
   avatar: {
     width: 100,
@@ -28,22 +28,22 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(2),
     background: theme.palette.alternate.main,
     borderRadius: theme.spacing(2),
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       padding: theme.spacing(4),
     },
   },
   gridItem: {
-    height: '100%',
+    height: "100%",
   },
-}));
+}))
 
 const Reviews = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
@@ -55,8 +55,8 @@ const Reviews = ({ data, className, ...rest }: ViewComponentProps): JSX.Element 
         }
         subtitle={
           <span className={classes.textWhite}>
-            After 3 days all of your offers will arrive and you will have
-            another 7 days to select your new company.
+            After 3 days all of your offers will arrive and you will have another 7 days to
+            select your new company.
           </span>
         }
         subtitleColor="textPrimary"
@@ -65,16 +65,11 @@ const Reviews = ({ data, className, ...rest }: ViewComponentProps): JSX.Element 
       <Grid container spacing={4}>
         {data.map((item: any, index: number) => (
           <Grid item xs={12} md={6} key={index} className={classes.gridItem}>
-            <Grid
-              container
-              className={classes.gridCard}
-              data-aos="fade-up"
-              spacing={2}
-            >
+            <Grid container className={classes.gridCard} data-aos="fade-up" spacing={2}>
               <Grid
                 item
                 container
-                justify={isMd ? 'flex-start' : 'center'}
+                justify={isMd ? "flex-start" : "center"}
                 alignItems="center"
                 xs={12}
               >
@@ -98,13 +93,13 @@ const Reviews = ({ data, className, ...rest }: ViewComponentProps): JSX.Element 
                 item
                 container
                 justify="space-between"
-                alignItems={isMd ? 'flex-start' : 'center'}
+                alignItems={isMd ? "flex-start" : "center"}
                 xs={12}
               >
                 <Typography
                   variant="body1"
                   color="textPrimary"
-                  align={isMd ? 'left' : 'center'}
+                  align={isMd ? "left" : "center"}
                 >
                   "{item.feedback}"
                 </Typography>
@@ -114,7 +109,7 @@ const Reviews = ({ data, className, ...rest }: ViewComponentProps): JSX.Element 
         ))}
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Reviews;
+export default Reviews

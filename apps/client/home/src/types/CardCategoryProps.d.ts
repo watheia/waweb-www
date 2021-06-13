@@ -2,19 +2,19 @@ interface CardCategoryProps {
   /**
    * External classes
    */
-  className?: string;
+  className?: string
   /**
    * Icon to show inside the category card
    */
-  icon: JSX.Element;
+  icon: JSX.Element
   /**
    * Category title to show inside the category card
    */
-  title: string;
+  title: string
   /**
    * The content alignment
    */
-  align?: 'left' | 'right' | 'center';
+  align?: "left" | "right" | "center"
   // All other props
-  [x:string]: any;
+  [x: string]: any
 }

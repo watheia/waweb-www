@@ -1,8 +1,8 @@
-import React from 'react';
-import _ from 'lodash';
+import React from "react"
+import _ from "lodash"
 
-import { Link, withPrefix, classNames } from 'utils';
-import Action from './Action';
+import { Link, withPrefix, classNames } from "@waweb/utils"
+import Action from "./Action"
 
 export default class Header extends React.Component {
   render() {
@@ -13,41 +13,25 @@ export default class Header extends React.Component {
             <Link className="sr-only" to="#content">
               Skip to main content
             </Link>
-            {_.get(
-              this.props,
-              'pageContext.site.siteMetadata.header.logo',
-              null
-            ) ? (
-              <Link className="navbar__logo" to={withPrefix('/')}>
+            {_.get(this.props, "pageContext.site.siteMetadata.header.logo", null) ? (
+              <Link className="navbar__logo" to={withPrefix("/")}>
                 <img
                   src={withPrefix(
-                    _.get(
-                      this.props,
-                      'pageContext.site.siteMetadata.header.logo',
-                      null
-                    )
+                    _.get(this.props, "pageContext.site.siteMetadata.header.logo", null)
                   )}
                   alt={_.get(
                     this.props,
-                    'pageContext.site.siteMetadata.header.logo_alt',
+                    "pageContext.site.siteMetadata.header.logo_alt",
                     null
                   )}
                 />
               </Link>
             ) : (
-              <Link className="h4 navbar__title" to={withPrefix('/')}>
-                {_.get(
-                  this.props,
-                  'pageContext.site.siteMetadata.header.title',
-                  null
-                )}
+              <Link className="h4 navbar__title" to={withPrefix("/")}>
+                {_.get(this.props, "pageContext.site.siteMetadata.header.title", null)}
               </Link>
             )}
-            {_.get(
-              this.props,
-              'pageContext.site.siteMetadata.header.has_nav',
-              null
-            ) && (
+            {_.get(this.props, "pageContext.site.siteMetadata.header.has_nav", null) && (
               <React.Fragment>
                 <button
                   aria-label="Menu"
@@ -84,30 +68,27 @@ export default class Header extends React.Component {
                         {_.map(
                           _.get(
                             this.props,
-                            'pageContext.site.siteMetadata.header.nav_links',
+                            "pageContext.site.siteMetadata.header.nav_links",
                             null
                           ),
                           (action, action_idx) => {
                             let pageUrl = _.trim(
-                              _.get(this.props, 'pageContext.url', null),
-                              '/'
-                            );
-                            let actionUrl = _.trim(
-                              _.get(action, 'url', null),
-                              '/'
-                            );
+                              _.get(this.props, "pageContext.url", null),
+                              "/"
+                            )
+                            let actionUrl = _.trim(_.get(action, "url", null), "/")
                             return (
                               <li
                                 key={action_idx}
-                                className={classNames('navbar__item', {
-                                  'navbar__item--btn':
-                                    _.get(action, 'style', null) !== 'link',
-                                  'is-active': pageUrl === actionUrl,
+                                className={classNames("navbar__item", {
+                                  "navbar__item--btn":
+                                    _.get(action, "style", null) !== "link",
+                                  "is-active": pageUrl === actionUrl,
                                 })}
                               >
                                 <Action {...this.props} action={action} />
                               </li>
-                            );
+                            )
                           }
                         )}
                       </ul>
@@ -119,6 +100,6 @@ export default class Header extends React.Component {
           </nav>
         </div>
       </header>
-    );
+    )
   }
 }

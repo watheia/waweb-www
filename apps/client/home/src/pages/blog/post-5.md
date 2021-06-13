@@ -3,46 +3,46 @@ stackbit_url_path: /blog/post-5
 template: post
 seo:
   type: stackbit_page_meta
-  description: 'Estne, quaeso, inquam, sitienti in bibendo voluptas'
+  description: "Estne, quaeso, inquam, sitienti in bibendo voluptas"
   extra:
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:type'
+      name: "og:type"
       keyName: property
       value: article
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:title'
+      name: "og:title"
       keyName: property
       value: Amet Nulla Facilisi Morbi Tempus
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:description'
+      name: "og:description"
       keyName: property
-      value: 'Estne, quaeso, inquam, sitienti in bibendo voluptas'
+      value: "Estne, quaeso, inquam, sitienti in bibendo voluptas"
     - relativeUrl: true
       type: stackbit_page_meta_extra
-      name: 'og:image'
+      name: "og:image"
       keyName: property
       value: images/5.png
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:card'
+      name: "twitter:card"
       keyName: name
       value: summary_large_image
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:title'
+      name: "twitter:title"
       keyName: name
       value: Amet Nulla Facilisi Morbi Tempus
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:description'
+      name: "twitter:description"
       keyName: name
-      value: 'Estne, quaeso, inquam, sitienti in bibendo voluptas'
+      value: "Estne, quaeso, inquam, sitienti in bibendo voluptas"
     - relativeUrl: true
       type: stackbit_page_meta_extra
-      name: 'twitter:image'
+      name: "twitter:image"
       keyName: name
       value: images/5.png
   title: Amet Nulla Facilisi Morbi Tempus
@@ -51,15 +51,15 @@ excerpt: >-
   philosophiae parte. Quem Tiberina descensio festo illo die tanto gaudio
   affecit, quanto.
 image_alt: Post 5 placeholder image
-date: '2020-06-02'
-image: 'https://www.datocms-assets.com/49645/1623441765-5.png'
+date: "2020-06-02"
+image: "https://www.datocms-assets.com/49645/1623441765-5.png"
 author:
   type: person
   bio: >-
     Sagittis nisl rhoncus mattis rhoncus urna neque viverra. In est ante in nibh
     mauris cursus mattis molestie porta non pulvinar neque.
   last_name: Norman
-  photo: 'https://www.datocms-assets.com/49645/1623441766-gordon-norman.jpg'
+  photo: "https://www.datocms-assets.com/49645/1623441766-gordon-norman.jpg"
   photo_alt: Gordon Norman
   first_name: Gordon
   link: blog/author/gordon-norman

@@ -1,34 +1,27 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery, Grid } from '@material-ui/core';
-import { Image } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { useMediaQuery, Grid } from "@material-ui/core"
+import { Image } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
 const useStyles = makeStyles(() => ({
   image: {
     maxWidth: 500,
   },
-}));
+}))
 
 const Teaser = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} {...rest}>
       <Grid container justify="space-between" spacing={isMd ? 4 : 2}>
-        <Grid
-          item
-          container
-          alignItems="center"
-          xs={12}
-          md={6}
-          data-aos={'fade-up'}
-        >
+        <Grid item container alignItems="center" xs={12} md={6} data-aos={"fade-up"}>
           <div>
             <SectionHeader
               title="Don't worry about pricing."
@@ -46,7 +39,7 @@ const Teaser = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
           alignItems="flex-start"
           xs={12}
           md={6}
-          data-aos={'fade-up'}
+          data-aos={"fade-up"}
         >
           <Image
             src="https://assets.maccarianagency.com/the-front/illustrations/relax-in-sofa.svg"
@@ -56,7 +49,7 @@ const Teaser = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Teaser;
+export default Teaser

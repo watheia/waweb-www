@@ -7,58 +7,58 @@ seo:
   extra:
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:type'
+      name: "og:type"
       keyName: property
       value: article
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:title'
+      name: "og:title"
       keyName: property
-      value: 'Non Minor, Inquit, Voluptas Percipitur Ex Vilissimis'
+      value: "Non Minor, Inquit, Voluptas Percipitur Ex Vilissimis"
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'og:description'
+      name: "og:description"
       keyName: property
       value: Quae diligentissime contra Aristonem dicuntur a Chryippo
     - relativeUrl: true
       type: stackbit_page_meta_extra
-      name: 'og:image'
+      name: "og:image"
       keyName: property
       value: images/2.png
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:card'
+      name: "twitter:card"
       keyName: name
       value: summary_large_image
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:title'
+      name: "twitter:title"
       keyName: name
-      value: 'Non Minor, Inquit, Voluptas Percipitur Ex Vilissimis'
+      value: "Non Minor, Inquit, Voluptas Percipitur Ex Vilissimis"
     - relativeUrl: false
       type: stackbit_page_meta_extra
-      name: 'twitter:description'
+      name: "twitter:description"
       keyName: name
       value: Quae diligentissime contra Aristonem dicuntur a Chryippo
     - relativeUrl: true
       type: stackbit_page_meta_extra
-      name: 'twitter:image'
+      name: "twitter:image"
       keyName: name
       value: images/2.png
-  title: 'Non Minor, Inquit, Voluptas Percipitur Ex Vilissimis'
+  title: "Non Minor, Inquit, Voluptas Percipitur Ex Vilissimis"
 excerpt: >-
   Quae diligentissime contra Aristonem dicuntur a Chryippo. Videamus igitur
   sententias eorum, tum ad verba redeamus. Levatio igitur vitiorum magna.
 image_alt: Post 2 placeholder image
-date: '2020-05-25'
-image: 'https://www.datocms-assets.com/49645/1623441764-2.png'
+date: "2020-05-25"
+image: "https://www.datocms-assets.com/49645/1623441764-2.png"
 author:
   type: person
   bio: >-
     Aliquam vestibulum morbi blandit cursus risus at ultrices mi. Massa placerat
     duis ultricies lacus. Amet justo donec enim diam.
   last_name: Tone
-  photo: 'https://www.datocms-assets.com/49645/1623441766-miles-tone.jpg'
+  photo: "https://www.datocms-assets.com/49645/1623441766-miles-tone.jpg"
   photo_alt: Miles Tone
   first_name: Miles
   link: blog/author/miles-tone
@@ -75,7 +75,7 @@ categories:
     title: General
     type: category
     id: general
-title: 'Non Minor, Inquit, Voluptas Percipitur Ex Vilissimis'
+title: "Non Minor, Inquit, Voluptas Percipitur Ex Vilissimis"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Negat esse eam, inquit, propter se expetendam. Nam de isto magna dissensio est. Nullum inveniri verbum potest quod magis idem declaret Latine, quod Graece, quam declarat voluptas. Idemne potest esse dies saepius, qui semel fuit? Non est ista, inquam, Piso, magna dissensio. Ita multo sanguine profuso in laetitia et in victoria est mortuus. Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum sit. Duo Reges: constructio interrete.

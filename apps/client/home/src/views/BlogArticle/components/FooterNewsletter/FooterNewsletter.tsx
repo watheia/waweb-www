@@ -1,50 +1,44 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import {
-  colors,
-  Grid,
-  FormControl,
-  OutlinedInput,
-  InputAdornment,
-} from '@material-ui/core';
-import { Icon, Image } from 'components/atoms';
-import { SectionHeader } from 'components/molecules';
+import React from "react"
+import { makeStyles } from "@material-ui/core/styles"
+import { colors, Grid, FormControl, OutlinedInput, InputAdornment } from "@material-ui/core"
+import { Icon, Image } from "components/atoms"
+import { SectionHeader } from "components/molecules"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   textWhite: {
-    color: 'white',
+    color: "white",
   },
   inputContainer: {
-    display: 'flex',
-    justifyContent: 'flex-start',
+    display: "flex",
+    justifyContent: "flex-start",
   },
   formControl: {
     maxWidth: 400,
-    '& .MuiOutlinedInput-root': {
-      '& fieldset': {
-        borderColor: 'white',
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
+        borderColor: "white",
       },
-      '&:hover fieldset': {
-        borderColor: 'white',
+      "&:hover fieldset": {
+        borderColor: "white",
       },
-      '&.Mui-focused fieldset': {
-        borderColor: 'white',
+      "&.Mui-focused fieldset": {
+        borderColor: "white",
       },
     },
-    '& .MuiInputBase-root': {
-      color: 'white',
+    "& .MuiInputBase-root": {
+      color: "white",
     },
-    '& .MuiInputAdornment-root i': {
-      color: 'white !important',
+    "& .MuiInputAdornment-root i": {
+      color: "white !important",
     },
   },
   image: {
     maxWidth: 400,
   },
-}));
+}))
 
 const FooterNewsletter = ({ className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <div className={className} {...rest}>
@@ -58,15 +52,11 @@ const FooterNewsletter = ({ className, ...rest }: ViewComponentProps): JSX.Eleme
         <Grid item xs={12} sm={6} container alignItems="center">
           <div>
             <SectionHeader
-              title={
-                <span className={classes.textWhite}>
-                  Subscribe To Our Newsletter
-                </span>
-              }
+              title={<span className={classes.textWhite}>Subscribe To Our Newsletter</span>}
               subtitle={
                 <span className={classes.textWhite}>
-                  Don't lose a chance to be among the firsts to know about our
-                  upcoming news and updates.
+                  Don't lose a chance to be among the firsts to know about our upcoming news
+                  and updates.
                 </span>
               }
               fadeUp
@@ -96,7 +86,7 @@ const FooterNewsletter = ({ className, ...rest }: ViewComponentProps): JSX.Eleme
         </Grid>
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default FooterNewsletter;
+export default FooterNewsletter

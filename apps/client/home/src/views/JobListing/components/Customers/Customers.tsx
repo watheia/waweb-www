@@ -1,5 +1,5 @@
-import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import React from "react"
+import { makeStyles, useTheme } from "@material-ui/core/styles"
 import {
   useMediaQuery,
   colors,
@@ -10,26 +10,26 @@ import {
   ListItem,
   ListItemAvatar,
   ListItemText,
-} from '@material-ui/core';
-import { SectionHeader, IconAlternate } from 'components/molecules';
+} from "@material-ui/core"
+import { SectionHeader, IconAlternate } from "components/molecules"
 
 const useStyles = makeStyles(() => ({
   swiperContainer: {
-    width: '100%',
+    width: "100%",
     maxWidth: 500,
   },
   gridItem: {
-    width: '100% !important',
+    width: "100% !important",
   },
-}));
+}))
 
 const Reviews = ({ data, className, ...rest }: ViewComponentProps): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
-  const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+  const theme = useTheme()
+  const isMd = useMediaQuery(theme.breakpoints.up("md"), {
     defaultMatches: true,
-  });
+  })
 
   return (
     <div className={className} data-aos="fade-up" {...rest}>
@@ -43,10 +43,7 @@ const Reviews = ({ data, className, ...rest }: ViewComponentProps): JSX.Element 
           <Grid item xs={12} sm={12} md={4} key={index} data-aos="fade-up">
             <Grid container spacing={2} className={classes.gridItem}>
               <Grid item container justify="center" xs={12}>
-                <IconAlternate
-                  color={colors.indigo}
-                  fontIconClass="fas fa-quote-right"
-                />
+                <IconAlternate color={colors.indigo} fontIconClass="fas fa-quote-right" />
               </Grid>
               <Grid item xs={12}>
                 <Typography variant="h6" align="center" component="p">
@@ -74,7 +71,7 @@ const Reviews = ({ data, className, ...rest }: ViewComponentProps): JSX.Element 
         ))}
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Reviews;
+export default Reviews

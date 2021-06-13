@@ -2,15 +2,15 @@ interface HeroShapedProps {
   /**
    * External classes
    */
-  className?: string;
+  className?: string
   /**
    * Children to placed inside the section right side
    */
-  rightSide: JSX.Element;
+  rightSide: JSX.Element
   /**
    * Children to placed inside the section left side
    */
-  leftSide: JSX.Element;
+  leftSide: JSX.Element
   // All other props
-  [x:string]: any;
+  [x: string]: any
 }

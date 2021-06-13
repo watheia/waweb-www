@@ -2,19 +2,19 @@ interface SwiperImageProps {
   /**
    * External classes
    */
-  className?: string;
+  className?: string
   /**
    * External classes for the images
    */
-  imageClassName?: string;
+  imageClassName?: string
   /**
    * The array of images object which should consist of src, alt and srcset attributes
    */
-  items: Array<ImageProps>;
+  items: Array<ImageProps>
   /**
    * Styles classes of the navigation button
    */
-  navigationButtonStyle?: string;
+  navigationButtonStyle?: string
   // All other props
-  [x:string]: any;
+  [x: string]: any
 }

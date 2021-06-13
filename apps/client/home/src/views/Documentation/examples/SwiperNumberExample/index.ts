@@ -1,1 +1,1 @@
-export { default } from './SwiperNumberExample';
+export { default } from "./SwiperNumberExample"

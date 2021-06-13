@@ -2,27 +2,27 @@ interface HeroSideImageProps {
   /**
    * External classes
    */
-  className?: string;
+  className?: string
   /**
    * Children to placed inside the hero
    */
-  children?: JSX.Element;
+  children?: JSX.Element
   /**
    * Background color of the hero
    */
-  backgroundColor?: string;
+  backgroundColor?: string
   /**
    * Side image
    */
-  imageSrc: string;
+  imageSrc: string
   /**
    * Side image srcset
    */
-  imageSrcSet?: string;
+  imageSrcSet?: string
   /**
    * Should show in reverse order
    */
-  reverse?: boolean;
+  reverse?: boolean
   // All other props
-  [x:string]: any;
+  [x: string]: any
 }

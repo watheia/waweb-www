@@ -1,10 +1,10 @@
-import React from 'react';
-import { makeStyles, Divider, Typography } from '@material-ui/core';
+import React from "react"
+import { makeStyles, Divider, Typography } from "@material-ui/core"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   divider: {
     margin: theme.spacing(3, 0),
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       margin: theme.spacing(5, 0),
     },
   },
@@ -21,19 +21,24 @@ const useStyles = makeStyles(theme => ({
     marginBottom: theme.spacing(2),
   },
   listItem: {
-    margin: theme.spacing(1/2, 0),
+    margin: theme.spacing(1 / 2, 0),
   },
-}));
+}))
 
 const Changelog = ({ className, ...rest }: any): JSX.Element => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   const BlockItem = ({ versionTitle, date, list }) => (
     <div>
       <Typography variant="h4" component="h4" className={classes.versionTitle}>
         {versionTitle}
       </Typography>
-      <Typography variant="body2" component="p" color="textSecondary" className={classes.date}>
+      <Typography
+        variant="body2"
+        component="p"
+        color="textSecondary"
+        className={classes.date}
+      >
         {date}
       </Typography>
       <ul className={classes.list}>
@@ -46,7 +51,7 @@ const Changelog = ({ className, ...rest }: any): JSX.Element => {
         ))}
       </ul>
     </div>
-  );
+  )
 
   return (
     <div className={className} {...rest}>
@@ -93,17 +98,13 @@ const Changelog = ({ className, ...rest }: any): JSX.Element => {
       <BlockItem
         versionTitle="v3.0.0"
         date="Nov 23, 2020"
-        list={[
-          "Add GatsbyJS support",
-        ]}
+        list={["Add GatsbyJS support"]}
       />
       <Divider className={classes.divider} />
       <BlockItem
         versionTitle="v2.1.0"
         date="Nov 17, 2020"
-        list={[
-          "Add dark mode support",
-        ]}
+        list={["Add dark mode support"]}
       />
       <Divider className={classes.divider} />
       <BlockItem
@@ -122,35 +123,25 @@ const Changelog = ({ className, ...rest }: any): JSX.Element => {
         list={[
           "Adapt Accordion component with Material-UI new naming convention changes",
           "Fix img display block issues",
-          "Fix npm installed packages vulnerability issues"
+          "Fix npm installed packages vulnerability issues",
         ]}
       />
       <Divider className={classes.divider} />
       <BlockItem
         versionTitle="v1.0.2"
         date="July 24, 2020"
-        list={[
-          "View components cleanup",
-        ]}
+        list={["View components cleanup"]}
       />
       <Divider className={classes.divider} />
       <BlockItem
         versionTitle="v1.0.1"
         date="July 22, 2020"
-        list={[
-          "Fix cross-platform support for npm scripts and commands",
-        ]}
+        list={["Fix cross-platform support for npm scripts and commands"]}
       />
       <Divider className={classes.divider} />
-      <BlockItem
-        versionTitle="v1.0.0"
-        date="July 18, 2020"
-        list={[
-          "Initial release",
-        ]}
-      />
+      <BlockItem versionTitle="v1.0.0" date="July 18, 2020" list={["Initial release"]} />
     </div>
-  );
-};
+  )
+}
 
-export default Changelog;
+export default Changelog

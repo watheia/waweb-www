@@ -1,1 +1,1 @@
-export { default } from './Customization';
+export { default } from "./Customization"
